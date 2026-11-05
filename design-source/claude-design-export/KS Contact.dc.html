@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#F7F4EF;color:#2F2F2F;font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:hover{color:#355C63}
+*{box-sizing:border-box}
+::selection{background:#D9C7B8}
+</style>
+</helmet>
+
+<header style="position:sticky;top:0;z-index:20;background:rgba(247,244,239,0.94);backdrop-filter:blur(8px);border-bottom:1px solid #D7D3CF">
+  <div style="max-width:1360px;margin:0 auto;padding:14px clamp(20px,4vw,48px);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+    <a href="KS%20Home.dc.html" style="display:flex;align-items:center;gap:12px;color:#2F2F2F">
+      <span style="width:36px;height:36px;border:1px solid #2F2F2F;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;letter-spacing:0.04em">KS</span>
+      <span style="font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:500;letter-spacing:0.02em">Launch Pilot</span>
+    </a>
+    <nav style="display:flex;align-items:center;gap:clamp(18px,2.6vw,36px);font-size:13px;letter-spacing:0.03em;white-space:nowrap;flex-wrap:wrap">
+      <a href="KS%20Services.dc.html" style="color:#2F2F2F" style-hover="color:#355C63">Services</a>
+      <a href="KS%20Work.dc.html" style="color:#2F2F2F" style-hover="color:#355C63">Work</a>
+      <a href="KS%20Studio.dc.html" style="color:#2F2F2F" style-hover="color:#355C63">Studio</a>
+      <a href="KS%20Contact.dc.html" style="background:#355C63;color:#F7F4EF;padding:11px 20px" style-hover="background:#2F2F2F;color:#F7F4EF">Start a project</a>
+    </nav>
+  </div>
+</header>
+
+<section data-screen-label="Contact" style="max-width:1360px;margin:0 auto;padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px);padding-top:clamp(56px,8vw,112px);padding-bottom:clamp(80px,10vw,140px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:64px clamp(40px,7vw,120px)">
+  <div style="display:flex;flex-direction:column;gap:28px">
+    <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#7A5C49">Contact</div>
+    <h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(48px,6.6vw,100px);line-height:0.98;letter-spacing:-0.01em;text-wrap:balance">Tell us about your project.</h1>
+    <p style="margin:0;font-size:16px;line-height:1.75;max-width:460px">Share a few details and we'll reply within two working days to arrange a call with both of us. The more context you give, the more useful that first conversation will be.</p>
+    <div style="display:flex;flex-direction:column;gap:18px;margin-top:16px;padding-top:28px;border-top:1px solid #D7D3CF;font-size:15px">
+      <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#7A5C49">Email</span><a href="mailto:hello@kslaunchpilot.com" style="color:#2F2F2F" style-hover="color:#355C63">hello@kslaunchpilot.com</a></div>
+      <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#7A5C49">Instagram</span><a href="https://instagram.com/" style="color:#2F2F2F" style-hover="color:#355C63">@kslaunchpilot</a></div>
+      <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#7A5C49">Based</span><span>Remote, Southeast Asia. Working with clients worldwide.</span></div>
+    </div>
+  </div>
+  <div>
+    <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+      <form onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:32px;background:#FFFFFF;padding:clamp(28px,4vw,48px);border:1px solid #D7D3CF">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:28px">
+          <label style="display:flex;flex-direction:column;gap:8px;font-size:12px;letter-spacing:0.08em;color:#7A5C49">Name<input required="" name="name" style="background:transparent;border:none;border-bottom:1px solid #B7A89B;padding:10px 0;font-size:16px;color:#2F2F2F;outline:none;font-family:inherit"></input></label>
+          <label style="display:flex;flex-direction:column;gap:8px;font-size:12px;letter-spacing:0.08em;color:#7A5C49">Email<input required="" type="email" name="email" style="background:transparent;border:none;border-bottom:1px solid #B7A89B;padding:10px 0;font-size:16px;color:#2F2F2F;outline:none;font-family:inherit"></input></label>
+          <label style="display:flex;flex-direction:column;gap:8px;font-size:12px;letter-spacing:0.08em;color:#7A5C49">Business<input name="business" style="background:transparent;border:none;border-bottom:1px solid #B7A89B;padding:10px 0;font-size:16px;color:#2F2F2F;outline:none;font-family:inherit"></input></label>
+          <label style="display:flex;flex-direction:column;gap:8px;font-size:12px;letter-spacing:0.08em;color:#7A5C49">Website (if any)<input name="site" style="background:transparent;border:none;border-bottom:1px solid #B7A89B;padding:10px 0;font-size:16px;color:#2F2F2F;outline:none;font-family:inherit"></input></label>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <span style="font-size:12px;letter-spacing:0.08em;color:#7A5C49">What do you need? Select all that apply</span>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <sc-for list="{{ services }}" as="o" hint-placeholder-count="5"><button type="button" onClick="{{ o.pick }}" style="{{ o.style }}">{{ o.label }}</button></sc-for>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <span style="font-size:12px;letter-spacing:0.08em;color:#7A5C49">Estimated budget (USD)</span>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <sc-for list="{{ budgets }}" as="o" hint-placeholder-count="4"><button type="button" onClick="{{ o.pick }}" style="{{ o.style }}">{{ o.label }}</button></sc-for>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <span style="font-size:12px;letter-spacing:0.08em;color:#7A5C49">Timeline</span>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <sc-for list="{{ timelines }}" as="o" hint-placeholder-count="3"><button type="button" onClick="{{ o.pick }}" style="{{ o.style }}">{{ o.label }}</button></sc-for>
+          </div>
+        </div>
+        <label style="display:flex;flex-direction:column;gap:8px;font-size:12px;letter-spacing:0.08em;color:#7A5C49">Tell us about the project<textarea required="" name="msg" rows="4" style="background:transparent;border:none;border-bottom:1px solid #B7A89B;padding:10px 0;font-size:16px;color:#2F2F2F;outline:none;font-family:inherit;resize:vertical"></textarea></label>
+        <button type="submit" style="align-self:flex-start;background:#355C63;color:#F7F4EF;border:none;padding:16px 30px;font-size:14px;letter-spacing:0.03em;cursor:pointer;font-family:inherit" style-hover="background:#2F2F2F">Send enquiry</button>
+      </form>
+    </sc-if>
+    <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;flex-direction:column;gap:16px;background:#FFFFFF;padding:clamp(28px,4vw,48px);border:1px solid #D7D3CF">
+        <p style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:40px;line-height:1.1">Thank you. Your enquiry is with us.</p>
+        <p style="margin:0;font-size:15px;line-height:1.7">We'll reply within two working days to arrange a call.</p>
+      </div>
+    </sc-if>
+  </div>
+</section>
+
+<footer style="background:#355C63;color:#F7F4EF">
+  <div style="max-width:1360px;margin:0 auto;padding:56px clamp(20px,4vw,48px) 40px;display:flex;flex-direction:column;gap:48px">
+    <div style="display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;gap:14px;max-width:380px">
+        <div style="display:flex;align-items:center;gap:12px">
+          <span style="width:36px;height:36px;border:1px solid #F7F4EF;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500">KS</span>
+          <span style="font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:500">Launch Pilot</span>
+        </div>
+        <p style="margin:0;font-size:14px;line-height:1.7;color:#D9C7B8">Digital strategy, design and development for hospitality, lifestyle and experience-led businesses.</p>
+      </div>
+      <div style="display:flex;gap:56px;flex-wrap:wrap;font-size:14px">
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <a href="KS%20Services.dc.html" style="color:#F7F4EF" style-hover="color:#D9C7B8">Services</a>
+          <a href="KS%20Work.dc.html" style="color:#F7F4EF" style-hover="color:#D9C7B8">Work</a>
+          <a href="KS%20Studio.dc.html" style="color:#F7F4EF" style-hover="color:#D9C7B8">Studio</a>
+          <a href="KS%20Contact.dc.html" style="color:#F7F4EF" style-hover="color:#D9C7B8">Contact</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <a href="mailto:hello@kslaunchpilot.com" style="color:#F7F4EF" style-hover="color:#D9C7B8">hello@kslaunchpilot.com</a>
+          <a href="https://instagram.com/" style="color:#F7F4EF" style-hover="color:#D9C7B8">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;color:#D9C7B8;padding-top:24px;border-top:1px solid rgba(247,244,239,0.25)">
+      <span>© 2026 KS Launch Pilot · Kenny &amp; Shrey</span>
+      <span>Working remotely with clients worldwide</span>
+    </div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = { sent:false, svc:[], budget:null, time:null };
+  renderVals() {
+    const base = { font:'inherit', fontSize:13, padding:'9px 16px', cursor:'pointer', border:'1px solid #B7A89B', background:'transparent', color:'#2F2F2F' };
+    const on = { ...base, background:'#355C63', color:'#F7F4EF', borderColor:'#355C63' };
+    const s = this.state;
+    return {
+      sent: s.sent, notSent: !s.sent,
+      services: ['Digital strategy','Website design & UX','Website development','Digital marketing','Not sure yet'].map(label => ({ label, style: s.svc.includes(label) ? on : base,
+        pick: () => this.setState(st => ({ svc: st.svc.includes(label) ? st.svc.filter(x => x !== label) : [...st.svc, label] })) })),
+      budgets: ['Under 3k','3k to 8k','8k to 15k','15k+'].map(label => ({ label, style: s.budget === label ? on : base, pick: () => this.setState({ budget: label }) })),
+      timelines: ['As soon as possible','Next 1 to 3 months','Just exploring'].map(label => ({ label, style: s.time === label ? on : base, pick: () => this.setState({ time: label }) })),
+      submit: e => { e.preventDefault(); this.setState({ sent:true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

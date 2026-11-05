@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ImageSlot from '../../components/ImageSlot.astro';
+import { PAGES } from '../../data/site';
+---
+
+<BaseLayout title={PAGES.caseStudyFfjn.title} description={PAGES.caseStudyFfjn.description} ogType="article">
+<section style="max-width:1360px;margin:0 auto;padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px);padding-top:clamp(32px,5vw,64px);padding-bottom:clamp(40px,5vw,64px)">
+  <a class="hv-728b35" href="/work/" style="font-size:14px;color:#2F2F2F">← All work</a>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:32px clamp(40px,6vw,96px);align-items:end;margin-top:clamp(32px,4vw,56px)">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#355C63;font-weight:500">Case study</div>
+      <h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(46px,6vw,88px);line-height:0.98;letter-spacing:-0.015em;text-wrap:balance">Felon Friendly Jobs Now</h1>
+    </div>
+    <dl style="margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:20px;font-size:14px;line-height:1.5">
+      <div style="display:flex;flex-direction:column;gap:6px;padding-top:14px;border-top:1px solid #2F2F2F"><dt style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#355C63">Industry</dt><dd style="margin:0">Jobs &amp; services directory</dd></div>
+      <div style="display:flex;flex-direction:column;gap:6px;padding-top:14px;border-top:1px solid #2F2F2F"><dt style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#355C63">Project</dt><dd style="margin:0">Multi-category directory platform</dd></div>
+      <div style="display:flex;flex-direction:column;gap:6px;padding-top:14px;border-top:1px solid #2F2F2F"><dt style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#355C63">Scope</dt><dd style="margin:0">Strategy, UX, design, development</dd></div>
+    </dl>
+  </div>
+</section>
+<section style="max-width:1360px;margin:0 auto;padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px);padding-bottom:clamp(64px,8vw,112px);display:flex;flex-direction:column;gap:20px">
+  <div style="background:#D7D3CF;padding:10px;display:flex;flex-direction:column;gap:8px">
+    <div style="display:flex;gap:6px;padding:0 4px"><span style="width:7px;height:7px;border-radius:50%;background:#B7A89B"></span><span style="width:7px;height:7px;border-radius:50%;background:#B7A89B"></span><span style="width:7px;height:7px;border-radius:50%;background:#B7A89B"></span></div>
+    {/* Claude Design rendered this slot at 3:2 (its 16/8 wrapper grew to fit the slot), so 3:2 is used to match the approved look. */}
+    <div style="aspect-ratio:3/2"><ImageSlot id="lp-cs-main" /></div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px">
+    <div class="cs-wide" style="min-width:0;background:#D7D3CF;padding:10px"><div style="aspect-ratio:16/10"><ImageSlot id="lp-cs-2" /></div></div>
+    <div style="background:#D7D3CF;padding:10px"><div style="aspect-ratio:9/16"><ImageSlot id="lp-cs-3" /></div></div>
+  </div>
+</section>
+<section style="border-top:1px solid #D7D3CF">
+  <div style="max-width:1360px;margin:0 auto;padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px);padding-top:clamp(64px,8vw,112px);padding-bottom:clamp(64px,8vw,112px)">
+    <div data-reveal style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px clamp(40px,6vw,96px);padding:32px 0;border-bottom:1px solid #D7D3CF"><h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(28px,2.8vw,38px);line-height:1.1">The Challenge</h2><p class="cs-span" style="min-width:0;margin:0;font-size:16px;line-height:1.7;max-width:680px">Bring job listings and service providers across several categories into one searchable platform that is easy to browse and easy to manage.</p></div><div data-reveal style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px clamp(40px,6vw,96px);padding:32px 0;border-bottom:1px solid #D7D3CF"><h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(28px,2.8vw,38px);line-height:1.1">The Approach</h2><p class="cs-span" style="min-width:0;margin:0;font-size:16px;line-height:1.7;max-width:680px">We mapped each type of user and listing before designing anything, then defined the categories, fields and journeys the platform needed to support.</p></div><div data-reveal style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px clamp(40px,6vw,96px);padding:32px 0;border-bottom:1px solid #D7D3CF"><h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(28px,2.8vw,38px);line-height:1.1">Design</h2><p class="cs-span" style="min-width:0;margin:0;font-size:16px;line-height:1.7;max-width:680px">A consistent listing layout across categories, with search and filters that stay simple as the directory grows.</p></div><div data-reveal style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px clamp(40px,6vw,96px);padding:32px 0;border-bottom:1px solid #D7D3CF"><h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(28px,2.8vw,38px);line-height:1.1">Development</h2><p class="cs-span" style="min-width:0;margin:0;font-size:16px;line-height:1.7;max-width:680px">Dynamic listings, search and filtering, with CMS and backend functionality for adding and managing entries.</p></div><div data-reveal style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px clamp(40px,6vw,96px);padding:32px 0;border-bottom:1px solid #D7D3CF"><h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(28px,2.8vw,38px);line-height:1.1">Outcome</h2><p class="cs-span" style="min-width:0;margin:0;font-size:16px;line-height:1.7;max-width:680px">A launched directory platform, structured so new categories can be added without a redesign.</p></div>
+  </div>
+</section>
+<section style="max-width:1360px;margin:0 auto;padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px);padding-bottom:clamp(80px,10vw,128px)">
+  <a class="hv-728b35" href="/work/" style="display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding:32px 0;border-top:1px solid #2F2F2F;border-bottom:1px solid #2F2F2F;color:#2F2F2F">
+    <span style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase">Next project</span>
+    <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(32px,3.6vw,48px);line-height:1">Baan Pufa Resort →</span>
+  </a>
+</section>
+<section data-surface="dark" style="background:#2F2F2F;color:#F7F4EF">
+  <div data-reveal style="max-width:1360px;margin:0 auto;padding:clamp(88px,11vw,150px) clamp(20px,4vw,48px);display:flex;flex-direction:column;gap:28px;align-items:flex-start">
+    <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(48px,7vw,104px);line-height:0.98;letter-spacing:-0.01em">Ready to build?</h2>
+    <p style="margin:0;font-size:17px;line-height:1.6;max-width:520px;color:#D7D3CF">Tell us what you're working on, what you need and when you'd like to launch.</p>
+    <a class="hv-d0dd51" href="/contact/" style="margin-top:8px;background:#F7F4EF;color:#2F2F2F;padding:17px 30px;font-size:15px;font-weight:500;white-space:nowrap">Start Your Project</a>
+  </div>
+</section>
+
+</BaseLayout>

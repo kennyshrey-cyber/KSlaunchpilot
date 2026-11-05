@@ -1,0 +1,15 @@
+---
+/* Shown by the form service after a submission made without JavaScript. Not indexed. */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { PAGES } from '../../../data/site';
+---
+
+<BaseLayout title={PAGES.contactThanks.title} description={PAGES.contactThanks.description} noindex stickyCta={false}>
+  <section style="max-width:1360px;margin:0 auto;padding:clamp(40px,6vw,80px) clamp(20px,4vw,48px) clamp(80px,10vw,128px)">
+    <div style="display:flex;flex-direction:column;gap:14px;padding:clamp(28px,4vw,48px);background:#FFFFFF;border:1px solid #D7D3CF;max-width:760px">
+      <h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:40px;line-height:1.05">Thanks. We've got your project details.</h1>
+      <p style="margin:0;font-size:15px;line-height:1.65">We'll be in touch shortly to arrange a call.</p>
+      <a href="/" class="hv-87875d" style="align-self:flex-start;margin-top:8px;font-size:15px;border-bottom:1px solid #2F2F2F;padding-bottom:3px;color:#2F2F2F">Back to Home</a>
+    </div>
+  </section>
+</BaseLayout>

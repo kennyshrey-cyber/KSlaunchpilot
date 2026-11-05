@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#F7F4EF;color:#2F2F2F;font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:hover{color:#7A5C49}
+*{box-sizing:border-box}
+::selection{background:#D9C7B8}
+</style>
+</helmet>
+
+<header style="position:sticky;top:0;z-index:20;background:rgba(247,244,239,0.94);backdrop-filter:blur(8px);border-bottom:1px solid #D7D3CF">
+  <div style="max-width:1360px;margin:0 auto;padding:18px clamp(20px,4vw,48px);display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
+    <a href="Home.dc.html" style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:19px;letter-spacing:0.22em">BALANCE &amp; BAGGAGE</a>
+    <nav style="white-space:nowrap;display:flex;gap:clamp(16px,2.6vw,36px);font-size:13px;letter-spacing:0.04em;flex-wrap:wrap">
+      <a href="Home.dc.html" style="color:#2F2F2F" style-hover="color:#7A5C49">Home</a>
+      <a href="Shrey.dc.html" style="color:#2F2F2F" style-hover="color:#7A5C49">Shrey</a>
+      <a href="Kenny.dc.html" style="color:#2F2F2F" style-hover="color:#7A5C49">Kenny</a>
+      <a href="Road.dc.html" style="color:#2F2F2F;border-bottom:1px solid #2F2F2F;padding-bottom:2px">The Road</a>
+      <a href="Home.dc.html#contact" style="color:#2F2F2F" style-hover="color:#7A5C49">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section data-screen-label="Road hero" style="position:relative;height:min(78vh,820px);min-height:520px;background:#7A5C49">
+  <div style="position:absolute;inset:0"><image-slot id="road-hero" shape="rect" placeholder="Wide shot: the two of us with backpacks on a ferry deck between Bali and Lombok"></image-slot></div>
+  <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top, rgba(40,32,26,0.6) 0%, rgba(40,32,26,0.08) 50%, rgba(40,32,26,0) 75%)"></div>
+  <div style="position:absolute;left:0;right:0;bottom:0;pointer-events:none">
+    <div style="max-width:1360px;margin:0 auto;padding:0 clamp(20px,4vw,48px) clamp(40px,7vh,72px);display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;color:#F7F4EF">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase">The Road</div>
+        <h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(48px,8vw,120px);line-height:0.95;max-width:12ch">Everything we've carried so far.</h1>
+      </div>
+      <p style="margin:0;font-size:15px;line-height:1.65;max-width:320px;padding-bottom:10px">Where we've lived, what we loved, and what nobody tells you about working on the move.</p>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Journey" style="max-width:1360px;margin:0 auto;padding:clamp(80px,12vw,160px) clamp(20px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:48px clamp(40px,6vw,96px)">
+  <div data-reveal="" style="display:flex;flex-direction:column;gap:20px;align-self:start;position:sticky;top:100px">
+    <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#7A5C49">The journey</div>
+    <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(40px,5vw,72px);line-height:1">Nine chapters, so far</h2>
+    <p style="margin:0;font-size:15px;line-height:1.7;max-width:340px">Not a highlight reel. Just the order things happened in.</p>
+  </div>
+  <ol style="grid-column:span 2;min-width:0;list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
+    <li data-reveal="" style="display:grid;grid-template-columns:72px minmax(0,1fr);gap:8px 24px;padding:28px 0;border-top:1px solid #D7D3CF">
+      <span style="font-size:12px;letter-spacing:0.14em;color:#7A5C49;padding-top:10px">CH. 01</span>
+      <div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Cormorant Garamond',serif;font-size:34px;line-height:1.1">Going Home</span><span style="font-size:15px;line-height:1.7;max-width:560px">We met in India, on a trip that was supposed to be about family and ended up being about us too.</span></div>
+    </li>
+    <li data-reveal="" style="display:grid;grid-template-columns:72px minmax(0,1fr);gap:8px 24px;padding:28px 0;border-top:1px solid #D7D3CF">
+      <span style="font-size:12px;letter-spacing:0.14em;color:#7A5C49;padding-top:10px">CH. 02</span>
+      <div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Cormorant Garamond',serif;font-size:34px;line-height:1.1">4 Months Apart</span><span style="font-size:15px;line-height:1.7;max-width:560px">Different countries, different time zones. Calls at strange hours and a shared calendar we both checked too often.</span></div>
+    </li>
+    <li data-reveal="" style="display:grid;grid-template-columns:72px minmax(0,1fr);gap:8px 24px;padding:28px 0;border-top:1px solid #D7D3CF">
+      <span style="font-size:12px;letter-spacing:0.14em;color:#7A5C49;padding-top:10px">CH. 03</span>
+      <div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Cormorant Garamond',serif;font-size:34px;line-height:1.1">Meeting Halfway</span><span style="font-size:15px;line-height:1.7;max-width:560px">We picked a place roughly between us and booked the tickets before we could overthink it.</span></div>
+    </li>
+    <li data-reveal="" style="display:grid;grid-template-columns:72px minmax(0,1fr);gap:8px 24px;padding:28px 0;border-top:1px solid #D7D3CF">
+      <span style="font-size:12px;letter-spacing:0.14em;color:#7A5C49;padding-top:10px">CH. 04</span>
+      <div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Cormorant Garamond',serif;font-size:34px;line-height:1.1">Quitting Our Old Lives</span><span style="font-size:15px;line-height:1.7;max-width:560px">Jobs, leases, most of our stuff. It was scarier on paper than it was in real life.</span></div>
+    </li>
+    <li data-reveal="" style="display:grid;grid-template-columns:72px minmax(0,1fr);gap:8px 24px;padding:28px 0;border-top:1px solid #D7D3CF">
+      <span style="font-size:12px;letter-spacing:0.14em;color:#7A5C49;padding-top:10px">CH. 05</span>
+      <div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Cormorant Garamond',serif;font-size:34px;line-height:1.1">Thailand</span><span style="font-size:15px;line-height:1.7;max-width:560px">The reunion. First shared apartment, first shared desk, first real test of working side by side.</span></div>
+    </li>
+    <li data-reveal="" style="display:grid;grid-template-columns:72px minmax(0,1fr);gap:8px 24px;padding:28px 0;border-top:1px solid #D7D3CF">
+      <span style="font-size:12px;letter-spacing:0.14em;color:#7A5C49;padding-top:10px">CH. 06</span>
+      <div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Cormorant Garamond',serif;font-size:34px;line-height:1.1">Vietnam</span><span style="font-size:15px;line-height:1.7;max-width:560px">Coffee culture, scooter traffic and the month we finally got a routine that stuck.</span></div>
+    </li>
+    <li data-reveal="" style="display:grid;grid-template-columns:72px minmax(0,1fr);gap:8px 24px;padding:28px 0;border-top:1px solid #D7D3CF">
+      <span style="font-size:12px;letter-spacing:0.14em;color:#7A5C49;padding-top:10px">CH. 07</span>
+      <div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Cormorant Garamond',serif;font-size:34px;line-height:1.1">Bali</span><span style="font-size:15px;line-height:1.7;max-width:560px">Yoga in the mornings, client calls in the evenings, and far too many smoothie bowls.</span></div>
+    </li>
+    <li data-reveal="" style="display:grid;grid-template-columns:72px minmax(0,1fr);gap:8px 24px;padding:28px 0;border-top:1px solid #D7D3CF">
+      <span style="font-size:12px;letter-spacing:0.14em;color:#7A5C49;padding-top:10px">CH. 08</span>
+      <div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Cormorant Garamond',serif;font-size:34px;line-height:1.1">Kuala Lumpur</span><span style="font-size:15px;line-height:1.7;max-width:560px">The city chapter. Fast internet, great food, and a very good gym.</span></div>
+    </li>
+    <li data-reveal="" style="display:grid;grid-template-columns:72px minmax(0,1fr);gap:8px 24px;padding:28px 0;border-top:1px solid #D7D3CF;border-bottom:1px solid #D7D3CF">
+      <span style="font-size:12px;letter-spacing:0.14em;color:#7A5C49;padding-top:10px">CH. 09</span>
+      <div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:'Cormorant Garamond',serif;font-size:34px;line-height:1.1">Lombok</span><span style="font-size:15px;line-height:1.7;max-width:560px">Quieter than Bali, slower than anywhere. We came for two weeks and stayed a lot longer.</span></div>
+    </li>
+  </ol>
+</section>
+
+<section data-screen-label="Destinations" style="background:#D9C7B8">
+  <div style="max-width:1360px;margin:0 auto;padding:clamp(80px,10vw,140px) clamp(20px,4vw,48px) 0">
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:20px">
+      <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#7A5C49">Destinations</div>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(40px,5vw,72px);line-height:1">Places we've called home</h2>
+    </div>
+  </div>
+  <div style="max-width:1360px;margin:0 auto;padding:clamp(56px,7vw,96px) clamp(20px,4vw,48px) clamp(80px,10vw,140px);display:flex;flex-direction:column;gap:clamp(80px,10vw,140px)">
+
+    <article data-reveal="" style="display:flex;flex-direction:column;gap:40px">
+      <figure style="margin:0;display:flex;flex-direction:column;gap:10px">
+        <div style="aspect-ratio:21/9;min-height:280px"><image-slot id="road-thailand" shape="rect" placeholder="Chiang Mai old city street at dusk, scooters and lanterns"></image-slot></div>
+        <figcaption style="font-size:12px;color:#7A5C49">Chiang Mai old city at dusk</figcaption>
+      </figure>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:32px clamp(32px,5vw,80px)">
+        <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;letter-spacing:0.14em;color:#7A5C49">01</span><h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(40px,4.4vw,60px);line-height:1">Thailand</h3></div>
+        <p style="margin:0;font-family:'Cormorant Garamond',serif;font-size:24px;line-height:1.4;text-wrap:pretty">Where it all became real. We learned how to share a small desk, how to split the cooking, and that Shrey will eat the same khao soi every day if nobody stops him.</p>
+        <dl style="margin:0;display:flex;flex-direction:column;gap:16px;font-size:14px;line-height:1.6">
+          <div style="display:flex;flex-direction:column;gap:4px;padding-top:12px;border-top:1px solid #7A5C49"><dt style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#7A5C49">Cafe</dt><dd style="margin:0">A garden cafe in Nimman with strong coffee and slow afternoons</dd></div>
+          <div style="display:flex;flex-direction:column;gap:4px;padding-top:12px;border-top:1px solid #7A5C49"><dt style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#7A5C49">Stay</dt><dd style="margin:0">Our first shared apartment, fourth floor, no lift</dd></div>
+          <div style="display:flex;flex-direction:column;gap:4px;padding-top:12px;border-top:1px solid #7A5C49"><dt style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#7A5C49">Moment</dt><dd style="margin:0">The Sunday walking street, getting lost on purpose</dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <article data-reveal="" style="display:flex;flex-direction:column;gap:40px">
+      <figure style="margin:0;display:flex;flex-direction:column;gap:10px">
+        <div style="aspect-ratio:21/9;min-height:280px"><image-slot id="road-vietnam" shape="rect" placeholder="Hoi An lanterns over the river, soft evening light"></image-slot></div>
+        <figcaption style="font-size:12px;color:#7A5C49">Hoi An riverside in the evening</figcaption>
+      </figure>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:32px clamp(32px,5vw,80px)">
+        <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;letter-spacing:0.14em;color:#7A5C49">02</span><h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(40px,4.4vw,60px);line-height:1">Vietnam</h3></div>
+        <p style="margin:0;font-family:'Cormorant Garamond',serif;font-size:24px;line-height:1.4;text-wrap:pretty">The best coffee we've had anywhere, and the country where working remotely finally felt normal. Kenny found her morning routine here. Shrey found egg coffee.</p>
+        <dl style="margin:0;display:flex;flex-direction:column;gap:16px;font-size:14px;line-height:1.6">
+          <div style="display:flex;flex-direction:column;gap:4px;padding-top:12px;border-top:1px solid #7A5C49"><dt style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#7A5C49">Cafe</dt><dd style="margin:0">A tiny coffee shop in Da Nang with plastic stools and perfect ca phe sua da</dd></div>
+          <div style="display:flex;flex-direction:column;gap:4px;padding-top:12px;border-top:1px solid #7A5C49"><dt style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#7A5C49">Stay</dt><dd style="margin:0">A flat near My Khe beach with a balcony we worked from every morning</dd></div>
+          <div style="display:flex;flex-direction:column;gap:4px;padding-top:12px;border-top:1px solid #7A5C49"><dt style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#7A5C49">Moment</dt><dd style="margin:0">Riding the Hai Van Pass and stopping far too often for photos</dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <article data-reveal="" style="display:flex;flex-direction:column;gap:40px">
+      <figure style="margin:0;display:flex;flex-direction:column;gap:10px">
+        <div style="aspect-ratio:21/9;min-height:280px"><image-slot id="road-bali" shape="rect" placeholder="Jungle view from a villa in Ubud, yoga mat on the deck"></image-slot></div>
+        <figcaption style="font-size:12px;color:#7A5C49">A villa deck in Ubud, yoga mat out</figcaption>
+      </figure>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:32px clamp(32px,5vw,80px)">
+        <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;letter-spacing:0.14em;color:#7A5C49">03</span><h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(40px,4.4vw,60px);line-height:1">Bali</h3></div>
+        <p style="margin:0;font-family:'Cormorant Garamond',serif;font-size:24px;line-height:1.4;text-wrap:pretty">Busy, beautiful and full of people doing exactly what we do. Kenny taught more classes here than anywhere else. We also got very good at avoiding traffic.</p>
+        <dl style="margin:0;display:flex;flex-direction:column;gap:16px;font-size:14px;line-height:1.6">
+          <div style="display:flex;flex-direction:column;gap:4px;padding-top:12px;border-top:1px solid #7A5C49"><dt style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#7A5C49">Cafe</dt><dd style="margin:0">A rice-field cafe in Ubud that opens early enough for the first call of the day</dd></div>
+          <div style="display:flex;flex-direction:column;gap:4px;padding-top:12px;border-top:1px solid #7A5C49"><dt style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#7A5C49">Stay</dt><dd style="margin:0">A small villa with an outdoor shower and a resident gecko</dd></div>
+          <div style="display:flex;flex-direction:column;gap:4px;padding-top:12px;border-top:1px solid #7A5C49"><dt style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#7A5C49">Moment</dt><dd style="margin:0">Sunrise at Mount Batur, which Shrey complained about until the sun came up</dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <article data-reveal="" style="display:flex;flex-direction:column;gap:40px">
+      <figure style="margin:0;display:flex;flex-direction:column;gap:10px">
+        <div style="aspect-ratio:21/9;min-height:280px"><image-slot id="road-kl" shape="rect" placeholder="Kuala Lumpur skyline from a rooftop, evening rain clouds"></image-slot></div>
+        <figcaption style="font-size:12px;color:#7A5C49">Kuala Lumpur from a rooftop before the rain</figcaption>
+      </figure>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:32px clamp(32px,5vw,80px)">
+        <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;letter-spacing:0.14em;color:#7A5C49">04</span><h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(40px,4.4vw,60px);line-height:1">Kuala Lumpur</h3></div>
+        <p style="margin:0;font-family:'Cormorant Garamond',serif;font-size:24px;line-height:1.4;text-wrap:pretty">After the islands, a city felt good. Reliable internet, big deadlines handled calmly, and some of the best food of the whole trip, mostly eaten at hawker stalls.</p>
+        <dl style="margin:0;display:flex;flex-direction:column;gap:16px;font-size:14px;line-height:1.6">
+          <div style="display:flex;flex-direction:column;gap:4px;padding-top:12px;border-top:1px solid #7A5C49"><dt style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#7A5C49">Cafe</dt><dd style="margin:0">A quiet specialty coffee bar in Bangsar with proper desks</dd></div>
+          <div style="display:flex;flex-direction:column;gap:4px;padding-top:12px;border-top:1px solid #7A5C49"><dt style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#7A5C49">Stay</dt><dd style="margin:0">A high-rise apartment with a pool we used exactly twice</dd></div>
+          <div style="display:flex;flex-direction:column;gap:4px;padding-top:12px;border-top:1px solid #7A5C49"><dt style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#7A5C49">Moment</dt><dd style="margin:0">Late-night roti canai after launching a client site</dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <article data-reveal="" style="display:flex;flex-direction:column;gap:40px">
+      <figure style="margin:0;display:flex;flex-direction:column;gap:10px">
+        <div style="aspect-ratio:21/9;min-height:280px"><image-slot id="road-lombok" shape="rect" placeholder="Empty beach in south Lombok, two sets of footprints, low sun"></image-slot></div>
+        <figcaption style="font-size:12px;color:#7A5C49">A quiet beach in south Lombok</figcaption>
+      </figure>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:32px clamp(32px,5vw,80px)">
+        <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;letter-spacing:0.14em;color:#7A5C49">05</span><h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(40px,4.4vw,60px);line-height:1">Lombok</h3></div>
+        <p style="margin:0;font-family:'Cormorant Garamond',serif;font-size:24px;line-height:1.4;text-wrap:pretty">Slower than anywhere we've been. Empty beaches, patchy signal and the kind of quiet that makes you do your best work. We still talk about going back.</p>
+        <dl style="margin:0;display:flex;flex-direction:column;gap:16px;font-size:14px;line-height:1.6">
+          <div style="display:flex;flex-direction:column;gap:4px;padding-top:12px;border-top:1px solid #7A5C49"><dt style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#7A5C49">Cafe</dt><dd style="margin:0">A surf cafe in Kuta Lombok where the Wi-Fi works if you sit by the window</dd></div>
+          <div style="display:flex;flex-direction:column;gap:4px;padding-top:12px;border-top:1px solid #7A5C49"><dt style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#7A5C49">Stay</dt><dd style="margin:0">A bungalow on a hill with a view worth the scooter ride up</dd></div>
+          <div style="display:flex;flex-direction:column;gap:4px;padding-top:12px;border-top:1px solid #7A5C49"><dt style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#7A5C49">Moment</dt><dd style="margin:0">A power cut, a candle and the most honest conversation of the year</dd></div>
+        </dl>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section data-screen-label="Life on the road" style="max-width:1360px;margin:0 auto;padding:clamp(80px,12vw,160px) clamp(20px,4vw,48px)">
+  <div data-reveal="" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(48px,6vw,80px)">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#7A5C49">Life on the road</div>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(40px,5vw,72px);line-height:1;max-width:14ch">The real side of it</h2>
+    </div>
+    <p style="margin:0;font-size:15px;line-height:1.7;max-width:380px">It's a good life. It's also laundry, visa runs and hunting for a power socket. Here's what a normal week looks like.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:56px 32px">
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:18px">
+      <div style="aspect-ratio:4/5"><image-slot id="road-life-1" shape="rect" placeholder="Two laptops, a charger tangle and iced coffees on a cafe table"></image-slot></div>
+      <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:30px">Working from cafes</h3>
+      <p style="margin:0;font-size:14px;line-height:1.7">We test the Wi-Fi before we order. Calls happen at home. Deep work happens wherever the coffee is good and the chairs aren't terrible.</p>
+    </div>
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:18px">
+      <div style="aspect-ratio:4/5"><image-slot id="road-life-2" shape="rect" placeholder="Kenny on a yoga mat on a balcony, early morning"></image-slot></div>
+      <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:30px">Routines</h3>
+      <p style="margin:0;font-size:14px;line-height:1.7">Yoga first, work second, exploring after. Keeping the same shape to our days is what makes moving every few months manageable.</p>
+    </div>
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:18px">
+      <div style="aspect-ratio:4/5"><image-slot id="road-life-3" shape="rect" placeholder="Shrey with both backpacks at an airport gate, boarding pass in hand"></image-slot></div>
+      <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:30px">Travel days</h3>
+      <p style="margin:0;font-size:14px;line-height:1.7">Shrey plans them like a flight: route, backups, snacks. We block the calendar and never schedule client calls on a moving day.</p>
+    </div>
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:18px">
+      <div style="aspect-ratio:4/5"><image-slot id="road-life-4" shape="rect" placeholder="Rain on a guesthouse window, laptop open, slightly grumpy faces"></image-slot></div>
+      <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:30px">The less glamorous bits</h3>
+      <p style="margin:0;font-size:14px;line-height:1.7">Missing family. Bad mattresses. Rainy season. Being together all the time and learning when the other one needs an afternoon alone.</p>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Instagram" style="border-top:1px solid #D7D3CF">
+  <div style="max-width:1360px;margin:0 auto;padding:clamp(80px,10vw,140px) clamp(20px,4vw,48px)">
+    <div data-reveal="" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#7A5C49">On Instagram</div>
+        <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(36px,4.4vw,60px);line-height:1">@balanceandbaggage</h2>
+      </div>
+      <a href="https://instagram.com/balanceandbaggage" style="font-size:14px;letter-spacing:0.04em;display:flex;gap:10px;color:#2F2F2F" style-hover="color:#7A5C49">Follow along <span>→</span></a>
+    </div>
+    <div data-reveal="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:12px">
+      <div style="aspect-ratio:1/1"><image-slot id="road-ig-1" shape="rect" placeholder="Instagram post"></image-slot></div>
+      <div style="aspect-ratio:1/1"><image-slot id="road-ig-2" shape="rect" placeholder="Instagram post"></image-slot></div>
+      <div style="aspect-ratio:1/1"><image-slot id="road-ig-3" shape="rect" placeholder="Instagram post"></image-slot></div>
+      <div style="aspect-ratio:1/1"><image-slot id="road-ig-4" shape="rect" placeholder="Instagram post"></image-slot></div>
+      <div style="aspect-ratio:1/1"><image-slot id="road-ig-5" shape="rect" placeholder="Instagram post"></image-slot></div>
+      <div style="aspect-ratio:1/1"><image-slot id="road-ig-6" shape="rect" placeholder="Instagram post"></image-slot></div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Currently in" style="background:#355C63;color:#F7F4EF">
+  <div data-reveal="" style="max-width:1360px;margin:0 auto;padding:clamp(56px,7vw,96px) clamp(20px,4vw,48px);display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#D9C7B8"><span style="width:7px;height:7px;border-radius:50%;background:#D9C7B8"></span>Currently in</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(44px,6vw,88px);line-height:1">{{ currentlyIn }}</div>
+    </div>
+    <p style="margin:0;font-size:15px;line-height:1.7;max-width:340px">{{ currentlyNote }}</p>
+  </div>
+</section>
+
+<footer style="max-width:1360px;margin:0 auto;padding:40px clamp(20px,4vw,48px);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:#2F2F2F">
+  <span style="font-family:'Cormorant Garamond',serif;font-weight:500;letter-spacing:0.22em;font-size:15px">BALANCE &amp; BAGGAGE</span>
+  <div style="display:flex;gap:28px;flex-wrap:wrap">
+    <a href="https://instagram.com/balanceandbaggage" style="color:#2F2F2F" style-hover="color:#7A5C49">Instagram</a>
+    <a href="mailto:hello@balanceandbaggage.com" style="color:#2F2F2F" style-hover="color:#7A5C49">Email</a>
+    <a href="Home.dc.html#contact" style="color:#2F2F2F" style-hover="color:#7A5C49">Contact</a>
+    <span style="color:#7A5C49">© 2026 Kenny &amp; Shrey</span>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;currentlyIn&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Da Nang, Vietnam&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Location&quot;},&quot;currentlyNote&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Working mornings, beach after five. Next stop is probably Lombok. Shrey is already checking flights.&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Location&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    if (this.props.motion === false) return;
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.style.opacity = 1; e.target.style.transform = 'none'; io.unobserve(e.target); }
+    }), { threshold: 0.1 });
+    document.querySelectorAll('[data-reveal]').forEach(el => {
+      if (el.getBoundingClientRect().top < innerHeight) return;
+      el.style.opacity = 0; el.style.transform = 'translateY(18px)';
+      el.style.transition = 'opacity 1s ease, transform 1s ease';
+      io.observe(el);
+    });
+    this.io = io;
+  }
+  componentWillUnmount() { this.io && this.io.disconnect(); }
+  renderVals() {
+    return {
+      currentlyIn: this.props.currentlyIn ?? 'Da Nang, Vietnam',
+      currentlyNote: this.props.currentlyNote ?? 'Working mornings, beach after five. Next stop is probably Lombok. Shrey is already checking flights.'
+    };
+  }
+}
+</script>
+</body>
+</html>

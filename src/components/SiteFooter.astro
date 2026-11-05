@@ -1,0 +1,23 @@
+---
+import { SITE } from '../data/site';
+---
+
+<footer class="site-footer" style="background:#2F2F2F;color:#D7D3CF;border-top:1px solid rgba(247,244,239,0.15)">
+  <div
+    style="max-width:1360px;margin:0 auto;padding:40px clamp(20px,4vw,48px) 96px;display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;font-size:13px"
+  >
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <span style="color:#F7F4EF;font-weight:500">{SITE.name}</span>
+      <span>{SITE.tagline}</span>
+    </div>
+    <nav aria-label="Footer" style="display:flex;gap:24px;flex-wrap:wrap">
+      <a href="/services/" class="hv-footer" style="color:#D7D3CF">Services</a>
+      <a href="/work/" class="hv-footer" style="color:#D7D3CF">Work</a>
+      <a href="/about/" class="hv-footer" style="color:#D7D3CF">About</a>
+      <a href="/contact/" class="hv-footer" style="color:#D7D3CF">Contact</a>
+      <a href={`mailto:${SITE.email}`} class="hv-footer" style="color:#D7D3CF">{SITE.email}</a>
+      <a href="/privacy/" class="hv-footer" style="color:#D7D3CF">Privacy</a>
+    </nav>
+    <span>© {SITE.copyrightYear} {SITE.name}</span>
+  </div>
+</footer>

@@ -1,0 +1,47 @@
+---
+/**
+ * Replaces the Claude Design <image-slot>. Fills its (sized) parent exactly like the original.
+ * Renders an optimised responsive image when one is registered in src/data/images.ts,
+ * otherwise a neutral placeholder block that keeps the layout intact.
+ */
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import { IMAGES } from '../data/images';
+
+interface Props {
+  id: string;
+  loading?: 'lazy' | 'eager';
+}
+
+const { id, loading = 'lazy' } = Astro.props;
+const entry = IMAGES[id];
+if (!entry) throw new Error(`ImageSlot: unknown image id "${id}". Add it to src/data/images.ts.`);
+
+const files = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/*.{jpg,jpeg,png,webp,avif}', {
+  eager: true,
+});
+const match = entry.file ? files[`/src/assets/images/${entry.file}`] : undefined;
+if (entry.file && !match) throw new Error(`ImageSlot: "${entry.file}" for "${id}" was not found in src/assets/images/.`);
+if (match && !entry.alt.trim()) throw new Error(`ImageSlot: "${id}" has an image but no alt text.`);
+
+const widths = match
+  ? [...new Set([400, 800, 1200, 1600, 2400].filter((w) => w < match.default.width).concat(match.default.width))]
+  : [];
+---
+
+{
+  match ? (
+    <Image
+      src={match.default}
+      alt={entry.alt}
+      widths={widths}
+      sizes={entry.sizes}
+      loading={loading}
+      decoding="async"
+      class="image-slot image-slot--filled"
+      data-slot={id}
+    />
+  ) : (
+    <div class="image-slot image-slot--empty" aria-hidden="true" data-slot={id} />
+  )
+}

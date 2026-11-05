@@ -1,0 +1,90 @@
+---
+import { NAV } from '../data/site';
+
+const path = Astro.url.pathname;
+const activeStyle = 'color:#2F2F2F;border-bottom:1px solid #2F2F2F;padding-bottom:2px';
+---
+
+<header
+  class="site-header"
+  style="position:sticky;top:0;z-index:30;background:rgba(247,244,239,0.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid #D7D3CF"
+>
+  <div
+    style="max-width:1360px;margin:0 auto;padding:12px clamp(20px,4vw,48px);display:flex;align-items:center;justify-content:space-between;gap:20px"
+  >
+    <a href="/" aria-label="KS Launchpilot, home" style="display:flex;align-items:center;gap:11px;color:#2F2F2F;white-space:nowrap">
+      <span
+        aria-hidden="true"
+        style="width:34px;height:34px;background:#2F2F2F;color:#F7F4EF;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;letter-spacing:0.04em"
+        >KS</span
+      >
+      <span aria-hidden="true" style="font-size:15px;font-weight:500;letter-spacing:0.01em">Launchpilot</span>
+    </a>
+    <div class="header-actions" style="display:flex;align-items:center;gap:clamp(12px,2.4vw,34px)">
+      <nav class="site-nav" aria-label="Main" style="display:flex;gap:clamp(18px,2.4vw,34px);font-size:14px;white-space:nowrap">
+        {
+          NAV.map((item) =>
+            item.match(path) ? (
+              <a href={item.href} aria-current="page" style={activeStyle}>
+                {item.label}
+              </a>
+            ) : (
+              <a href={item.href} class="hv-728b35" style="color:#2F2F2F">
+                {item.label}
+              </a>
+            ),
+          )
+        }
+      </nav>
+      <a
+        href="/contact/"
+        class="hv-b9b180 header-cta"
+        style="background:#355C63;color:#F7F4EF;padding:11px 18px;font-size:14px;font-weight:500;white-space:nowrap"
+        >Start Your Project</a
+      >
+      <button
+        type="button"
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        style="align-items:center;justify-content:center;width:44px;height:40px;margin-right:-10px;padding:0;background:transparent;border:0;color:#2F2F2F;cursor:pointer"
+      >
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+        <span class="visually-hidden" data-menu-label>Open menu</span>
+      </button>
+    </div>
+  </div>
+
+  <div
+    id="mobile-menu"
+    class="mobile-menu"
+    hidden
+    style="position:absolute;top:100%;left:0;right:0;background:#F7F4EF;border-bottom:1px solid #D7D3CF;box-shadow:0 24px 40px -28px rgba(47,47,47,0.35);max-height:calc(100dvh - 59px);overflow-y:auto"
+  >
+    <nav aria-label="Main (mobile)" style="padding:8px clamp(20px,4vw,48px) 24px;display:flex;flex-direction:column">
+      <ul style="list-style:none;margin:0;padding:0">
+        {
+          NAV.map((item) => (
+            <li style="border-top:1px solid #D7D3CF">
+              <a
+                href={item.href}
+                aria-current={item.match(path) ? 'page' : undefined}
+                class="hv-menu"
+                style={`display:flex;justify-content:space-between;align-items:center;padding:16px 0;font-family:'Cormorant Garamond',serif;font-size:30px;line-height:1.05;color:${item.match(path) ? '#355C63' : '#2F2F2F'}`}
+              >
+                {item.label}
+                <span aria-hidden="true" style="font-family:Inter,system-ui,sans-serif;font-size:14px">→</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <a
+        href="/contact/"
+        class="hv-b9b180"
+        style="margin-top:12px;background:#355C63;color:#F7F4EF;padding:16px 20px;font-size:15px;font-weight:500;display:flex;justify-content:space-between;align-items:center"
+        >Start Your Project <span aria-hidden="true">→</span></a
+      >
+    </nav>
+  </div>
+</header>

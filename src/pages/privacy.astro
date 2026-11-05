@@ -1,0 +1,22 @@
+---
+/*
+ * PLACEHOLDER ROUTE: the approved privacy policy text has not been supplied yet.
+ * This page is excluded from the sitemap and marked noindex until the legal content is added.
+ * Replace the holding notice below with the approved policy, then remove `noindex`.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { PAGES, SITE } from '../data/site';
+---
+
+<BaseLayout title={PAGES.privacy.title} description={PAGES.privacy.description} noindex>
+  <section style="max-width:1360px;margin:0 auto;padding:clamp(40px,6vw,88px) clamp(20px,4vw,48px) clamp(80px,10vw,128px)">
+    <div style="display:flex;flex-direction:column;gap:20px;max-width:720px">
+      <div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#355C63;font-weight:500">Privacy</div>
+      <h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(46px,6vw,88px);line-height:0.98;letter-spacing:-0.015em">Privacy policy</h1>
+      <p style="margin:0;font-size:16px;line-height:1.65">
+        Our privacy policy is being finalised. If you have any questions about how we handle your information, email us at
+        <a href={`mailto:${SITE.email}`} class="hv-87875d" style="border-bottom:1px solid #2F2F2F;padding-bottom:2px">{SITE.email}</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

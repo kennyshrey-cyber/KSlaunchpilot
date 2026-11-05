@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#F7F4EF;color:#2F2F2F;font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:hover{color:#355C63}
+*{box-sizing:border-box}
+::selection{background:#D9C7B8}
+</style>
+</helmet>
+
+<header style="position:sticky;top:0;z-index:20;background:rgba(247,244,239,0.94);backdrop-filter:blur(8px);border-bottom:1px solid #D7D3CF">
+  <div style="max-width:1360px;margin:0 auto;padding:14px clamp(20px,4vw,48px);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+    <a href="KS%20Home.dc.html" style="display:flex;align-items:center;gap:12px;color:#2F2F2F">
+      <span style="width:36px;height:36px;border:1px solid #2F2F2F;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;letter-spacing:0.04em">KS</span>
+      <span style="font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:500;letter-spacing:0.02em">Launch Pilot</span>
+    </a>
+    <nav style="display:flex;align-items:center;gap:clamp(18px,2.6vw,36px);font-size:13px;letter-spacing:0.03em;white-space:nowrap;flex-wrap:wrap">
+      <a href="KS%20Services.dc.html" style="color:#2F2F2F" style-hover="color:#355C63">Services</a>
+      <a href="KS%20Work.dc.html" style="color:#2F2F2F" style-hover="color:#355C63">Work</a>
+      <a href="KS%20Studio.dc.html" style="color:#2F2F2F;border-bottom:1px solid #2F2F2F;padding-bottom:2px">Studio</a>
+      <a href="KS%20Contact.dc.html" style="background:#355C63;color:#F7F4EF;padding:11px 20px" style-hover="background:#2F2F2F;color:#F7F4EF">Start a project</a>
+    </nav>
+  </div>
+</header>
+
+<section data-screen-label="Studio intro" style="max-width:1360px;margin:0 auto;padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px);padding-top:clamp(56px,8vw,112px);padding-bottom:clamp(80px,10vw,140px)">
+  <div style="display:flex;flex-direction:column;gap:28px;max-width:1080px">
+    <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#7A5C49">The studio</div>
+    <h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(48px,6.6vw,100px);line-height:0.98;letter-spacing:-0.01em;text-wrap:balance">A two-person studio, on purpose.</h1>
+  </div>
+  <div data-reveal="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:32px clamp(40px,6vw,96px);margin-top:clamp(48px,6vw,80px)">
+    <p style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(26px,2.8vw,38px);line-height:1.25;text-wrap:pretty">We're Kenny and Shrey. KS Launch Pilot brings marketing strategy together with design, development and technical execution, so the strategic and technical sides of a digital project sit under one roof.</p>
+    <div style="display:flex;flex-direction:column;gap:18px;font-size:16px;line-height:1.75;max-width:560px">
+      <p style="margin:0">We stay small deliberately. Clients work directly with the two people doing the work, without account managers or hand-offs in between. That keeps decisions quick and the thinking consistent from first call to launch.</p>
+      <p style="margin:0">We take on a limited number of projects at a time, and we prefer long-term relationships with businesses that care about quality over one-off jobs.</p>
+    </div>
+  </div>
+</section>
+<section data-screen-label="Founders" style="border-top:1px solid #D7D3CF">
+  <div style="max-width:1360px;margin:0 auto;padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px);padding-top:clamp(80px,10vw,140px);padding-bottom:clamp(80px,10vw,140px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:72px clamp(32px,5vw,80px)">
+    <article data-reveal="" style="display:flex;flex-direction:column;gap:24px">
+      <div style="aspect-ratio:4/5"><image-slot id="ks-studio-kenny" shape="rect" placeholder="Portrait: Kenny, natural light, neutral backdrop"></image-slot></div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap">
+        <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(40px,4.4vw,60px);line-height:1">Kenny</h2>
+        <span style="font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#5A6851">Strategy &amp; Marketing</span>
+      </div>
+      <p style="margin:0;font-size:15px;line-height:1.75;max-width:540px">Kenny leads marketing strategy, brand positioning and content direction. She helps clients define who they're for and what makes them worth choosing, then builds the plan that carries that message into the market. She's also a qualified yoga teacher, which shows in how she works: calm, focused and attentive to people.</p>
+      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px;font-size:13px">
+        <li style="border:1px solid #B7A89B;padding:6px 12px">Positioning</li><li style="border:1px solid #B7A89B;padding:6px 12px">Marketing strategy</li><li style="border:1px solid #B7A89B;padding:6px 12px">Content direction</li><li style="border:1px solid #B7A89B;padding:6px 12px">Audience strategy</li><li style="border:1px solid #B7A89B;padding:6px 12px">Creative direction</li>
+      </ul>
+    </article>
+    <article data-reveal="" style="display:flex;flex-direction:column;gap:24px">
+      <div style="aspect-ratio:4/5"><image-slot id="ks-studio-shrey" shape="rect" placeholder="Portrait: Shrey, natural light, neutral backdrop"></image-slot></div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap">
+        <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(40px,4.4vw,60px);line-height:1">Shrey</h2>
+        <span style="font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#355C63">Design, UX &amp; Development</span>
+      </div>
+      <p style="margin:0;font-size:15px;line-height:1.75;max-width:540px">Shrey leads website design, UX and technical implementation across Wix Studio, WordPress and custom HTML, CSS and JavaScript, including CMS, backend and integrations. He's also a commercial pilot, and brings the same discipline to projects: clear process, careful checks and nothing left to chance at launch.</p>
+      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px;font-size:13px">
+        <li style="border:1px solid #B7A89B;padding:6px 12px">UX &amp; architecture</li><li style="border:1px solid #B7A89B;padding:6px 12px">Wix Studio &amp; Velo</li><li style="border:1px solid #B7A89B;padding:6px 12px">WordPress</li><li style="border:1px solid #B7A89B;padding:6px 12px">Custom code</li><li style="border:1px solid #B7A89B;padding:6px 12px">Backend &amp; APIs</li>
+      </ul>
+    </article>
+  </div>
+</section>
+<section data-screen-label="Principles" style="background:#2F2F2F;color:#F7F4EF">
+  <div style="max-width:1360px;margin:0 auto;padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px);padding-top:clamp(80px,10vw,140px);padding-bottom:clamp(80px,10vw,140px)">
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:18px;margin-bottom:clamp(48px,6vw,80px)">
+      <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#D9C7B8">How we think</div>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(40px,5vw,72px);line-height:1;text-wrap:balance">Design leads. Strategy supports. Technology executes.</h2>
+    </div>
+    <div data-reveal="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:48px 36px">
+      <div style="display:flex;flex-direction:column;gap:14px;padding-top:24px;border-top:1px solid rgba(247,244,239,0.3)"><span style="font-family:'Cormorant Garamond',serif;font-size:30px;line-height:1.05">Purpose before pixels</span><span style="font-size:14px;line-height:1.7;color:#D7D3CF">We start with why the website needs to exist and what it has to do for the business.</span></div>
+      <div style="display:flex;flex-direction:column;gap:14px;padding-top:24px;border-top:1px solid rgba(247,244,239,0.3)"><span style="font-family:'Cormorant Garamond',serif;font-size:30px;line-height:1.05">Quality over volume</span><span style="font-size:14px;line-height:1.7;color:#D7D3CF">A few projects at a time, each given full attention from both of us.</span></div>
+      <div style="display:flex;flex-direction:column;gap:14px;padding-top:24px;border-top:1px solid rgba(247,244,239,0.3)"><span style="font-family:'Cormorant Garamond',serif;font-size:30px;line-height:1.05">Built to be run</span><span style="font-size:14px;line-height:1.7;color:#D7D3CF">Systems your team can update confidently after launch, with a proper handover.</span></div>
+      <div style="display:flex;flex-direction:column;gap:14px;padding-top:24px;border-top:1px solid rgba(247,244,239,0.3)"><span style="font-family:'Cormorant Garamond',serif;font-size:30px;line-height:1.05">Clear communication</span><span style="font-size:14px;line-height:1.7;color:#D7D3CF">Regular updates, honest timelines and direct answers.</span></div>
+    </div>
+  </div>
+</section>
+<section data-screen-label="Remote" style="max-width:1360px;margin:0 auto;padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px);padding-top:clamp(80px,10vw,140px);padding-bottom:clamp(80px,10vw,140px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:48px clamp(40px,6vw,96px);align-items:center">
+  <figure data-reveal="" style="margin:0"><div style="aspect-ratio:3/2"><image-slot id="ks-studio-remote" shape="rect" placeholder="Workspace: two laptops on a timber table in a light-filled hotel lounge"></image-slot></div></figure>
+  <div data-reveal="" style="display:flex;flex-direction:column;gap:22px">
+    <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#7A5C49">Where we work</div>
+    <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(34px,4vw,54px);line-height:1.05;text-wrap:balance">Remote by design, based in Southeast Asia.</h2>
+    <p style="margin:0;font-size:16px;line-height:1.75;max-width:520px">We work remotely with clients in different time zones. Having spent years as guests in hotels, villas and retreats across the region, we understand hospitality from the customer's side as well as the business side, and that shapes the work.</p>
+  </div>
+</section>
+
+<section data-screen-label="CTA" style="background:#D9C7B8">
+  <div data-reveal="" style="max-width:1360px;margin:0 auto;padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px);padding-top:clamp(80px,10vw,140px);padding-bottom:clamp(80px,10vw,140px);display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap">
+    <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(44px,6vw,88px);line-height:1;max-width:13ch;text-wrap:balance">Let's talk about your project.</h2>
+    <div style="display:flex;flex-direction:column;gap:20px;max-width:360px">
+      <p style="margin:0;font-size:15px;line-height:1.7">Tell us a little about your business. We'll set up a call with both of us.</p>
+      <a href="KS%20Contact.dc.html" style="align-self:flex-start;background:#355C63;color:#F7F4EF;padding:16px 28px;font-size:14px;letter-spacing:0.03em;white-space:nowrap" style-hover="background:#2F2F2F;color:#F7F4EF">Start a project</a>
+    </div>
+  </div>
+</section>
+
+
+<footer style="background:#355C63;color:#F7F4EF">
+  <div style="max-width:1360px;margin:0 auto;padding:56px clamp(20px,4vw,48px) 40px;display:flex;flex-direction:column;gap:48px">
+    <div style="display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;gap:14px;max-width:380px">
+        <div style="display:flex;align-items:center;gap:12px">
+          <span style="width:36px;height:36px;border:1px solid #F7F4EF;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500">KS</span>
+          <span style="font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:500">Launch Pilot</span>
+        </div>
+        <p style="margin:0;font-size:14px;line-height:1.7;color:#D9C7B8">Digital strategy, design and development for hospitality, lifestyle and experience-led businesses.</p>
+      </div>
+      <div style="display:flex;gap:56px;flex-wrap:wrap;font-size:14px">
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <a href="KS%20Services.dc.html" style="color:#F7F4EF" style-hover="color:#D9C7B8">Services</a>
+          <a href="KS%20Work.dc.html" style="color:#F7F4EF" style-hover="color:#D9C7B8">Work</a>
+          <a href="KS%20Studio.dc.html" style="color:#F7F4EF" style-hover="color:#D9C7B8">Studio</a>
+          <a href="KS%20Contact.dc.html" style="color:#F7F4EF" style-hover="color:#D9C7B8">Contact</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <a href="mailto:hello@kslaunchpilot.com" style="color:#F7F4EF" style-hover="color:#D9C7B8">hello@kslaunchpilot.com</a>
+          <a href="https://instagram.com/" style="color:#F7F4EF" style-hover="color:#D9C7B8">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;color:#D9C7B8;padding-top:24px;border-top:1px solid rgba(247,244,239,0.25)">
+      <span>© 2026 KS Launch Pilot · Kenny &amp; Shrey</span>
+      <span>Working remotely with clients worldwide</span>
+    </div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;motion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    if (this.props.motion === false) return;
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.style.opacity = 1; e.target.style.transform = 'none'; io.unobserve(e.target); }
+    }), { threshold: 0.1 });
+    document.querySelectorAll('[data-reveal]').forEach(el => {
+      if (el.getBoundingClientRect().top < innerHeight) return;
+      el.style.opacity = 0; el.style.transform = 'translateY(18px)';
+      el.style.transition = 'opacity 0.9s ease, transform 0.9s ease';
+      io.observe(el);
+    });
+    this.io = io;
+  }
+  componentWillUnmount() { this.io && this.io.disconnect(); }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

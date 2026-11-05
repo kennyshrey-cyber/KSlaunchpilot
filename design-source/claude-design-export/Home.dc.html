@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#F7F4EF;color:#2F2F2F;font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:hover{color:#7A5C49}
+*{box-sizing:border-box}
+input,textarea{font:inherit}
+::selection{background:#D9C7B8}
+</style>
+</helmet>
+
+<header style="position:sticky;top:0;z-index:20;background:rgba(247,244,239,0.94);backdrop-filter:blur(8px);border-bottom:1px solid #D7D3CF">
+  <div style="max-width:1360px;margin:0 auto;padding:18px clamp(20px,4vw,48px);display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
+    <a href="Home.dc.html" style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:19px;letter-spacing:0.22em">BALANCE &amp; BAGGAGE</a>
+    <nav style="white-space:nowrap;display:flex;gap:clamp(16px,2.6vw,36px);font-size:13px;letter-spacing:0.04em;flex-wrap:wrap">
+      <a href="Home.dc.html" style="color:#2F2F2F;border-bottom:1px solid #2F2F2F;padding-bottom:2px">Home</a>
+      <a href="Shrey.dc.html" style="color:#2F2F2F" style-hover="color:#7A5C49">Shrey</a>
+      <a href="Kenny.dc.html" style="color:#2F2F2F" style-hover="color:#7A5C49">Kenny</a>
+      <a href="Road.dc.html" style="color:#2F2F2F" style-hover="color:#7A5C49">The Road</a>
+      <a href="#contact" style="color:#2F2F2F" style-hover="color:#7A5C49">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section data-screen-label="Hero" style="position:relative;height:min(90vh,920px);min-height:560px;background:#355C63">
+  <div style="position:absolute;inset:0">
+    <image-slot id="home-hero" shape="rect" placeholder="Hero: Kenny &amp; Shrey on a scooter along a coastal road in Lombok, late afternoon, shot from behind"></image-slot>
+  </div>
+  <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top, rgba(33,40,40,0.62) 0%, rgba(33,40,40,0.1) 45%, rgba(33,40,40,0) 70%)"></div>
+  <div style="position:absolute;left:0;right:0;bottom:0;pointer-events:none">
+    <div style="max-width:1360px;margin:0 auto;padding:0 clamp(20px,4vw,48px) clamp(40px,7vh,80px);display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;color:#F7F4EF">
+      <h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(48px,8vw,124px);line-height:0.95;letter-spacing:-0.01em;max-width:11ch;text-wrap:balance">We work from wherever we wake up.</h1>
+      <div style="display:flex;flex-direction:column;gap:14px;max-width:320px;padding-bottom:12px">
+        <div style="display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:0.14em;text-transform:uppercase">
+          <span style="width:7px;height:7px;border-radius:50%;background:#D9C7B8"></span>
+          <span>Currently in {{ currentlyIn }}</span>
+        </div>
+        <p style="margin:0;font-size:15px;line-height:1.6">Kenny &amp; Shrey. Marketing, websites, and a lot of travel days in between.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Intro" style="max-width:1360px;margin:0 auto;padding:clamp(80px,12vw,160px) clamp(20px,4vw,48px)">
+  <div data-reveal="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:48px 80px;align-items:start">
+    <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#7A5C49">Hello from somewhere in Southeast Asia</div>
+    <div style="grid-column:span 2;min-width:0;display:flex;flex-direction:column;gap:32px">
+      <p style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,3.4vw,46px);line-height:1.2;text-wrap:pretty">We're Kenny and Shrey. Two people building a life on the road, with two laptops, one yoga mat and a bag that is always slightly heavier than it should be.</p>
+      <p style="margin:0;font-size:16px;line-height:1.75;max-width:620px;color:#2F2F2F">While we travel, we help small businesses look and sound like themselves online. Kenny handles the marketing: strategy, brand, content. Shrey builds the websites. Most of it happens from cafes with decent Wi-Fi, and some of it from airport gates.</p>
+      <div style="font-family:'Mrs Saint Delafield',cursive;font-size:clamp(48px,5vw,68px);color:#7A5C49;line-height:1;transform:rotate(-4deg);transform-origin:left;margin-top:24px">Kenny &amp; Shrey</div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="About" style="background:#D9C7B8">
+  <div style="max-width:1360px;margin:0 auto;padding:clamp(80px,10vw,140px) clamp(20px,4vw,48px)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:56px 96px">
+      <div data-reveal="" style="display:flex;flex-direction:column;gap:20px">
+        <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#7A5C49">About us</div>
+        <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(40px,5vw,72px);line-height:1;text-wrap:balance">How we ended up here</h2>
+      </div>
+      <div data-reveal="" style="display:flex;flex-direction:column;gap:20px;font-size:16px;line-height:1.75;max-width:600px">
+        <p style="margin:0">We met in India. It was not a movie moment. It was a normal one that turned out to matter a lot.</p>
+        <p style="margin:0">Then came long distance: different countries, different time zones, a lot of voice notes and a lot of "can you hear me now?". We figured out pretty quickly that we wanted the same thing, which was a life that didn't need an office or a fixed address.</p>
+        <p style="margin:0">We reunited in Thailand, quit our old routines, and started working online full time. Since then we've lived in Vietnam, Bali, Lombok, Kuala Lumpur, the Philippines and back in India, usually a few months at a time.</p>
+        <p style="margin:0">Balance is the wellness side and the partnership. Baggage is the travel, the stories and everything we carry along the way. Both are equally true.</p>
+      </div>
+    </div>
+    <ol data-reveal="" style="list-style:none;margin:clamp(64px,8vw,112px) 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:40px 32px;border-top:1px solid #7A5C49">
+      <li style="padding-top:24px;display:flex;flex-direction:column;gap:10px">
+        <span style="font-size:12px;letter-spacing:0.14em;color:#7A5C49">01</span>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:30px;line-height:1.1">India</span>
+        <span style="font-size:14px;line-height:1.6">Where we met.</span>
+      </li>
+      <li style="padding-top:24px;display:flex;flex-direction:column;gap:10px">
+        <span style="font-size:12px;letter-spacing:0.14em;color:#7A5C49">02</span>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:30px;line-height:1.1">Long distance</span>
+        <span style="font-size:14px;line-height:1.6">Time zones, bad connections, a lot of patience.</span>
+      </li>
+      <li style="padding-top:24px;display:flex;flex-direction:column;gap:10px">
+        <span style="font-size:12px;letter-spacing:0.14em;color:#7A5C49">03</span>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:30px;line-height:1.1">Thailand</span>
+        <span style="font-size:14px;line-height:1.6">Where we stopped saying goodbye at airports.</span>
+      </li>
+      <li style="padding-top:24px;display:flex;flex-direction:column;gap:10px">
+        <span style="font-size:12px;letter-spacing:0.14em;color:#7A5C49">04</span>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:30px;line-height:1.1">Southeast Asia</span>
+        <span style="font-size:14px;line-height:1.6">Home is wherever the lease is short.</span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section data-screen-label="The two of us" style="max-width:1360px;margin:0 auto;padding:clamp(80px,12vw,160px) clamp(20px,4vw,48px)">
+  <div data-reveal="" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(48px,6vw,80px)">
+    <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(40px,5vw,72px);line-height:1">The two of us</h2>
+    <p style="margin:0;font-size:15px;line-height:1.6;max-width:360px;color:#2F2F2F">One of us does the thinking about people. The other does the thinking about systems. We argue about fonts together.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:64px clamp(32px,5vw,80px)">
+    <article data-reveal="" style="display:flex;flex-direction:column;gap:28px">
+      <figure style="margin:0;display:flex;flex-direction:column;gap:10px">
+        <div style="aspect-ratio:4/5;width:100%">
+          <image-slot id="home-kenny" shape="rect" placeholder="Kenny teaching yoga on a beach at sunrise"></image-slot>
+        </div>
+        <figcaption style="font-size:12px;color:#7A5C49">Kenny teaching yoga on a beach at sunrise</figcaption>
+      </figure>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#5A6851">The Balance</div>
+        <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(40px,4.4vw,60px);line-height:1">Kenny</h3>
+        <p style="margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;line-height:1.3">Digital marketer and yoga teacher.</p>
+        <p style="margin:0;font-size:15px;line-height:1.75;max-width:520px">Kenny looks after strategy, marketing, content and brand. She helps small businesses, especially in hospitality and wellness, figure out what they're actually about and then say it clearly.</p>
+        <p style="margin:0;font-size:14px;line-height:1.7;max-width:520px;padding-top:16px;border-top:1px solid #D7D3CF;color:#5A6851">Off the clock: teaches yoga wherever there's a quiet floor, and has convinced Shrey to attend at least twice.</p>
+      </div>
+      <a href="Kenny.dc.html" style="font-size:14px;letter-spacing:0.04em;display:flex;gap:10px;align-items:center;color:#2F2F2F" style-hover="color:#7A5C49">Kenny's page <span>→</span></a>
+    </article>
+    <article data-reveal="" style="display:flex;flex-direction:column;gap:28px;padding-top:clamp(0px,8vw,120px)">
+      <figure style="margin:0;display:flex;flex-direction:column;gap:10px">
+        <div style="aspect-ratio:4/5;width:100%">
+          <image-slot id="home-shrey" shape="rect" placeholder="Shrey in the cockpit before a flight, headset around his neck"></image-slot>
+        </div>
+        <figcaption style="font-size:12px;color:#7A5C49">Shrey in the cockpit before a flight, headset around his neck</figcaption>
+      </figure>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#355C63">The Baggage</div>
+        <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(40px,4.4vw,60px);line-height:1">Shrey</h3>
+        <p style="margin:0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;line-height:1.3">Website designer, developer, and commercial pilot.</p>
+        <p style="margin:0;font-size:15px;line-height:1.75;max-width:520px">Shrey designs and builds websites on Wix, Wix Studio, WordPress and custom code, backend included. He's the one who packs, books, plans the route and knows where the charger is.</p>
+        <p style="margin:0;font-size:14px;line-height:1.7;max-width:520px;padding-top:16px;border-top:1px solid #D7D3CF;color:#355C63">Off the clock: holds a commercial pilot licence, so yes, he has opinions about your airline's landing.</p>
+      </div>
+      <a href="Shrey.dc.html" style="font-size:14px;letter-spacing:0.04em;display:flex;gap:10px;align-items:center;color:#2F2F2F" style-hover="color:#7A5C49">Shrey's page <span>→</span></a>
+    </article>
+  </div>
+</section>
+
+<section data-screen-label="Work with us" style="border-top:1px solid #D7D3CF">
+  <div data-reveal="" style="max-width:1360px;margin:0 auto;padding:clamp(56px,7vw,96px) clamp(20px,4vw,48px);display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap">
+    <div style="display:flex;flex-direction:column;gap:14px;max-width:640px">
+      <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#7A5C49">What we do on the road</div>
+      <p style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,3.2vw,44px);line-height:1.15">Our work lives at KS Launchpilot, our website design, development and marketing studio.</p>
+    </div>
+    <a href="Launchpilot%20Home.dc.html" style="background:#2F2F2F;color:#F7F4EF;padding:15px 26px;font-size:14px;letter-spacing:0.03em;white-space:nowrap" style-hover="background:#355C63;color:#F7F4EF">Visit KS Launchpilot →</a>
+  </div>
+</section>
+
+<section data-screen-label="Currently in" style="background:#355C63;color:#F7F4EF">
+  <div data-reveal="" style="max-width:1360px;margin:0 auto;padding:clamp(56px,7vw,96px) clamp(20px,4vw,48px);display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#D9C7B8">
+        <span style="width:7px;height:7px;border-radius:50%;background:#D9C7B8"></span>Currently in
+      </div>
+      <div style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(44px,6vw,88px);line-height:1">{{ currentlyIn }}</div>
+    </div>
+    <p style="margin:0;font-size:15px;line-height:1.7;max-width:340px">{{ currentlyNote }}</p>
+  </div>
+</section>
+
+<section data-screen-label="Road teaser" style="max-width:1360px;margin:0 auto;padding:clamp(80px,12vw,160px) clamp(20px,4vw,48px)">
+  <div data-reveal="" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(40px,5vw,64px)">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#7A5C49">The Road</div>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(40px,5vw,72px);line-height:1;max-width:14ch">Where we've been lately</h2>
+    </div>
+    <a href="Road.dc.html" style="font-size:14px;letter-spacing:0.04em;display:flex;gap:10px;color:#2F2F2F" style-hover="color:#7A5C49">Read the road journal <span>→</span></a>
+  </div>
+  <div data-reveal="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px;align-items:end">
+    <figure style="margin:0;display:flex;flex-direction:column;gap:10px">
+      <div style="aspect-ratio:3/4"><image-slot id="home-road-1" shape="rect" placeholder="Rice terraces outside Ubud, morning mist"></image-slot></div>
+      <figcaption style="font-size:12px;color:#7A5C49">Bali. Rice terraces outside Ubud, morning mist</figcaption>
+    </figure>
+    <figure style="margin:0;display:flex;flex-direction:column;gap:10px">
+      <div style="aspect-ratio:4/5"><image-slot id="home-road-2" shape="rect" placeholder="Two coffees and two laptops on a Hoi An cafe table"></image-slot></div>
+      <figcaption style="font-size:12px;color:#7A5C49">Vietnam. Two coffees, two laptops, Hoi An</figcaption>
+    </figure>
+    <figure style="margin:0;display:flex;flex-direction:column;gap:10px">
+      <div style="aspect-ratio:1/1"><image-slot id="home-road-3" shape="rect" placeholder="Night market in Chiang Mai, blurry and warm"></image-slot></div>
+      <figcaption style="font-size:12px;color:#7A5C49">Thailand. Night market in Chiang Mai</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="contact" data-screen-label="Contact" style="background:#D9C7B8;scroll-margin-top:60px">
+  <div style="max-width:1360px;margin:0 auto;padding:clamp(80px,10vw,140px) clamp(20px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:64px 96px">
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:24px">
+      <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#7A5C49">Contact</div>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(40px,5vw,72px);line-height:1;text-wrap:balance">Say hello. We usually reply within a day, time zones permitting.</h2>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:15px;margin-top:16px">
+        <a href="mailto:hello@balanceandbaggage.com" style="color:#2F2F2F" style-hover="color:#7A5C49">hello@balanceandbaggage.com</a>
+        <a href="https://instagram.com/balanceandbaggage" style="color:#2F2F2F" style-hover="color:#7A5C49">Instagram: @balanceandbaggage</a>
+      </div>
+    </div>
+    <div data-reveal="">
+      <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+        <form onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:28px">
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <span style="font-size:12px;letter-spacing:0.08em;color:#7A5C49">Who's it for?</span>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <sc-for list="{{ whoOptions }}" as="o" hint-placeholder-count="3">
+                <button type="button" onClick="{{ o.pick }}" style="{{ o.style }}">{{ o.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+          <label style="display:flex;flex-direction:column;gap:8px;font-size:12px;letter-spacing:0.08em;color:#7A5C49">Your name
+            <input required="" name="name" style="background:transparent;border:none;border-bottom:1px solid #7A5C49;padding:10px 0;font-size:16px;color:#2F2F2F;outline:none"></input>
+          </label>
+          <label style="display:flex;flex-direction:column;gap:8px;font-size:12px;letter-spacing:0.08em;color:#7A5C49">Email
+            <input required="" type="email" name="email" style="background:transparent;border:none;border-bottom:1px solid #7A5C49;padding:10px 0;font-size:16px;color:#2F2F2F;outline:none"></input>
+          </label>
+          <label style="display:flex;flex-direction:column;gap:8px;font-size:12px;letter-spacing:0.08em;color:#7A5C49">What are you working on?
+            <textarea required="" name="msg" rows="4" style="background:transparent;border:none;border-bottom:1px solid #7A5C49;padding:10px 0;font-size:16px;color:#2F2F2F;outline:none;resize:vertical"></textarea>
+          </label>
+          <button type="submit" style="align-self:flex-start;background:#2F2F2F;color:#F7F4EF;border:none;padding:15px 28px;font-size:14px;letter-spacing:0.04em;cursor:pointer" style-hover="background:#355C63">Send message</button>
+        </form>
+      </sc-if>
+      <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;flex-direction:column;gap:16px;padding-top:24px">
+          <p style="margin:0;font-family:'Cormorant Garamond',serif;font-size:36px;line-height:1.15">Thanks. It's in our inbox.</p>
+          <p style="margin:0;font-size:15px;line-height:1.7">One of us will get back to you soon, probably from a cafe.</p>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</section>
+
+<footer style="max-width:1360px;margin:0 auto;padding:40px clamp(20px,4vw,48px);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:#2F2F2F">
+  <span style="font-family:'Cormorant Garamond',serif;font-weight:500;letter-spacing:0.22em;font-size:15px">BALANCE &amp; BAGGAGE</span>
+  <div style="display:flex;gap:28px;flex-wrap:wrap">
+    <a href="https://instagram.com/balanceandbaggage" style="color:#2F2F2F" style-hover="color:#7A5C49">Instagram</a>
+    <a href="mailto:hello@balanceandbaggage.com" style="color:#2F2F2F" style-hover="color:#7A5C49">Email</a>
+    <span style="color:#7A5C49">© 2026 Kenny &amp; Shrey</span>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;currentlyIn&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Da Nang, Vietnam&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Location&quot;},&quot;currentlyNote&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Working mornings, beach after five. Next stop is probably Lombok. Shrey is already checking flights.&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Location&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  state = { sent: false, who: 'Both of us' };
+  componentDidMount() {
+    if (this.props.motion === false) return;
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.style.opacity = 1; e.target.style.transform = 'none'; io.unobserve(e.target); }
+    }), { threshold: 0.1 });
+    document.querySelectorAll('[data-reveal]').forEach(el => {
+      if (el.getBoundingClientRect().top < innerHeight) return;
+      el.style.opacity = 0; el.style.transform = 'translateY(18px)';
+      el.style.transition = 'opacity 1s ease, transform 1s ease';
+      io.observe(el);
+    });
+    this.io = io;
+  }
+  componentWillUnmount() { this.io && this.io.disconnect(); }
+  renderVals() {
+    const base = { font: 'inherit', fontSize: 13, padding: '9px 16px', cursor: 'pointer', border: '1px solid #7A5C49', borderRadius: 999 };
+    return {
+      currentlyIn: this.props.currentlyIn ?? 'Da Nang, Vietnam',
+      currentlyNote: this.props.currentlyNote ?? 'Working mornings, beach after five. Next stop is probably Lombok. Shrey is already checking flights.',
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      whoOptions: ['Kenny', 'Shrey', 'Both of us'].map(label => ({
+        label,
+        pick: () => this.setState({ who: label }),
+        style: { ...base, background: this.state.who === label ? '#2F2F2F' : 'transparent', color: this.state.who === label ? '#F7F4EF' : '#2F2F2F' }
+      })),
+      submit: e => { e.preventDefault(); this.setState({ sent: true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

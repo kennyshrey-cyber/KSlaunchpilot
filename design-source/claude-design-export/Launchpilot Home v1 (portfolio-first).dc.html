@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>KS Launchpilot | Website design, development &amp; digital marketing</title>
+<meta name="description" content="KS Launchpilot is a two-person studio designing and developing professional websites on Wix Studio, WordPress and custom code, with digital marketing and strategy support.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#F7F4EF;color:#2F2F2F;font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:hover{color:#355C63}
+*{box-sizing:border-box}
+::selection{background:#D9C7B8}
+</style>
+</helmet>
+
+<header style="position:sticky;top:0;z-index:30;background:rgba(247,244,239,0.96);backdrop-filter:blur(8px);border-bottom:1px solid #D7D3CF">
+  <div style="max-width:1360px;margin:0 auto;padding:12px clamp(20px,4vw,48px);display:flex;align-items:center;justify-content:space-between;gap:20px">
+    <a href="Launchpilot%20Home.dc.html" style="display:flex;align-items:center;gap:11px;color:#2F2F2F;white-space:nowrap">
+      <span style="width:34px;height:34px;background:#2F2F2F;color:#F7F4EF;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;letter-spacing:0.04em">KS</span>
+      <span style="font-size:15px;font-weight:500;letter-spacing:0.01em">Launchpilot</span>
+    </a>
+    <div style="display:flex;align-items:center;gap:clamp(18px,2.4vw,34px)">
+      <sc-if value="{{ fullNav }}" hint-placeholder-val="{{ true }}">
+        <nav style="display:flex;gap:clamp(18px,2.4vw,34px);font-size:14px;white-space:nowrap">
+          <a href="Launchpilot%20Work.dc.html" style="color:#2F2F2F" style-hover="color:#355C63">Work</a>
+          <a href="Launchpilot%20Services.dc.html" style="color:#2F2F2F" style-hover="color:#355C63">Services</a>
+          <a href="Launchpilot%20Home.dc.html#process" style="color:#2F2F2F" style-hover="color:#355C63">Process</a>
+          <a href="Launchpilot%20About.dc.html" style="color:#2F2F2F" style-hover="color:#355C63">About</a>
+          <a href="Launchpilot%20Contact.dc.html" style="color:#2F2F2F" style-hover="color:#355C63">Contact</a>
+        </nav>
+      </sc-if>
+      <a href="Launchpilot%20Contact.dc.html" style="background:#355C63;color:#F7F4EF;padding:11px 18px;font-size:14px;font-weight:500;white-space:nowrap" style-hover="background:#2F2F2F;color:#F7F4EF">Start Your Project</a>
+    </div>
+  </div>
+</header>
+
+<section data-screen-label="01 Hero" style="max-width:1360px;margin:0 auto;padding:clamp(40px,6vw,88px) clamp(20px,4vw,48px) clamp(56px,7vw,96px)">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:48px clamp(40px,5vw,80px);align-items:center">
+    <div style="display:flex;flex-direction:column;gap:26px">
+      <div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#355C63;font-weight:500">Website design &amp; development studio</div>
+      <sc-if value="{{ heroA }}" hint-placeholder-val="{{ true }}">
+        <h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(48px,6.4vw,96px);line-height:0.98;letter-spacing:-0.015em;text-wrap:balance">Websites built to launch your business.</h1>
+        <p style="margin:0;font-size:clamp(16px,1.3vw,18px);line-height:1.6;max-width:500px">Strategy, design and development for businesses ready to build, rebuild or improve their digital presence.</p>
+      </sc-if>
+      <sc-if value="{{ heroB }}" hint-placeholder-val="{{ false }}">
+        <h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(48px,6.4vw,96px);line-height:0.98;letter-spacing:-0.015em;text-wrap:balance">Need a website? Let's build it.</h1>
+        <p style="margin:0;font-size:clamp(16px,1.3vw,18px);line-height:1.6;max-width:500px">We design and develop professional websites for businesses ready to launch, grow or reposition online.</p>
+      </sc-if>
+      <div style="display:flex;gap:14px 28px;align-items:center;flex-wrap:wrap;margin-top:4px">
+        <a href="Launchpilot%20Contact.dc.html" style="background:#355C63;color:#F7F4EF;padding:17px 30px;font-size:15px;font-weight:500;white-space:nowrap" style-hover="background:#2F2F2F;color:#F7F4EF">Start Your Project</a>
+        <a href="#work" style="font-size:15px;border-bottom:1px solid #2F2F2F;padding-bottom:3px;color:#2F2F2F;white-space:nowrap" style-hover="color:#355C63;border-color:#355C63">View Our Work</a>
+      </div>
+      <div style="display:flex;gap:8px 20px;flex-wrap:wrap;font-size:13px;color:#5A6851;padding-top:22px;border-top:1px solid #D7D3CF;max-width:500px">
+        <span>Wix Studio</span><span>WordPress</span><span>Custom HTML, CSS &amp; JS</span><span>CMS &amp; integrations</span>
+      </div>
+    </div>
+    <div style="position:relative;padding:0 0 9% 0">
+      <div style="width:88%;background:#D7D3CF;padding:8px;display:flex;flex-direction:column;gap:7px;box-shadow:0 30px 60px -30px rgba(47,47,47,0.35)">
+        <div style="display:flex;gap:5px;padding:1px 3px"><span style="width:7px;height:7px;border-radius:50%;background:#B7A89B"></span><span style="width:7px;height:7px;border-radius:50%;background:#B7A89B"></span><span style="width:7px;height:7px;border-radius:50%;background:#B7A89B"></span></div>
+        <div style="aspect-ratio:16/11"><image-slot id="lp-hero-desktop" shape="rect" placeholder="Desktop screenshot of your strongest project (e.g. Baan Pufa Resort homepage)"></image-slot></div>
+      </div>
+      <div style="position:absolute;right:0;bottom:0;width:27%;aspect-ratio:9/19;background:#2F2F2F;padding:5px;border-radius:18px;box-shadow:0 24px 48px -20px rgba(47,47,47,0.45)">
+        <div style="width:100%;height:100%;border-radius:13px;overflow:hidden"><image-slot id="lp-hero-mobile" shape="rect" placeholder="Same project, mobile view"></image-slot></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="02 Service paths" style="max-width:1360px;margin:0 auto;padding:0 clamp(20px,4vw,48px) clamp(80px,10vw,128px)">
+  <div style="display:flex;flex-wrap:wrap;gap:20px">
+    <article data-reveal="" style="flex:1.5 1 520px;min-width:0;background:#355C63;color:#F7F4EF;padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;gap:22px">
+      <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#D9C7B8"><span>01 · Website</span><span>Led by Shrey</span></div>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(36px,4vw,56px);line-height:1">Website Design &amp; Development</h2>
+      <p style="margin:0;font-size:16px;line-height:1.65;max-width:520px">From structure to launch, we design and build websites that are clear, responsive and built around your business.</p>
+      <ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:0 24px;font-size:14px">
+        <li style="padding:10px 0;border-top:1px solid rgba(247,244,239,0.25)">Website strategy &amp; UX</li>
+        <li style="padding:10px 0;border-top:1px solid rgba(247,244,239,0.25)">UI &amp; responsive design</li>
+        <li style="padding:10px 0;border-top:1px solid rgba(247,244,239,0.25)">Wix Studio, CMS &amp; Velo</li>
+        <li style="padding:10px 0;border-top:1px solid rgba(247,244,239,0.25)">WordPress &amp; Elementor</li>
+        <li style="padding:10px 0;border-top:1px solid rgba(247,244,239,0.25)">Custom HTML, CSS &amp; JS</li>
+        <li style="padding:10px 0;border-top:1px solid rgba(247,244,239,0.25)">Backend &amp; integrations</li>
+      </ul>
+      <a href="Launchpilot%20Contact.dc.html?need=New%20Website" style="align-self:flex-start;margin-top:auto;background:#F7F4EF;color:#2F2F2F;padding:15px 26px;font-size:14px;font-weight:500;white-space:nowrap" style-hover="background:#D9C7B8;color:#2F2F2F">Build My Website →</a>
+    </article>
+    <article data-reveal="" style="flex:1 1 360px;min-width:0;background:#D9C7B8;padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;gap:22px">
+      <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#7A5C49"><span>02 · Marketing</span><span>Led by Kenny</span></div>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(32px,3.2vw,44px);line-height:1.02">Digital Marketing &amp; Strategy</h2>
+      <p style="margin:0;font-size:15px;line-height:1.65">Once the website is working, we help build the strategy that brings the right people to it.</p>
+      <ul style="list-style:none;margin:0;padding:0;font-size:14px">
+        <li style="padding:10px 0;border-top:1px solid #B7A89B">Marketing strategy &amp; positioning</li>
+        <li style="padding:10px 0;border-top:1px solid #B7A89B">Content &amp; conversion strategy</li>
+        <li style="padding:10px 0;border-top:1px solid #B7A89B">SEO foundations</li>
+        <li style="padding:10px 0;border-top:1px solid #B7A89B">Ongoing marketing support</li>
+      </ul>
+      <p style="margin:0;font-size:13px;line-height:1.6;color:#7A5C49">Add it to your website project, or book it as a separate engagement.</p>
+      <a href="Launchpilot%20Contact.dc.html?need=Digital%20Marketing" style="align-self:flex-start;margin-top:auto;border:1px solid #2F2F2F;color:#2F2F2F;padding:14px 24px;font-size:14px;font-weight:500;white-space:nowrap" style-hover="background:#2F2F2F;color:#F7F4EF">Discuss Marketing →</a>
+    </article>
+  </div>
+</section>
+
+<section id="work" data-screen-label="03 Selected work" style="max-width:1360px;margin:0 auto;padding:0 clamp(20px,4vw,48px) clamp(80px,10vw,128px);scroll-margin-top:80px">
+  <div data-reveal="" style="display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:40px;padding-top:clamp(56px,7vw,88px);border-top:1px solid #D7D3CF">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#355C63;font-weight:500">Selected work</div>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(38px,4.6vw,64px);line-height:1">Recent websites</h2>
+    </div>
+    <a href="Launchpilot%20Work.dc.html" style="font-size:14px;display:flex;gap:8px;color:#2F2F2F;white-space:nowrap" style-hover="color:#355C63">View all work →</a>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:48px 24px">
+    <a data-reveal="" href="Launchpilot%20Case%20Study.dc.html" style="display:flex;flex-direction:column;gap:16px;color:#2F2F2F">
+      <div style="background:#D7D3CF;padding:7px"><div style="aspect-ratio:4/3"><image-slot id="lp-w-baanpufa" shape="rect" placeholder="Baan Pufa Resort, homepage screenshot"></image-slot></div></div>
+      <div style="display:flex;flex-direction:column;gap:6px"><h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:28px;line-height:1.1">Baan Pufa Resort</h3><span style="font-size:13px;color:#5A6851">Hospitality · Resort website</span></div>
+    </a>
+    <a data-reveal="" href="Launchpilot%20Case%20Study.dc.html" style="display:flex;flex-direction:column;gap:16px;color:#2F2F2F">
+      <div style="background:#D7D3CF;padding:7px"><div style="aspect-ratio:4/3"><image-slot id="lp-w-zenida" shape="rect" placeholder="Zenida Wellbeing, homepage screenshot"></image-slot></div></div>
+      <div style="display:flex;flex-direction:column;gap:6px"><h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:28px;line-height:1.1">Zenida Wellbeing</h3><span style="font-size:13px;color:#5A6851">Wellness · Business website</span></div>
+    </a>
+    <a data-reveal="" href="Launchpilot%20Case%20Study.dc.html" style="display:flex;flex-direction:column;gap:16px;color:#2F2F2F">
+      <div style="background:#D7D3CF;padding:7px"><div style="aspect-ratio:4/3"><image-slot id="lp-w-ffjn" shape="rect" placeholder="Felon Friendly Jobs Now, directory screenshot"></image-slot></div></div>
+      <div style="display:flex;flex-direction:column;gap:6px"><h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:28px;line-height:1.1">Felon Friendly Jobs Now</h3><span style="font-size:13px;color:#5A6851">Jobs &amp; services directory · Custom functionality</span></div>
+    </a>
+    <a data-reveal="" href="Launchpilot%20Case%20Study.dc.html" style="display:flex;flex-direction:column;gap:16px;color:#2F2F2F">
+      <div style="background:#D7D3CF;padding:7px"><div style="aspect-ratio:4/3"><image-slot id="lp-w-carmine" shape="rect" placeholder="Carmine Realty, listings screenshot"></image-slot></div></div>
+      <div style="display:flex;flex-direction:column;gap:6px"><h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:28px;line-height:1.1">Carmine Realty</h3><span style="font-size:13px;color:#5A6851">Real estate · Business website</span></div>
+    </a>
+    <a data-reveal="" href="Launchpilot%20Case%20Study.dc.html" style="display:flex;flex-direction:column;gap:16px;color:#2F2F2F">
+      <div style="background:#D7D3CF;padding:7px"><div style="aspect-ratio:4/3"><image-slot id="lp-w-harihara" shape="rect" placeholder="Hariharalaya, homepage screenshot"></image-slot></div></div>
+      <div style="display:flex;flex-direction:column;gap:6px"><h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:28px;line-height:1.1">Hariharalaya</h3><span style="font-size:13px;color:#5A6851">Retreat · Hospitality website</span></div>
+    </a>
+    <a data-reveal="" href="Launchpilot%20Case%20Study.dc.html" style="display:flex;flex-direction:column;gap:16px;color:#2F2F2F">
+      <div style="background:#D7D3CF;padding:7px"><div style="aspect-ratio:4/3"><image-slot id="lp-w-montecielo" shape="rect" placeholder="Monte Cielo, homepage screenshot"></image-slot></div></div>
+      <div style="display:flex;flex-direction:column;gap:6px"><h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:28px;line-height:1.1">Monte Cielo</h3><span style="font-size:13px;color:#5A6851">Website project</span></div>
+    </a>
+  </div>
+  <div data-reveal="" style="display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:56px;padding:26px 0;border-top:1px solid #D7D3CF;border-bottom:1px solid #D7D3CF">
+    <p style="margin:0;font-family:'Cormorant Garamond',serif;font-size:clamp(24px,2.4vw,32px);line-height:1.2">Need something similar for your business?</p>
+    <a href="Launchpilot%20Contact.dc.html" style="background:#355C63;color:#F7F4EF;padding:15px 26px;font-size:14px;font-weight:500;white-space:nowrap" style-hover="background:#2F2F2F;color:#F7F4EF">Start Your Project</a>
+  </div>
+</section>
+
+<section data-screen-label="04 Capabilities" style="background:#2F2F2F;color:#F7F4EF">
+  <div style="max-width:1360px;margin:0 auto;padding:clamp(80px,10vw,128px) clamp(20px,4vw,48px)">
+    <div data-reveal="" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(40px,5vw,64px)">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#D9C7B8;font-weight:500">Capabilities</div>
+        <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(38px,4.6vw,64px);line-height:1;max-width:16ch">Built on the platform that fits the project.</h2>
+      </div>
+      <p style="margin:0;font-size:15px;line-height:1.65;max-width:380px;color:#D7D3CF">Simple sites your team can edit, or custom functionality that goes beyond standard pages.</p>
+    </div>
+    <div data-reveal="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:40px 32px">
+      <div style="display:flex;flex-direction:column;gap:14px;padding-top:22px;border-top:1px solid rgba(247,244,239,0.3)">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:32px;line-height:1.05">No-code &amp; low-code</span>
+        <span style="font-size:14px;line-height:1.65;color:#D7D3CF">Quick to launch and easy for your team to update.</span>
+        <span style="font-size:13px;line-height:1.8;color:#D9C7B8">Wix Studio · Wix Editor · Wix CMS · Wix Velo</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;padding-top:22px;border-top:1px solid rgba(247,244,239,0.3)">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:32px;line-height:1.05">WordPress &amp; CMS</span>
+        <span style="font-size:14px;line-height:1.65;color:#D7D3CF">For content-heavy sites that need to grow.</span>
+        <span style="font-size:13px;line-height:1.8;color:#D9C7B8">WordPress · Elementor · Custom PHP · ACF · Custom post types &amp; fields</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;padding-top:22px;border-top:1px solid rgba(247,244,239,0.3)">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:32px;line-height:1.05">Custom development</span>
+        <span style="font-size:14px;line-height:1.65;color:#D7D3CF">When the project needs more than a template allows.</span>
+        <span style="font-size:13px;line-height:1.8;color:#D9C7B8">HTML · CSS · JavaScript · Backend functionality · Integrations</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="05 Why us" style="max-width:1360px;margin:0 auto;padding:clamp(80px,10vw,128px) clamp(20px,4vw,48px)">
+  <div data-reveal="" style="display:flex;flex-direction:column;gap:14px;margin-bottom:clamp(40px,5vw,64px)">
+    <div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#355C63;font-weight:500">Why KS Launchpilot</div>
+    <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(38px,4.6vw,64px);line-height:1">Two specialists. No unnecessary layers.</h2>
+  </div>
+  <div data-reveal="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:36px 28px">
+    <div style="display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:1px solid #2F2F2F"><span style="font-size:15px;font-weight:500">Direct communication</span><span style="font-size:14px;line-height:1.65">You work directly with the people building the project.</span></div>
+    <div style="display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:1px solid #2F2F2F"><span style="font-size:15px;font-weight:500">Strategy, design &amp; development</span><span style="font-size:14px;line-height:1.65">Nothing gets passed between separate teams.</span></div>
+    <div style="display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:1px solid #2F2F2F"><span style="font-size:15px;font-weight:500">Technical and creative</span><span style="font-size:14px;line-height:1.65">We know how the site should look and how it needs to work.</span></div>
+    <div style="display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:1px solid #2F2F2F"><span style="font-size:15px;font-weight:500">Built around your business</span><span style="font-size:14px;line-height:1.65">No generic template your business has to fit into.</span></div>
+    <div style="display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:1px solid #2F2F2F"><span style="font-size:15px;font-weight:500">Small studio attention</span><span style="font-size:14px;line-height:1.65">Your project gets handled directly, not lost in an agency structure.</span></div>
+  </div>
+</section>
+
+<section id="process" data-screen-label="06 Process" style="background:#355C63;color:#F7F4EF;scroll-margin-top:60px">
+  <div style="max-width:1360px;margin:0 auto;padding:clamp(80px,10vw,128px) clamp(20px,4vw,48px)">
+    <div data-reveal="" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(40px,5vw,64px)">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#D9C7B8;font-weight:500">Process</div>
+        <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(38px,4.6vw,64px);line-height:1">From first call to launch</h2>
+      </div>
+      <p style="margin:0;font-size:15px;line-height:1.65;max-width:360px">Clear scope. Clear communication. Efficient execution.</p>
+    </div>
+    <ol data-reveal="" style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:36px 24px">
+      <li style="display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:1px solid rgba(247,244,239,0.35)"><span style="font-size:12px;color:#D9C7B8">01</span><span style="font-family:'Cormorant Garamond',serif;font-size:28px">Discover</span><span style="font-size:14px;line-height:1.6">Your business, goals, audience and what the site needs to achieve.</span></li>
+      <li style="display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:1px solid rgba(247,244,239,0.35)"><span style="font-size:12px;color:#D9C7B8">02</span><span style="font-family:'Cormorant Garamond',serif;font-size:28px">Structure</span><span style="font-size:14px;line-height:1.6">Sitemap, user journey, content structure and requirements.</span></li>
+      <li style="display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:1px solid rgba(247,244,239,0.35)"><span style="font-size:12px;color:#D9C7B8">03</span><span style="font-family:'Cormorant Garamond',serif;font-size:28px">Design</span><span style="font-size:14px;line-height:1.6">Visual direction and a responsive user experience.</span></li>
+      <li style="display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:1px solid rgba(247,244,239,0.35)"><span style="font-size:12px;color:#D9C7B8">04</span><span style="font-family:'Cormorant Garamond',serif;font-size:28px">Build</span><span style="font-size:14px;line-height:1.6">The website, CMS, integrations and required functionality.</span></li>
+      <li style="display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:1px solid rgba(247,244,239,0.35)"><span style="font-size:12px;color:#D9C7B8">05</span><span style="font-family:'Cormorant Garamond',serif;font-size:28px">Refine</span><span style="font-size:14px;line-height:1.6">Testing, optimisation and launch preparation.</span></li>
+      <li style="display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:1px solid rgba(247,244,239,0.35)"><span style="font-size:12px;color:#D9C7B8">06</span><span style="font-family:'Cormorant Garamond',serif;font-size:28px">Launch</span><span style="font-size:14px;line-height:1.6">Your website goes live.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section data-screen-label="07 The duo" style="max-width:1360px;margin:0 auto;padding:clamp(80px,10vw,128px) clamp(20px,4vw,48px)">
+  <div data-reveal="" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(40px,5vw,56px)">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#355C63;font-weight:500">Who does the work</div>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(38px,4.6vw,64px);line-height:1">One direct team</h2>
+    </div>
+    <a href="Launchpilot%20About.dc.html" style="font-size:14px;color:#2F2F2F;white-space:nowrap" style-hover="color:#355C63">About the studio →</a>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:24px">
+    <article data-reveal="" style="display:grid;grid-template-columns:120px minmax(0,1fr);gap:24px;padding:28px;border:1px solid #D7D3CF;align-items:start">
+      <div style="aspect-ratio:1/1"><image-slot id="lp-shrey" shape="rect" placeholder="Shrey headshot"></image-slot></div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:32px;line-height:1">Shrey</h3>
+        <span style="font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#355C63;font-weight:500">Website Design, Development &amp; UX</span>
+        <p style="margin:0;font-size:14px;line-height:1.65">Leads website strategy, UX, design and development, from Wix and WordPress to custom code, CMS and integrations.</p>
+      </div>
+    </article>
+    <article data-reveal="" style="display:grid;grid-template-columns:120px minmax(0,1fr);gap:24px;padding:28px;border:1px solid #D7D3CF;align-items:start">
+      <div style="aspect-ratio:1/1"><image-slot id="lp-kenny" shape="rect" placeholder="Kenny headshot"></image-slot></div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:32px;line-height:1">Kenny</h3>
+        <span style="font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#7A5C49;font-weight:500">Digital Marketing &amp; Strategy</span>
+        <p style="margin:0;font-size:14px;line-height:1.65">Leads marketing strategy, positioning, content direction and conversion. Need marketing after launch? Kenny takes it from there.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section data-screen-label="08 Final CTA" style="background:#2F2F2F;color:#F7F4EF">
+  <div data-reveal="" style="max-width:1360px;margin:0 auto;padding:clamp(88px,11vw,150px) clamp(20px,4vw,48px);display:flex;flex-direction:column;gap:28px;align-items:flex-start">
+    <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(48px,7vw,104px);line-height:0.98;letter-spacing:-0.01em">Have a project in mind?</h2>
+    <p style="margin:0;font-size:17px;line-height:1.6;max-width:520px;color:#D7D3CF">Tell us what you're building, what you need, and when you'd like to launch. We'll take it from there.</p>
+    <div style="display:flex;gap:14px 28px;align-items:center;flex-wrap:wrap;margin-top:8px">
+      <a href="Launchpilot%20Contact.dc.html" style="background:#F7F4EF;color:#2F2F2F;padding:17px 30px;font-size:15px;font-weight:500;white-space:nowrap" style-hover="background:#D9C7B8;color:#2F2F2F">Start Your Project</a>
+      <a href="Launchpilot%20Work.dc.html" style="font-size:15px;border-bottom:1px solid #F7F4EF;padding-bottom:3px;color:#F7F4EF;white-space:nowrap" style-hover="color:#D9C7B8">View Our Work</a>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#2F2F2F;color:#D7D3CF;border-top:1px solid rgba(247,244,239,0.15)">
+  <div style="max-width:1360px;margin:0 auto;padding:40px clamp(20px,4vw,48px) 96px;display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;font-size:13px">
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <span style="color:#F7F4EF;font-weight:500">KS Launchpilot</span>
+      <span>Website design, development &amp; digital marketing</span>
+    </div>
+    <div style="display:flex;gap:24px;flex-wrap:wrap">
+      <a href="Launchpilot%20Work.dc.html" style="color:#D7D3CF" style-hover="color:#F7F4EF">Work</a>
+      <a href="Launchpilot%20Services.dc.html" style="color:#D7D3CF" style-hover="color:#F7F4EF">Services</a>
+      <a href="Launchpilot%20About.dc.html" style="color:#D7D3CF" style-hover="color:#F7F4EF">About</a>
+      <a href="Launchpilot%20Contact.dc.html" style="color:#D7D3CF" style-hover="color:#F7F4EF">Contact</a>
+      <a href="mailto:hello@kslaunchpilot.com" style="color:#D7D3CF" style-hover="color:#F7F4EF">hello@kslaunchpilot.com</a>
+    </div>
+    <span>© 2026 KS Launchpilot</span>
+  </div>
+</footer>
+
+<sc-if value="{{ sticky }}" hint-placeholder-val="{{ false }}">
+  <a href="Launchpilot%20Contact.dc.html" style="position:fixed;left:12px;right:12px;bottom:12px;z-index:40;background:#355C63;color:#F7F4EF;padding:16px 20px;font-size:15px;font-weight:500;display:flex;justify-content:space-between;align-items:center;box-shadow:0 12px 30px -10px rgba(47,47,47,0.5)">Start Your Project <span>→</span></a>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;heroHeadline&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Websites built to launch&quot;,&quot;Need a website?&quot;],&quot;default&quot;:&quot;Websites built to launch&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Hero&quot;},&quot;stickyCta&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Mobile&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  state = { m: false, s: false };
+  componentDidMount() {
+    this.onR = () => { const m = innerWidth < 860; if (m !== this.state.m) this.setState({ m }); };
+    this.onS = () => { const s = scrollY > 520; if (s !== this.state.s) this.setState({ s }); };
+    this.onR(); this.onS();
+    addEventListener('resize', this.onR); addEventListener('scroll', this.onS, { passive: true });
+    if (this.props.motion === false) return;
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.style.opacity = 1; e.target.style.transform = 'none'; io.unobserve(e.target); }
+    }), { threshold: 0.08 });
+    document.querySelectorAll('[data-reveal]').forEach(el => {
+      if (el.getBoundingClientRect().top < innerHeight) return;
+      el.style.opacity = 0; el.style.transform = 'translateY(14px)';
+      el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+      io.observe(el);
+    });
+    this.io = io;
+  }
+  componentWillUnmount() { removeEventListener('resize', this.onR); removeEventListener('scroll', this.onS); this.io && this.io.disconnect(); }
+  renderVals() {
+    const b = (this.props.heroHeadline ?? 'Websites built to launch') !== 'Websites built to launch';
+    return { fullNav: !this.state.m, sticky: this.state.m && this.state.s && (this.props.stickyCta ?? true), heroA: !b, heroB: b };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#F7F4EF;color:#2F2F2F;font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:hover{color:#355C63}
+*{box-sizing:border-box}
+::selection{background:#D9C7B8}
+</style>
+</helmet>
+
+<header style="position:sticky;top:0;z-index:20;background:rgba(247,244,239,0.94);backdrop-filter:blur(8px);border-bottom:1px solid #D7D3CF">
+  <div style="max-width:1360px;margin:0 auto;padding:14px clamp(20px,4vw,48px);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+    <a href="KS%20Home.dc.html" style="display:flex;align-items:center;gap:12px;color:#2F2F2F">
+      <span style="width:36px;height:36px;border:1px solid #2F2F2F;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;letter-spacing:0.04em">KS</span>
+      <span style="font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:500;letter-spacing:0.02em">Launch Pilot</span>
+    </a>
+    <nav style="display:flex;align-items:center;gap:clamp(18px,2.6vw,36px);font-size:13px;letter-spacing:0.03em;white-space:nowrap;flex-wrap:wrap">
+      <a href="KS%20Services.dc.html" style="color:#2F2F2F" style-hover="color:#355C63">Services</a>
+      <a href="KS%20Work.dc.html" style="color:#2F2F2F;border-bottom:1px solid #2F2F2F;padding-bottom:2px">Work</a>
+      <a href="KS%20Studio.dc.html" style="color:#2F2F2F" style-hover="color:#355C63">Studio</a>
+      <a href="KS%20Contact.dc.html" style="background:#355C63;color:#F7F4EF;padding:11px 20px" style-hover="background:#2F2F2F;color:#F7F4EF">Start a project</a>
+    </nav>
+  </div>
+</header>
+
+<section data-screen-label="Work intro" style="max-width:1360px;margin:0 auto;padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px);padding-top:clamp(56px,8vw,112px);padding-bottom:clamp(40px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:40px clamp(40px,6vw,96px);align-items:end">
+  <div style="display:flex;flex-direction:column;gap:28px">
+    <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#7A5C49">Selected work</div>
+    <h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(48px,6.6vw,100px);line-height:0.98;letter-spacing:-0.01em;text-wrap:balance">Case studies</h1>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:24px">
+    <p style="margin:0;font-size:17px;line-height:1.7;max-width:520px">A selection of recent projects across hospitality, wellness and digital platforms, with the thinking behind each one.</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <sc-for list="{{ filters }}" as="f" hint-placeholder-count="4">
+        <button type="button" onClick="{{ f.pick }}" style="{{ f.style }}">{{ f.label }}</button>
+      </sc-for>
+    </div>
+  </div>
+</section>
+<section data-screen-label="Case studies" style="max-width:1360px;margin:0 auto;padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px);padding-bottom:clamp(80px,10vw,140px)">
+  <sc-for list="{{ cases }}" as="c" hint-placeholder-count="2">
+    <article style="display:flex;flex-direction:column;gap:clamp(32px,4vw,48px);padding:clamp(56px,7vw,96px) 0;border-top:1px solid #D7D3CF">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px clamp(32px,5vw,72px);align-items:end">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <span style="font-size:12px;letter-spacing:0.14em;color:#7A5C49">{{ c.num }}</span>
+          <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(38px,4.4vw,60px);line-height:1">{{ c.name }}</h2>
+        </div>
+        <dl style="margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;font-size:13px;line-height:1.5">
+          <div style="display:flex;flex-direction:column;gap:4px"><dt style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#7A5C49">Sector</dt><dd style="margin:0">{{ c.sector }}</dd></div>
+          <div style="display:flex;flex-direction:column;gap:4px"><dt style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#7A5C49">Platform</dt><dd style="margin:0">{{ c.platform }}</dd></div>
+          <div style="display:flex;flex-direction:column;gap:4px"><dt style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#7A5C49">Scope</dt><dd style="margin:0">{{ c.scope }}</dd></div>
+        </dl>
+      </div>
+      <div style="background:#D7D3CF;padding:10px;display:flex;flex-direction:column;gap:8px">
+        <div style="display:flex;gap:6px;padding:0 4px"><span style="width:7px;height:7px;border-radius:50%;background:#B7A89B"></span><span style="width:7px;height:7px;border-radius:50%;background:#B7A89B"></span><span style="width:7px;height:7px;border-radius:50%;background:#B7A89B"></span></div>
+        <div style="aspect-ratio:16/8"><image-slot id="{{ c.img }}" shape="rect" placeholder="{{ c.shot }}"></image-slot></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:32px clamp(32px,5vw,72px)">
+        <p style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(24px,2.4vw,32px);line-height:1.3;text-wrap:pretty">{{ c.summary }}</p>
+        <dl style="grid-column:span 2;min-width:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:0 32px">
+          <sc-for list="{{ c.rows }}" as="r" hint-placeholder-count="5">
+            <div style="display:flex;flex-direction:column;gap:6px;padding:18px 0;border-top:1px solid #D7D3CF">
+              <dt style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#355C63">{{ r.k }}</dt>
+              <dd style="margin:0;font-size:14px;line-height:1.65">{{ r.v }}</dd>
+            </div>
+          </sc-for>
+        </dl>
+      </div>
+    </article>
+  </sc-for>
+</section>
+
+<section data-screen-label="CTA" style="background:#D9C7B8">
+  <div data-reveal="" style="max-width:1360px;margin:0 auto;padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px);padding-top:clamp(80px,10vw,140px);padding-bottom:clamp(80px,10vw,140px);display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap">
+    <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(44px,6vw,88px);line-height:1;max-width:13ch;text-wrap:balance">Have a project like one of these?</h2>
+    <div style="display:flex;flex-direction:column;gap:20px;max-width:360px">
+      <p style="margin:0;font-size:15px;line-height:1.7">Tell us what you're working on and what you'd like to change.</p>
+      <a href="KS%20Contact.dc.html" style="align-self:flex-start;background:#355C63;color:#F7F4EF;padding:16px 28px;font-size:14px;letter-spacing:0.03em;white-space:nowrap" style-hover="background:#2F2F2F;color:#F7F4EF">Start a project</a>
+    </div>
+  </div>
+</section>
+
+
+<footer style="background:#355C63;color:#F7F4EF">
+  <div style="max-width:1360px;margin:0 auto;padding:56px clamp(20px,4vw,48px) 40px;display:flex;flex-direction:column;gap:48px">
+    <div style="display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;gap:14px;max-width:380px">
+        <div style="display:flex;align-items:center;gap:12px">
+          <span style="width:36px;height:36px;border:1px solid #F7F4EF;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500">KS</span>
+          <span style="font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:500">Launch Pilot</span>
+        </div>
+        <p style="margin:0;font-size:14px;line-height:1.7;color:#D9C7B8">Digital strategy, design and development for hospitality, lifestyle and experience-led businesses.</p>
+      </div>
+      <div style="display:flex;gap:56px;flex-wrap:wrap;font-size:14px">
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <a href="KS%20Services.dc.html" style="color:#F7F4EF" style-hover="color:#D9C7B8">Services</a>
+          <a href="KS%20Work.dc.html" style="color:#F7F4EF" style-hover="color:#D9C7B8">Work</a>
+          <a href="KS%20Studio.dc.html" style="color:#F7F4EF" style-hover="color:#D9C7B8">Studio</a>
+          <a href="KS%20Contact.dc.html" style="color:#F7F4EF" style-hover="color:#D9C7B8">Contact</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <a href="mailto:hello@kslaunchpilot.com" style="color:#F7F4EF" style-hover="color:#D9C7B8">hello@kslaunchpilot.com</a>
+          <a href="https://instagram.com/" style="color:#F7F4EF" style-hover="color:#D9C7B8">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;color:#D9C7B8;padding-top:24px;border-top:1px solid rgba(247,244,239,0.25)">
+      <span>© 2026 KS Launch Pilot · Kenny &amp; Shrey</span>
+      <span>Working remotely with clients worldwide</span>
+    </div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;motion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  state = { filter: 'All' };
+  componentDidMount() {
+    if (this.props.motion === false) return;
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.style.opacity = 1; e.target.style.transform = 'none'; io.unobserve(e.target); }
+    }), { threshold: 0.1 });
+    document.querySelectorAll('[data-reveal]').forEach(el => {
+      if (el.getBoundingClientRect().top < innerHeight) return;
+      el.style.opacity = 0; el.style.transform = 'translateY(18px)';
+      el.style.transition = 'opacity 0.9s ease, transform 0.9s ease';
+      io.observe(el);
+    });
+    this.io = io;
+  }
+  componentWillUnmount() { this.io && this.io.disconnect(); }
+  renderVals() {
+    const C = [
+      { tag:'Hospitality', name:'Short-term rental apartments', sector:'Hospitality', platform:'Wix Studio', scope:'Strategy, design, build, integrations', img:'ks-case-1', shot:'Screenshot: apartments homepage with booking bar and room pages',
+        summary:'A direct booking website that lets the owners rely less on third-party platforms.',
+        rows:[['Challenge','Bookings came almost entirely through OTAs, with commission on every stay and no direct relationship with guests.'],['Strategy','Position the apartments around longer, comfortable stays and give guests a clear reason to book direct.'],['Design','Room-first layouts, strong photography and a booking bar present on every page.'],['Development','Channel manager connected so rates and availability stay in sync across every sales channel.'],['Result','A booking flow the owners manage themselves, with direct bookings now a real channel.']] },
+      { tag:'Wellness', name:'Med spa agency', sector:'Wellness & aesthetics', platform:'Wix Studio, Wix CMS', scope:'Positioning, UX, rebuild', img:'ks-case-2', shot:'Screenshot: med spa homepage and treatment detail page',
+        summary:'A full rebuild that made a complicated treatment menu easy to understand.',
+        rows:[['Challenge','An outdated site with scattered service pages and a tone that did not match the quality of the clinics.'],['Strategy','Regroup treatments around client concerns rather than internal service names.'],['Design','A calmer visual system with consistent treatment templates and clear calls to book.'],['Development','Rebuilt in Wix Studio with CMS-driven treatment pages the team can edit.'],['Result','A site the in-house team updates without developer help, and a clearer path to consultation.']] },
+      { tag:'Platforms', name:'Jobs & services directory', sector:'Marketplace', platform:'Custom HTML/CSS/JS + backend', scope:'Architecture, UX, full-stack build', img:'ks-case-3', shot:'Screenshot: directory search results with category filters',
+        summary:'A multi-category platform for jobs and local services, built from the ground up.',
+        rows:[['Challenge','Several listing types, each with different fields, needed to live in one searchable platform.'],['Strategy','Map every user type and listing journey before committing to a data structure.'],['Design','A consistent listing system with filters that stay simple as categories grow.'],['Development','Custom front end and backend with accounts, listing management and search.'],['Result','A platform that scales to new categories without redesign.']] },
+      { tag:'Hospitality', name:'Hospitality email templates', sector:'Hospitality group', platform:'HTML email', scope:'Design system, coding, testing', img:'ks-case-4', shot:'Screenshot: offer email on desktop and mobile',
+        summary:'A reusable set of on-brand HTML emails for offers and guest communication.',
+        rows:[['Challenge','Emails were built one at a time and looked different in every inbox.'],['Strategy','Define a small set of templates that cover every campaign and guest touchpoint.'],['Design','Modular sections the marketing team can combine without breaking the layout.'],['Development','Hand-coded templates tested across Gmail, Outlook and Apple Mail.'],['Result','Faster campaign production with consistent presentation.']] },
+      { tag:'Hospitality', name:'Boutique villa stay', sector:'Hospitality', platform:'Instagram, website copy', scope:'Positioning, content strategy', img:'ks-case-5', shot:'Content: villa Instagram grid and listing copy',
+        summary:'A clearer position and content plan for a small villa competing with larger resorts.',
+        rows:[['Challenge','Beautiful property, but a generic message that blended in with every other listing.'],['Strategy','Reposition around slow, longer stays for a specific type of guest.'],['Design','Content direction and photography briefs built around that guest.'],['Development','Updated listings and website copy aligned with the new position.'],['Result','A consistent brand voice across every channel and more enquiries direct.']] },
+      { tag:'Wellness', name:'Wellness studio', sector:'Yoga & wellness', platform:'WordPress', scope:'Strategy, website, SEO foundations', img:'ks-case-6', shot:'Screenshot: studio class schedule and teacher pages',
+        summary:'A joint strategy and website project, delivered by both of us together.',
+        rows:[['Challenge','Hard to find in local search and a schedule that was difficult to use on mobile.'],['Strategy','Focus on local discovery and the first-visit journey for new students.'],['Design','Mobile-first schedule, teacher profiles and simple intro offers.'],['Development','WordPress build with booking integration and SEO foundations in place.'],['Result','Better visibility for the classes they teach and an easier first booking.']] }
+    ];
+    const f = this.state.filter;
+    const base = { font:'inherit', fontSize:13, padding:'9px 16px', cursor:'pointer', border:'1px solid #B7A89B', background:'transparent', color:'#2F2F2F' };
+    return {
+      filters: ['All','Hospitality','Wellness','Platforms'].map(label => ({ label, pick: () => this.setState({ filter: label }),
+        style: f === label ? { ...base, background:'#2F2F2F', color:'#F7F4EF', borderColor:'#2F2F2F' } : base })),
+      cases: C.filter(c => f === 'All' || c.tag === f).map((c, i) => ({ ...c, num: String(i + 1).padStart(2, '0'), rows: c.rows.map(r => ({ k: r[0], v: r[1] })) }))
+    };
+  }
+}
+</script>
+</body>
+</html>

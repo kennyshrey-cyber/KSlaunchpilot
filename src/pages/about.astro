@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ImageSlot from '../components/ImageSlot.astro';
+import { PAGES } from '../data/site';
+---
+
+<BaseLayout title={PAGES.about.title} description={PAGES.about.description}>
+<section style="max-width:1360px;margin:0 auto;padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px);padding-top:clamp(40px,6vw,88px);padding-bottom:clamp(56px,7vw,96px)">
+  <div style="display:flex;flex-direction:column;gap:20px;max-width:1100px">
+    <div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#355C63;font-weight:500">About</div>
+    <h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(40px,5vw,72px);line-height:1.04;letter-spacing:-0.01em;text-wrap:balance">We're a two-person digital studio combining marketing strategy with website design and development.</h1>
+  </div>
+</section>
+<section style="max-width:1360px;margin:0 auto;padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px);padding-bottom:clamp(64px,8vw,112px)">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:64px clamp(32px,5vw,80px);padding-top:clamp(48px,6vw,72px);border-top:1px solid #D7D3CF">
+    
+    <article data-reveal style="display:flex;flex-direction:column;gap:20px">
+      <div style="aspect-ratio:4/5;max-width:520px"><ImageSlot id="lp-about-shrey" /></div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(38px,4vw,54px);line-height:1">Shrey</h2>
+        <span style="font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#355C63;font-weight:500">Website Design, Development &amp; UX</span>
+      </div>
+      <p style="margin:0;font-size:15px;line-height:1.7;max-width:520px">Shrey leads website strategy, UX, design and development. He works across Wix Studio, WordPress and custom code, and handles the CMS, backend and integration work behind each build.</p>
+      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px;font-size:13px"><li style="border:1px solid #B7A89B;padding:6px 12px">Wix Studio &amp; Velo</li><li style="border:1px solid #B7A89B;padding:6px 12px">WordPress &amp; Elementor</li><li style="border:1px solid #B7A89B;padding:6px 12px">Custom PHP &amp; ACF</li><li style="border:1px solid #B7A89B;padding:6px 12px">HTML, CSS &amp; JavaScript</li><li style="border:1px solid #B7A89B;padding:6px 12px">Integrations</li></ul>
+    </article>
+    
+    <article data-reveal style="display:flex;flex-direction:column;gap:20px">
+      <div style="aspect-ratio:4/5;max-width:520px"><ImageSlot id="lp-about-kenny" /></div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(38px,4vw,54px);line-height:1">Kenny</h2>
+        <span style="font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#7A5C49;font-weight:500">Digital Marketing &amp; Strategy</span>
+      </div>
+      <p style="margin:0;font-size:15px;line-height:1.7;max-width:520px">Kenny leads marketing strategy, positioning and content direction. Kenny works out who the website is for and what it needs to say, then plans the marketing that brings people to it after launch.</p>
+      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px;font-size:13px"><li style="border:1px solid #B7A89B;padding:6px 12px">Marketing strategy</li><li style="border:1px solid #B7A89B;padding:6px 12px">Positioning</li><li style="border:1px solid #B7A89B;padding:6px 12px">Content direction</li><li style="border:1px solid #B7A89B;padding:6px 12px">Conversion strategy</li><li style="border:1px solid #B7A89B;padding:6px 12px">SEO foundations</li></ul>
+    </article>
+  </div>
+</section>
+<section data-surface="dark" style="background:#355C63;color:#F7F4EF">
+  <div data-reveal style="max-width:1360px;margin:0 auto;padding:clamp(72px,9vw,120px) clamp(20px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:40px clamp(40px,6vw,96px);align-items:start">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#D9C7B8;font-weight:500">Why the combination matters</div>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(36px,4.4vw,60px);line-height:1;text-wrap:balance">Strategy on one side. Execution on the other.</h2>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <p style="margin:0;padding:20px 0;border-top:1px solid rgba(247,244,239,0.3);font-size:16px;line-height:1.65"><strong style="font-weight:500">Marketing</strong> understands what the website needs to communicate and achieve.</p>
+      <p style="margin:0;padding:20px 0;border-top:1px solid rgba(247,244,239,0.3);font-size:16px;line-height:1.65"><strong style="font-weight:500">Development</strong> turns that strategy into a functional digital experience.</p>
+      <p style="margin:0;padding:20px 0;border-top:1px solid rgba(247,244,239,0.3);border-bottom:1px solid rgba(247,244,239,0.3);font-size:16px;line-height:1.65">You work directly with both, so nothing gets lost between the plan and the build.</p>
+    </div>
+  </div>
+</section>
+<section data-surface="dark" style="background:#2F2F2F;color:#F7F4EF">
+  <div data-reveal style="max-width:1360px;margin:0 auto;padding:clamp(88px,11vw,150px) clamp(20px,4vw,48px);display:flex;flex-direction:column;gap:28px;align-items:flex-start">
+    <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(48px,7vw,104px);line-height:0.98;letter-spacing:-0.01em">Ready to build?</h2>
+    <p style="margin:0;font-size:17px;line-height:1.6;max-width:520px;color:#D7D3CF">Tell us what you're working on, what you need and when you'd like to launch.</p>
+    <a class="hv-d0dd51" href="/contact/" style="margin-top:8px;background:#F7F4EF;color:#2F2F2F;padding:17px 30px;font-size:15px;font-weight:500;white-space:nowrap">Start Your Project</a>
+  </div>
+</section>
+
+</BaseLayout>

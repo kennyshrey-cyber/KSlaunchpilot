@@ -1,0 +1,141 @@
+---
+import { SITE } from '../data/site';
+import { NEEDS, TIMINGS, BUDGETS, FORM_PROVIDER, FORM_ENDPOINT, FORM_NAME, THANKS_PATH } from '../data/contact';
+
+const provider = FORM_PROVIDER === 'netlify' || (FORM_PROVIDER === 'formspree' && FORM_ENDPOINT) ? FORM_PROVIDER : 'none';
+const action = provider === 'netlify' ? THANKS_PATH : provider === 'formspree' ? FORM_ENDPOINT : undefined;
+const netlifyAttrs = provider === 'netlify' ? { 'data-netlify': 'true', 'netlify-honeypot': 'bot-field' } : {};
+
+const labelStyle = 'display:flex;flex-direction:column;gap:8px;font-size:13px;font-weight:500;color:#2F2F2F';
+const inputStyle =
+  'background:#FFFFFF;border:1px solid #D7D3CF;padding:13px 14px;font-size:16px;color:#2F2F2F;font-family:inherit;width:100%';
+const legendStyle = 'padding:0;margin:0 0 12px;font-size:13px;font-weight:500';
+const optional = '<span style="font-weight:400;color:#7A5C49"> (optional)</span>';
+---
+
+<div data-contact>
+  <form
+    name={FORM_NAME}
+    method={action ? 'POST' : undefined}
+    action={action}
+    data-provider={provider}
+    {...netlifyAttrs}
+    style="display:flex;flex-direction:column;gap:28px"
+  >
+    {provider === 'netlify' && <input type="hidden" name="form-name" value={FORM_NAME} />}
+    <p class="visually-hidden" aria-hidden="true">
+      <label>Leave this field empty <input name={provider === 'formspree' ? '_gotcha' : 'bot-field'} tabindex="-1" autocomplete="off" /></label>
+    </p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:20px">
+      <label style={labelStyle}>
+        Name
+        <input required name="name" autocomplete="name" aria-describedby="err-name" style={inputStyle} />
+        <span class="field-error" id="err-name" hidden>Please enter your name.</span>
+      </label>
+      <label style={labelStyle}>
+        Email
+        <input required type="email" name="email" autocomplete="email" aria-describedby="err-email" style={inputStyle} />
+        <span class="field-error" id="err-email" hidden>Please enter a valid email address.</span>
+      </label>
+      <label style={labelStyle}>
+        Business / Company
+        <input name="company" autocomplete="organization" style={inputStyle} />
+      </label>
+      <label style={labelStyle}>
+        <span>Current website URL<Fragment set:html={optional} /></span>
+        <input name="url" type="url" inputmode="url" placeholder="https://" aria-describedby="err-url" style={inputStyle} />
+        <span class="field-error" id="err-url" hidden>Please enter a full web address, starting with https://</span>
+      </label>
+    </div>
+
+    <fieldset class="option-group">
+      <legend style={legendStyle}>What do you need?</legend>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        {
+          NEEDS.map((o) => (
+            <label class="option">
+              <input type="radio" name="need" value={o} />
+              <span>{o}</span>
+            </label>
+          ))
+        }
+      </div>
+    </fieldset>
+
+    <label style={labelStyle}>
+      Tell us briefly about the project
+      <textarea required name="brief" rows="4" aria-describedby="err-brief" style={`${inputStyle};resize:vertical`}></textarea>
+      <span class="field-error" id="err-brief" hidden>Please tell us briefly about the project.</span>
+    </label>
+
+    <fieldset class="option-group">
+      <legend style={legendStyle}>When would you like to launch?</legend>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        {
+          TIMINGS.map((o) => (
+            <label class="option">
+              <input type="radio" name="timing" value={o} />
+              <span>{o}</span>
+            </label>
+          ))
+        }
+      </div>
+    </fieldset>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:20px;align-items:start">
+      <label style={labelStyle}>
+        <span>Target launch date<Fragment set:html={optional} /></span>
+        <input name="date" type="date" style={inputStyle} />
+      </label>
+    </div>
+
+    <fieldset class="option-group">
+      <legend style={legendStyle}>Budget range<Fragment set:html={optional} /></legend>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        {
+          BUDGETS.map((o) => (
+            <label class="option">
+              <input type="radio" name="budget" value={o} />
+              <span>{o}</span>
+            </label>
+          ))
+        }
+      </div>
+    </fieldset>
+
+    <div
+      data-form-error
+      role="alert"
+      hidden
+      style="padding:16px 18px;border:1px solid #9B2C1F;background:#FFFFFF;font-size:14px;line-height:1.6;color:#2F2F2F"
+    >
+      <span data-form-error-text>Something went wrong and your details weren't sent.</span>
+      Please try again, or email us at <a href={`mailto:${SITE.email}`} style="border-bottom:1px solid currentColor">{SITE.email}</a>.
+    </div>
+
+    <div style="display:flex;gap:16px 24px;align-items:center;flex-wrap:wrap;padding-top:8px;border-top:1px solid #D7D3CF">
+      <button
+        type="submit"
+        class="hv-722fc5"
+        style="margin-top:20px;background:#355C63;color:#F7F4EF;border:none;padding:17px 32px;font-size:15px;font-weight:500;cursor:pointer;font-family:inherit"
+        >Start My Project</button
+      >
+      <span style="margin-top:20px;font-size:13px;color:#5A6851">Takes about a minute.</span>
+    </div>
+  </form>
+
+  <div
+    data-form-success
+    hidden
+    tabindex="-1"
+    style="display:flex;flex-direction:column;gap:14px;padding:clamp(28px,4vw,48px);background:#FFFFFF;border:1px solid #D7D3CF;outline:none"
+  >
+    <p style="margin:0;font-family:'Cormorant Garamond',serif;font-size:40px;line-height:1.05">Thanks. We've got your project details.</p>
+    <p style="margin:0;font-size:15px;line-height:1.65">We'll be in touch shortly to arrange a call.</p>
+  </div>
+</div>
+
+<script>
+  import '../scripts/contact-form.ts';
+</script>

@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { PAGES } from '../data/site';
+---
+
+<BaseLayout title={PAGES.notFound.title} description={PAGES.notFound.description} noindex>
+  <section style="max-width:1360px;margin:0 auto;padding:clamp(40px,6vw,88px) clamp(20px,4vw,48px) clamp(80px,10vw,128px)">
+    <div style="display:flex;flex-direction:column;gap:24px;max-width:720px">
+      <div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#355C63;font-weight:500">404</div>
+      <h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(46px,6vw,88px);line-height:0.98;letter-spacing:-0.015em;text-wrap:balance">Page not found.</h1>
+      <p style="margin:0;font-size:16px;line-height:1.65;max-width:440px">The page you're looking for doesn't exist or has moved.</p>
+      <div style="display:flex;gap:14px 28px;align-items:center;flex-wrap:wrap;margin-top:4px">
+        <a href="/" class="hv-b9b180" style="background:#355C63;color:#F7F4EF;padding:17px 30px;font-size:15px;font-weight:500;white-space:nowrap">Back to Home</a>
+        <a href="/contact/" class="hv-87875d" style="font-size:15px;border-bottom:1px solid #2F2F2F;padding-bottom:3px;color:#2F2F2F;white-space:nowrap">Start Your Project</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
