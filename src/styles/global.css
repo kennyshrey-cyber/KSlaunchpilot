@@ -265,3 +265,54 @@ body {
   .svc-row > :nth-child(3) { grid-area: desc; }
   .svc-row > :nth-child(4) { grid-area: owner; }
 }
+
+/* Launch-edition website visuals: keep the top of the page (logo and navigation) in view when cropped. */
+.image-slot--filled[data-slot^='lp-l-'] {
+  object-position: top;
+}
+
+/* Click-to-play video poster. */
+.video-embed__play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 76px;
+  height: 76px;
+  margin: -38px 0 0 -38px;
+  border-radius: 50%;
+  background: rgba(21, 28, 50, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.video-embed__play::after {
+  content: '';
+  position: absolute;
+  left: 31px;
+  top: 25px;
+  border-style: solid;
+  border-width: 13px 0 13px 21px;
+  border-color: transparent transparent transparent #ffffff;
+}
+.video-embed__link:hover .video-embed__play {
+  transform: scale(1.06);
+  background: #151c32;
+}
+@media (prefers-reduced-motion: reduce) {
+  .video-embed__play {
+    transition: none;
+  }
+}
+
+/* Brand-coloured app sections: white focus ring. */
+.app-surface :focus-visible {
+  outline-color: #ffffff;
+}
+
+/* Case study: when the wide screenshot sits beside the tall phone screenshot, let it fill the full
+   height of its frame (cropping from the top) instead of leaving an empty band underneath. */
+@media (min-width: 680px) {
+  .cs-wide-frame:has(.image-slot--filled) {
+    height: 100%;
+    aspect-ratio: auto !important;
+  }
+}

@@ -1,23 +1,49 @@
 ---
-import { SITE } from '../data/site';
+import { SITE, SOCIALS } from '../data/site';
+import SocialIcon from './SocialIcon.astro';
 ---
 
 <footer class="site-footer" style="background:#2F2F2F;color:#D7D3CF;border-top:1px solid rgba(247,244,239,0.15)">
   <div
-    style="max-width:1360px;margin:0 auto;padding:40px clamp(20px,4vw,48px) 96px;display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;font-size:13px"
+    style="max-width:1360px;margin:0 auto;padding:40px clamp(20px,4vw,48px) 28px;display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;font-size:13px"
   >
-    <div style="display:flex;flex-direction:column;gap:10px">
+    <div style="display:flex;flex-direction:column;gap:10px;max-width:340px">
       <span style="color:#F7F4EF;font-weight:500">{SITE.name}</span>
-      <span>{SITE.tagline}</span>
+      <span style="line-height:1.55">{SITE.tagline}</span>
     </div>
-    <nav aria-label="Footer" style="display:flex;gap:24px;flex-wrap:wrap">
+    <nav aria-label="Footer" style="display:flex;gap:14px 24px;flex-wrap:wrap;align-content:flex-start">
       <a href="/services/" class="hv-footer" style="color:#D7D3CF">Services</a>
       <a href="/work/" class="hv-footer" style="color:#D7D3CF">Work</a>
+      <a href="/apps/" class="hv-footer" style="color:#D7D3CF">Apps</a>
       <a href="/about/" class="hv-footer" style="color:#D7D3CF">About</a>
       <a href="/contact/" class="hv-footer" style="color:#D7D3CF">Contact</a>
       <a href={`mailto:${SITE.email}`} class="hv-footer" style="color:#D7D3CF">{SITE.email}</a>
       <a href="/privacy/" class="hv-footer" style="color:#D7D3CF">Privacy</a>
     </nav>
+    <ul aria-label="KS LaunchPilot on social media" style="list-style:none;margin:0;padding:0;display:flex;gap:6px;flex-wrap:wrap;align-content:flex-start">
+      {
+        SOCIALS.map((s) => (
+          <li>
+            <a
+              href={s.href}
+              target="_blank"
+              rel="noopener"
+              class="hv-footer"
+              style="display:flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid rgba(247,244,239,0.22);color:#D7D3CF"
+            >
+              <SocialIcon id={s.id} size={16} />
+              {s.label}
+              <span class="visually-hidden"> (opens in a new tab)</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div
+    style="max-width:1360px;margin:0 auto;padding:20px clamp(20px,4vw,48px) 96px;border-top:1px solid rgba(247,244,239,0.12);display:flex;justify-content:space-between;gap:12px 28px;flex-wrap:wrap;font-size:12px;line-height:1.55;color:#B9B4AE"
+  >
     <span>© {SITE.copyrightYear} {SITE.name}</span>
+    <span style="max-width:640px">Code Canvas and CollectionGrid are independent apps by KS LaunchPilot. Wix is a trademark of Wix.com Ltd.</span>
   </div>
 </footer>

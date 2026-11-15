@@ -1,0 +1,49 @@
+---
+/**
+ * Click-to-play YouTube video. Nothing is loaded from YouTube until the visitor presses play.
+ * Without JavaScript the poster is a normal link that opens the video on YouTube.
+ */
+import ImageSlot from './ImageSlot.astro';
+
+interface Props {
+  youtubeId: string;
+  title: string;
+  posterId: string;
+}
+const { youtubeId, title, posterId } = Astro.props;
+---
+
+<div class="video-embed" data-video={youtubeId} data-title={title} style="position:relative;aspect-ratio:16/9;background:#000">
+  <a
+    href={`https://www.youtube.com/watch?v=${youtubeId}`}
+    target="_blank"
+    rel="noopener"
+    class="video-embed__link"
+    style="position:absolute;inset:0;display:block;color:#FFFFFF"
+  >
+    <ImageSlot id={posterId} decorative />
+    <span class="video-embed__play" aria-hidden="true"></span>
+    <span class="visually-hidden">Play video: {title}</span>
+  </a>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('.video-embed').forEach((box) => {
+    const link = box.querySelector<HTMLAnchorElement>('.video-embed__link');
+    const id = box.dataset.video;
+    if (!link || !id) return;
+    link.addEventListener('click', (e) => {
+      // Leave modified clicks alone so "open in new tab" still works.
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      e.preventDefault();
+      const frame = document.createElement('iframe');
+      frame.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?autoplay=1&rel=0`;
+      frame.title = box.dataset.title ?? 'Video';
+      frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      frame.allowFullscreen = true;
+      frame.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:0';
+      box.replaceChildren(frame);
+      frame.focus();
+    });
+  });
+</script>

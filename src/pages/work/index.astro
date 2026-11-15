@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ImageSlot from '../../components/ImageSlot.astro';
 import { PAGES } from '../../data/site';
 import { PROJECTS } from '../../data/projects';
+import { IS_LAUNCH } from '../../data/edition';
 ---
 
 <BaseLayout title={PAGES.work.title} description={PAGES.work.description}>
@@ -12,7 +13,13 @@ import { PROJECTS } from '../../data/projects';
       <div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#355C63;font-weight:500">Selected work</div>
       <h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(46px,6vw,88px);line-height:0.98;letter-spacing:-0.015em;text-wrap:balance;max-width:14ch">Websites we've designed and built.</h1>
     </div>
-    <p style="margin:0;font-size:16px;line-height:1.6;max-width:380px">Hospitality, wellness, real estate and platform projects. Select a project to see what we did.</p>
+    {
+      IS_LAUNCH ? (
+        <p style="margin:0;font-size:16px;line-height:1.6;max-width:400px">Hospitality, wellness, real estate and platform projects. Client names are kept private, so the visuals are illustrative and the brand names in them are fictional.</p>
+      ) : (
+        <p style="margin:0;font-size:16px;line-height:1.6;max-width:380px">Hospitality, wellness, real estate and platform projects. Select a project to see what we did.</p>
+      )
+    }
   </div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:56px 24px">
     {
@@ -38,6 +45,16 @@ import { PROJECTS } from '../../data/projects';
           <article data-reveal style="display:flex;flex-direction:column;gap:16px;color:#2F2F2F">{inner}</article>
         );
       })
+    }
+    {
+      /* An odd number of cards leaves a gap in the three-column grid: fill it with an invitation. */
+      PROJECTS.length % 3 === 2 && (
+        <a data-reveal class="hv-722fc5" href="/contact/" style="display:flex;flex-direction:column;justify-content:space-between;gap:24px;background:#355C63;color:#F7F4EF;padding:clamp(24px,3vw,36px);min-height:280px">
+          <span style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#DDCCBE;font-weight:500">Your project</span>
+          <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(32px,3.400vw,44px);line-height:1.05;text-wrap:balance">Yours could be the next one we build.</span>
+          <span style="font-size:14px;font-weight:500">Start Your Project →</span>
+        </a>
+      )
     }
     </div>
   <div data-reveal style="display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:64px;padding:26px 0;border-top:1px solid #D7D3CF;border-bottom:1px solid #D7D3CF">

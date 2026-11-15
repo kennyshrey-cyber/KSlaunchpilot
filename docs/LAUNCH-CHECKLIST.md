@@ -1,29 +1,37 @@
 # Launch checklist
 
-Status as of the first implementation pass on branch `claude/sleepy-ritchie-l3rsi0`.
+Status as of the launch edition on branch `claude/hopeful-dijkstra-3d08g8`. The sections from "Changes made to the design" down describe the first implementation pass.
 
-## Blockers: need information from you
+## Launch edition (current release)
 
-| # | Item | Why it blocks launch | Where it goes |
-|---|---|---|---|
-| 1 | **Hosting and form delivery.** Confirm Netlify (or supply a Formspree endpoint). | Without a configured provider the form deliberately reports that nothing was sent. | `netlify.toml` (already set for Netlify Forms) or `PUBLIC_FORM_PROVIDER`/`PUBLIC_FORM_ENDPOINT` |
-| 2 | **Submission email address.** Where should enquiries be delivered? | Netlify stores submissions; email delivery is configured in its dashboard. | Netlify → Forms → Form notifications |
-| 3 | **Domain.** Confirm the domain (the design uses `hello@kslaunchpilot.com`) and DNS access. | Canonical URLs, Open Graph URLs and the sitemap need the final domain. | `SITE_URL` env var, Netlify domain settings |
-| 4 | **Mailbox.** Confirm `hello@kslaunchpilot.com` exists and receives mail. | It is the fallback contact on every page and in the form's error message. | `src/data/site.ts` |
-| 5 | **Privacy policy text** (approved legal content). | The contact form collects personal data. `/privacy/` is a holding page (noindex). | `src/pages/privacy.astro` |
-| 6 | **Images.** 14 essential images (project screenshots, case-study screenshots, About headshots). | The Work, case-study and About pages show empty placeholder blocks. | `docs/ASSET-INVENTORY.md` |
+The site now builds the **launch edition** by default: no client names, no real client screenshots and no
+team photos. See "Editions" in the README.
 
-## Decisions for you (not blocking a soft launch)
+### Before or right after going live
+
+| # | Item | State |
+|---|---|---|
+| 1 | **Publish.** Netlify builds the repository's production branch. The launch edition is on `claude/hopeful-dijkstra-3d08g8`. | Merge it into the production branch (or point Netlify at it). |
+| 2 | **Form delivery.** Netlify → Forms → enable form detection, then add an email notification. | Check one real enquiry arrives. |
+| 3 | **Contact email.** The site uses `kslaunchpilot@gmail.com` (the public support address on the App Market listing). The original design used `hello@kslaunchpilot.com`, which was never confirmed to exist. | Change `email` in `src/data/site.ts` if a domain mailbox is set up. |
+| 4 | **CollectionGrid App Market link.** Not supplied yet, so the CollectionGrid buttons say "Search CollectionGrid on the Wix App Market". | Add the listing address as `marketUrl` in `src/data/apps.ts`. |
+| 5 | **Domain.** Still on `kslaunchpilot.netlify.app`. | Set `SITE_URL` and connect the domain when ready. |
+| 6 | **Privacy page.** A plain-language notice that describes what the site does. It has not been reviewed by a lawyer. | Review the wording in `src/pages/privacy.astro`. |
+| 7 | **Client names in the repository.** The website no longer shows them, but this repository is public and the names remain in `src/data/projects.ts`, `docs/` and `design-source/`. | Make the repository private, or remove the names, if that matters. |
+
+### To switch to the full edition later
+
+1. Get each client's permission to show their name and website.
+2. Add the real screenshots and team photos (`docs/ASSET-INVENTORY.md`).
+3. Set `PUBLIC_SITE_EDITION = "full"` in `netlify.toml` and redeploy.
+
+## Decisions for you (not blocking)
 
 | # | Item | Current state |
 |---|---|---|
-| 7 | **Colour contrast (WCAG 2.1 AA).** Sand Beige `#D9C7B8` text on Ocean Deep `#355C63` (small uppercase labels, eyebrows, process numbers), and Ocean Deep text on Sand Beige (the "Shrey" labels on Home), are **4.47:1** (needs 4.5:1). The brown `#7A5C49` on the Sand Beige section was 3.7:1 and has already been darkened to `#6B4F3E` (4.55:1). | Brand colours kept exactly as designed. A near-invisible fix: use `#DDCCBE` for small labels on Ocean Deep. One-line change if approved. |
-| 8 | **Project destinations.** 8 of 9 Work cards have no case study or verified URL. | Rendered as non-clickable cards, with no "Case study →" label. Add `url` (verified) or `caseStudy` per project in `src/data/projects.ts`. |
-| 9 | **Homepage "Platform" row.** The design said "To confirm". | Hidden until a value is set in `src/data/projects.ts`. |
-| 10 | **Work page intro** says "Select a project to see what we did." | Kept as designed; only Felon Friendly Jobs Now is currently selectable. |
-| 11 | **Case study "Next project: Baan Pufa Resort →"** links to `/work/` (as in the design) because there is no Baan Pufa case study. | Kept as designed. |
-| 12 | **Analytics.** None installed. | Supply a GA4 ID (or similar) if wanted. A cookie notice may then be required. |
-| 13 | **Share image and favicon** are built from the design's "KS" mark and homepage headline. | Replace `public/og-image.png` and the icons if official brand files exist. |
+| 8 | **Colour contrast (WCAG 2.1 AA).** Sand Beige `#D9C7B8` text on Ocean Deep `#355C63` (small uppercase labels, eyebrows, process numbers), and Ocean Deep text on Sand Beige (the "Shrey" labels on Home), are **4.47:1** (needs 4.5:1). | Brand colours kept exactly as designed. A near-invisible fix: use `#DDCCBE` for small labels on Ocean Deep. |
+| 9 | **Analytics.** None installed. | Supply a GA4 ID (or similar) if wanted. The privacy page must then be updated, and a cookie notice may be required. |
+| 10 | **Restaurant or other project types.** The Work page lists the five project types that match delivered projects. | Tell us if more types should be added. |
 
 ## Changes made to the design (functional or accessibility only)
 

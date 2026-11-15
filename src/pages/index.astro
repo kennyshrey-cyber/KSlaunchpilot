@@ -1,8 +1,18 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ImageSlot from '../components/ImageSlot.astro';
-import { PAGES, SITE } from '../data/site';
+import AppsShowcase from '../components/AppsShowcase.astro';
+import { PAGES, SITE, SOCIALS } from '../data/site';
 import { FEATURED } from '../data/projects';
+import { hasImage } from '../data/images';
+import { IS_LAUNCH } from '../data/edition';
+
+const TEAM = [
+  { name: 'Shrey', imageId: 'lp-shrey', role: 'Website design, development and technical implementation.' },
+  { name: 'Kenny', imageId: 'lp-kenny', role: 'Digital marketing and strategy.' },
+];
+/* Team photos are optional: with no photo registered, the rows are text only (no empty photo boxes). */
+const teamPhotos = TEAM.every((m) => hasImage(m.imageId));
 ---
 
 <BaseLayout title={PAGES.home.title} description={PAGES.home.description}>
@@ -19,6 +29,7 @@ import { FEATURED } from '../data/projects';
         url: Astro.site.href,
         email: SITE.email,
         logo: new URL('/icon-512.png', Astro.site).href,
+        sameAs: SOCIALS.map((x) => x.href),
       })}
     />
   )
@@ -26,9 +37,10 @@ import { FEATURED } from '../data/projects';
 <section style="max-width:1360px;margin:0 auto;padding:clamp(40px,6vw,88px) clamp(20px,4vw,48px) clamp(64px,8vw,112px)">
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:56px clamp(40px,5vw,80px);align-items:center">
     <div style="display:flex;flex-direction:column;gap:26px">
+      <a class="hv-announce" href="#apps" style="align-self:flex-start;display:inline-flex;align-items:center;gap:10px;border:1px solid #B7A89B;padding:8px 14px;font-size:13px;line-height:1.3;color:#2F2F2F"><span style="background:#151C32;color:#FFFFFF;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;padding:3px 8px">New</span>Code Canvas and CollectionGrid are live on the Wix App Market <span aria-hidden="true">→</span></a>
       <div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#355C63;font-weight:500">Website design · Development · Digital marketing</div>
       <h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(52px,7vw,104px);line-height:0.96;letter-spacing:-0.015em;text-wrap:balance">Need a website? Let's build it.</h1>
-      <p style="margin:0;font-size:clamp(16px,1.3vw,18px);line-height:1.6;max-width:520px">KS Launchpilot is a two-person digital studio combining website design, development and digital marketing for businesses ready to launch, rebuild or improve online.</p>
+      <p style="margin:0;font-size:clamp(16px,1.3vw,18px);line-height:1.6;max-width:520px">KS LaunchPilot is a two-person digital studio combining website design, development and digital marketing for businesses ready to launch, rebuild or improve online.</p>
       <div style="display:flex;gap:14px 28px;align-items:center;flex-wrap:wrap;margin-top:4px">
         <a class="hv-b9b180" href="/contact/" style="background:#355C63;color:#F7F4EF;padding:17px 30px;font-size:15px;font-weight:500;white-space:nowrap">Start Your Project</a>
         <a class="hv-87875d" href="#services" style="font-size:15px;border-bottom:1px solid #2F2F2F;padding-bottom:3px;color:#2F2F2F;white-space:nowrap">See What We Do</a>
@@ -89,20 +101,17 @@ import { FEATURED } from '../data/projects';
       <a class="hv-bae33e" href="/about/" style="align-self:flex-start;font-size:14px;color:#F7F4EF;border-bottom:1px solid #F7F4EF;padding-bottom:3px;white-space:nowrap">Meet the team →</a>
     </div>
     <div data-reveal style="display:flex;flex-direction:column">
-      <div style="display:grid;grid-template-columns:88px minmax(0,1fr);gap:22px;padding:24px 0;border-top:1px solid rgba(247,244,239,0.25);align-items:center">
-        <div style="aspect-ratio:1/1"><ImageSlot id="lp-shrey" /></div>
-        <div style="display:flex;flex-direction:column;gap:6px">
-          <span style="font-family:'Cormorant Garamond',serif;font-size:30px;line-height:1">Shrey</span>
-          <span style="font-size:14px;line-height:1.55;color:#D7D3CF">Website design, development and technical implementation.</span>
-        </div>
-      </div>
-      <div style="display:grid;grid-template-columns:88px minmax(0,1fr);gap:22px;padding:24px 0;border-top:1px solid rgba(247,244,239,0.25);border-bottom:1px solid rgba(247,244,239,0.25);align-items:center">
-        <div style="aspect-ratio:1/1"><ImageSlot id="lp-kenny" /></div>
-        <div style="display:flex;flex-direction:column;gap:6px">
-          <span style="font-family:'Cormorant Garamond',serif;font-size:30px;line-height:1">Kenny</span>
-          <span style="font-size:14px;line-height:1.55;color:#D7D3CF">Digital marketing and strategy.</span>
-        </div>
-      </div>
+      {
+        TEAM.map((m, i) => (
+          <div style={`display:grid;grid-template-columns:${teamPhotos ? '88px minmax(0,1fr)' : 'minmax(0,1fr)'};gap:22px;padding:24px 0;border-top:1px solid rgba(247,244,239,0.25);${i === TEAM.length - 1 ? 'border-bottom:1px solid rgba(247,244,239,0.25);' : ''}align-items:center`}>
+            {teamPhotos && <div style="aspect-ratio:1/1"><ImageSlot id={m.imageId} /></div>}
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:30px;line-height:1">{m.name}</span>
+              <span style="font-size:14px;line-height:1.55;color:#D7D3CF">{m.role}</span>
+            </div>
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>
@@ -142,6 +151,8 @@ import { FEATURED } from '../data/projects';
     </article>
   </div>
 </section>
+
+<AppsShowcase />
 
 <section style="background:#D9C7B8">
   <div style="max-width:1360px;margin:0 auto;padding:clamp(80px,10vw,128px) clamp(20px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:48px clamp(40px,6vw,96px)">
@@ -255,13 +266,14 @@ import { FEATURED } from '../data/projects';
       <div style="display:flex;flex-direction:column;gap:14px">
         <div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#355C63;font-weight:500">Selected experience</div>
         <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(34px,3.8vw,52px);line-height:1">Real projects we've delivered</h2>
+        {IS_LAUNCH && <p style="margin:0;font-size:14px;line-height:1.6;color:#5A6851;max-width:520px">Client names are kept private, so the visuals are illustrative.</p>}
       </div>
       <a class="hv-728b35" href="/work/" style="font-size:14px;color:#2F2F2F;white-space:nowrap">View More Work →</a>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:40px 24px">
       {
         FEATURED.map((p) => (
-          <a data-reveal href="/work/" style="display:flex;flex-direction:column;gap:14px;color:#2F2F2F">
+          <a data-reveal href={p.caseStudy ?? '/work/'} style="display:flex;flex-direction:column;gap:14px;color:#2F2F2F">
             <div style="background:#D7D3CF;padding:6px"><div style="aspect-ratio:16/10"><ImageSlot id={p.imageId} /></div></div>
             <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:26px;line-height:1.1">{p.name}</h3>
             <dl style="margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:13px;line-height:1.5">

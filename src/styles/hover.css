@@ -11,3 +11,8 @@
 .hv-footer:hover{color:#F7F4EF !important}
 /* Mobile menu links. */
 .hv-menu:hover{color:#355C63 !important}
+/* Apps sections (dark, brand-coloured): hover uses the section's accent colour, set as --accent. */
+.hv-accent:hover{color:var(--accent,#A79BFF) !important;border-color:var(--accent,#A79BFF) !important}
+.hv-app-primary:hover{background:var(--accent,#A79BFF) !important;color:#151C32 !important}
+/* Homepage announcement link. */
+.hv-announce:hover{border-color:#355C63 !important;color:#355C63 !important}

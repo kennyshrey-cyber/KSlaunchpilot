@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Olive &amp; Ember Studio: illustrative wellness website</title>
+<link rel="stylesheet" href="fonts.css">
+<style>
+  body{font-family:"DM Sans",sans-serif;color:#2c322b;background:#f4efe6}
+  .bar{background:#56684f;color:#f4efe6;text-align:center;font-size:13px;padding:10px;letter-spacing:.04em}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:24px 64px;font-size:15px}
+  .logo{font-family:Fraunces,serif;font-size:27px;font-weight:500;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+  .logo i{width:26px;height:26px;border-radius:50%;background:#c9744d;display:inline-block;box-shadow:inset -8px 0 0 #56684f}
+  nav .links{display:flex;gap:36px;color:#454c43}
+  nav .cta{display:flex;gap:22px;align-items:center}
+  .pill{background:#2c322b;color:#f4efe6;padding:13px 26px;border-radius:999px;font-weight:500;font-size:14px}
+  .hero{display:grid;grid-template-columns:1fr 1fr;gap:56px;padding:26px 64px 0;align-items:center}
+  .tag{display:inline-flex;gap:10px;align-items:center;background:#e6dfcf;border-radius:999px;padding:8px 16px;font-size:13px;font-weight:500;color:#56684f}
+  .tag b{width:8px;height:8px;border-radius:50%;background:#c9744d}
+  h1{margin:24px 0 0;font-family:Fraunces,serif;font-weight:400;font-size:74px;line-height:1.02;letter-spacing:-.025em}
+  h1 em{font-style:italic;color:#56684f}
+  .sub{font-size:18px;line-height:1.6;color:#4d554b;max-width:500px;margin:24px 0 0}
+  .actions{display:flex;gap:16px;align-items:center;margin-top:32px}
+  .actions .pill{padding:17px 32px;font-size:15px;background:#c9744d}
+  .ghost{padding:16px 30px;border:1px solid #2c322b;border-radius:999px;font-size:15px;font-weight:500}
+  .proof{display:flex;gap:36px;margin-top:38px;padding-top:26px;border-top:1px solid #dcd4c2}
+  .proof b{display:block;font-family:Fraunces,serif;font-weight:500;font-size:30px}
+  .proof span{font-size:13px;color:#676e63}
+  .photo{position:relative;height:640px}
+  .photo .ph{position:absolute;inset:0;border-radius:300px 300px 22px 22px;overflow:hidden}
+  .today{position:absolute;left:-44px;bottom:38px;background:#fff;border-radius:18px;padding:20px 22px;width:310px;box-shadow:0 24px 50px -24px rgba(44,50,43,.4)}
+  .today h4{margin:0 0 12px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#56684f}
+  .row{display:grid;grid-template-columns:62px 1fr auto;gap:10px;align-items:center;padding:9px 0;border-top:1px solid #eee8db;font-size:14px}
+  .row time{font-weight:600}
+  .row small{display:block;color:#7a8076;font-size:12px}
+  .row a{font-size:12px;font-weight:600;color:#c9744d}
+  .offer{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:40px 64px 0}
+  .o{background:#fff;border-radius:20px;overflow:hidden;display:grid;grid-template-columns:170px 1fr}
+  .o .ph{height:176px}
+  .o>div:not(.ph){padding:26px 24px 0}
+  .o h3{margin:0 0 6px;font-family:Fraunces,serif;font-weight:500;font-size:22px}
+  .o p{margin:0;font-size:14px;line-height:1.5;color:#5c6358}
+  .o .sw{background:#56684f;display:flex;align-items:center;justify-content:center}
+  .o .sw svg{width:54px;height:54px}
+</style>
+</head>
+<body>
+<div class="bar">New members: your first two weeks of unlimited classes for $39 →</div>
+<nav>
+  <div class="logo"><i></i>Olive &amp; Ember</div>
+  <div class="links"><a>Classes</a><a>Schedule</a><a>Treatments</a><a>Memberships</a><a>Teachers</a><a>Journal</a></div>
+  <div class="cta"><a>Sign in</a><a class="pill">Book a class</a></div>
+</nav>
+<section class="hero">
+  <div>
+    <span class="tag"><b></b>Yoga · Pilates · Bodywork</span>
+    <h1>Move, breathe and feel <em>at home</em> in your body.</h1>
+    <p class="sub">Small classes, unhurried teachers and a sunlit studio in the old tram depot. Beginners are always welcome.</p>
+    <div class="actions"><a class="pill">See this week's schedule</a><a class="ghost">Explore memberships</a></div>
+    <div class="proof"><div><b>42</b><span>classes each week</span></div><div><b>12 max</b><span>people per class</span></div><div><b>4.9 ★</b><span>from 640 members</span></div></div>
+  </div>
+  <div class="photo">
+    <div class="ph"><img src="../photos/wellness-hero.jpg" alt=""></div>
+    <div class="today">
+      <h4>Today at the studio</h4>
+      <div class="row"><time>7:00</time><div>Morning Flow<small>with Ines · 3 spots left</small></div><a>Book</a></div>
+      <div class="row"><time>9:30</time><div>Reformer Basics<small>with Tomas · 5 spots left</small></div><a>Book</a></div>
+      <div class="row"><time>18:15</time><div>Slow Yin &amp; Sound<small>with Mara · Waitlist</small></div><a>Join</a></div>
+    </div>
+  </div>
+</section>
+<section class="offer">
+  <div class="o"><div class="ph"><img src="../photos/wellness-pilates.jpg" alt=""></div><div><h3>Reformer Pilates</h3><p>Strength and control on the reformer, in groups of six.</p></div></div>
+  <div class="o"><div class="ph"><img src="../photos/wellness-treatment.jpg" alt=""></div><div><h3>Bodywork</h3><p>Massage and myofascial release with our therapists.</p></div></div>
+  <div class="o"><div class="ph sw"><svg viewBox="0 0 54 54" fill="none" stroke="#f4efe6" stroke-width="1.6"><circle cx="27" cy="27" r="10"/><path d="M27 4v8M27 42v8M4 27h8M42 27h8M10.5 10.5l5.6 5.6M37.9 37.9l5.6 5.6M10.5 43.5l5.6-5.6M37.9 16.1l5.6-5.6"/></svg></div><div><h3>Morning Yoga</h3><p>Start the day with breath-led flow, every day at 7am.</p></div></div>
+</section>
+</body>
+</html>

@@ -5,6 +5,8 @@
 [build.environment]
   NODE_VERSION = "22.23.4"
   PUBLIC_FORM_PROVIDER = "netlify"
+  # "launch": no client names, real screenshots or team photos. "full": the named-client version (needs permission and images).
+  PUBLIC_SITE_EDITION = "launch"
 
 [[headers]]
   for = "/*"
@@ -18,3 +20,9 @@
   for = "/_astro/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+# The named case study is not part of the launch edition. Send its old address to the Work page.
+[[redirects]]
+  from = "/work/felon-friendly-jobs-now/*"
+  to = "/work/"
+  status = 302

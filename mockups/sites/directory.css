@@ -1,0 +1,22 @@
+/* Shared styles for the three jobs & services directory views. */
+body{font-family:Inter,sans-serif;color:#17212f;background:#f5f7fa}
+.nav{display:flex;align-items:center;justify-content:space-between;background:#fff;border-bottom:1px solid #e3e8ef;padding:16px 56px;font-size:15px;font-weight:500}
+.logo{display:flex;align-items:center;gap:10px;font-family:Manrope,sans-serif;font-weight:800;font-size:22px;letter-spacing:-.02em}
+.logo i{width:34px;height:34px;border-radius:9px;background:#1463d6;display:flex;align-items:center;justify-content:center}
+.logo i svg{width:20px;height:20px}
+.logo span{color:#1463d6;margin-left:-10px}
+.links{display:flex;gap:30px;color:#3b4757}
+.acts{display:flex;gap:18px;align-items:center}
+.btn{background:#1463d6;color:#fff;padding:11px 20px;border-radius:8px;font-weight:600;font-size:14px}
+.btn.o{background:#fff;color:#1463d6;border:1px solid #c5d6f2}
+.chip{display:inline-flex;align-items:center;gap:6px;background:#eef3fb;color:#27528f;font-size:12px;font-weight:600;padding:5px 10px;border-radius:999px}
+.chip.g{background:#e6f4ec;color:#1d6b43}
+.chip.y{background:#fdf3d8;color:#8a6410}
+.co{width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:Manrope,sans-serif;font-weight:800;font-size:17px;flex:none}
+.c1{background:#0f766e}.c2{background:#b45309}.c3{background:#4338ca}.c4{background:#be123c}.c5{background:#1463d6}.c6{background:#475569}
+.item{display:grid;grid-template-columns:46px 1fr auto;gap:16px;align-items:center;background:#fff;border:1px solid #e3e8ef;border-radius:12px;padding:18px 20px}
+.item h3{margin:0 0 3px;font-size:17px;font-weight:600}
+.item p{margin:0;font-size:14px;color:#566273}
+.item .tags{display:flex;gap:6px;margin-top:9px;flex-wrap:wrap}
+.item .side{text-align:right;font-size:13px;color:#6b7686}
+.item .side b{display:block;font-size:15px;color:#17212f;margin-bottom:3px}

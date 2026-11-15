@@ -18,7 +18,7 @@ export default defineConfig({
     ? [
         sitemap({
           // Pages that must not be indexed are excluded.
-          filter: (page) => !/\/(privacy|contact\/thanks)\/$/.test(page),
+          filter: (page) => !/\/contact\/thanks\/$/.test(page),
         }),
       ]
     : [],

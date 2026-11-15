@@ -2,6 +2,10 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ImageSlot from '../components/ImageSlot.astro';
 import { PAGES } from '../data/site';
+import { hasImage } from '../data/images';
+
+/* Founder photos are optional: with none registered, the profiles are text only (no empty photo boxes). */
+const photos = hasImage('lp-about-shrey') && hasImage('lp-about-kenny');
 ---
 
 <BaseLayout title={PAGES.about.title} description={PAGES.about.description}>
@@ -15,7 +19,7 @@ import { PAGES } from '../data/site';
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:64px clamp(32px,5vw,80px);padding-top:clamp(48px,6vw,72px);border-top:1px solid #D7D3CF">
     
     <article data-reveal style="display:flex;flex-direction:column;gap:20px">
-      <div style="aspect-ratio:4/5;max-width:520px"><ImageSlot id="lp-about-shrey" /></div>
+      {photos && <div style="aspect-ratio:4/5;max-width:520px"><ImageSlot id="lp-about-shrey" /></div>}
       <div style="display:flex;flex-direction:column;gap:10px">
         <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(38px,4vw,54px);line-height:1">Shrey</h2>
         <span style="font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#355C63;font-weight:500">Website Design, Development &amp; UX</span>
@@ -25,7 +29,7 @@ import { PAGES } from '../data/site';
     </article>
     
     <article data-reveal style="display:flex;flex-direction:column;gap:20px">
-      <div style="aspect-ratio:4/5;max-width:520px"><ImageSlot id="lp-about-kenny" /></div>
+      {photos && <div style="aspect-ratio:4/5;max-width:520px"><ImageSlot id="lp-about-kenny" /></div>}
       <div style="display:flex;flex-direction:column;gap:10px">
         <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(38px,4vw,54px);line-height:1">Kenny</h2>
         <span style="font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:#7A5C49;font-weight:500">Digital Marketing &amp; Strategy</span>
