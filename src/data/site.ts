@@ -54,7 +54,7 @@ export const PAGES = {
   services: {
     title: 'Wix Web Development, WordPress SEO & Digital Marketing Services | KS LaunchPilot',
     description:
-      'Website strategy, UX and design, Wix and WordPress development, CMS and custom functionality, SEO and digital marketing that lifts conversion rates for e-commerce stores and small businesses.',
+      'Website strategy, UX and design, Wix and WordPress development, CMS and custom functionality, SEO and digital marketing that lifts conversion rates for e-commerce stores and small businesses, plus Airbnb direct booking websites.',
   },
   work: {
     title: 'Website Design & Development Work | KS LaunchPilot',
