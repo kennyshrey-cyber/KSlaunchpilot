@@ -33,13 +33,56 @@ const BUILD_TYPES = [
       slot="head"
       set:html={JSON.stringify({
         '@context': 'https://schema.org',
-        '@type': 'ProfessionalService',
-        name: SITE.name,
-        description: PAGES.home.description,
-        url: Astro.site.href,
-        email: SITE.email,
-        logo: new URL('/icon-512.png', Astro.site).href,
-        sameAs: SOCIALS.map((x) => x.href),
+        '@graph': [
+          {
+            '@type': 'ProfessionalService',
+            '@id': new URL('/#organization', Astro.site).href,
+            name: SITE.name,
+            description: PAGES.home.description,
+            url: Astro.site.href,
+            email: SITE.email,
+            logo: new URL('/icon-512.png', Astro.site).href,
+            image: new URL('/og-image.png', Astro.site).href,
+            address: { '@type': 'PostalAddress', addressLocality: SITE.locality, addressRegion: SITE.region, addressCountry: SITE.country },
+            areaServed: SITE.areaServed.map((name) => ({ '@type': 'Place', name })),
+            knowsAbout: [
+              'Wix web design',
+              'Wix development',
+              'Wix Velo',
+              'Wix apps',
+              'WordPress development',
+              'Search engine optimisation (SEO)',
+              'Wix SEO',
+              'WordPress SEO',
+              'Digital marketing',
+              'Conversion rate optimisation',
+              'E-commerce websites',
+              'Small business websites',
+            ],
+            hasOfferCatalog: {
+              '@type': 'OfferCatalog',
+              name: 'Services',
+              itemListElement: [
+                'Wix website design and development',
+                'WordPress website design and development',
+                'SEO for Wix and WordPress websites',
+                'Digital marketing for small businesses and e-commerce',
+                'Conversion rate optimisation',
+                'CMS and custom functionality',
+                'Wix app development',
+              ].map((name) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name } })),
+            },
+            sameAs: SOCIALS.map((x) => x.href),
+          },
+          {
+            '@type': 'WebSite',
+            '@id': new URL('/#website', Astro.site).href,
+            name: SITE.name,
+            url: Astro.site.href,
+            inLanguage: 'en',
+            publisher: { '@id': new URL('/#organization', Astro.site).href },
+          },
+        ],
       })}
     />
   )

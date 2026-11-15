@@ -7,6 +7,13 @@ export const SITE = {
   lang: 'en',
   /** Shown in the footer. */
   copyrightYear: 2026,
+  /** Used in structured data only (no street address published). */
+  locality: 'Manila',
+  region: 'Metro Manila',
+  country: 'PH',
+  /** Markets served, for structured data. */
+  areaServed: ['Philippines', 'Singapore', 'Malaysia', 'Indonesia', 'Thailand', 'Vietnam', 'Southeast Asia', 'United States'],
+  xHandle: '@KSLaunchPilot',
 } as const;
 
 /** Official KS LaunchPilot profiles. */
@@ -33,42 +40,46 @@ export const NAV: NavItem[] = [
   { label: 'Contact', href: '/contact/', match: (p) => p.startsWith('/contact') },
 ];
 
-/** Page metadata. Titles follow the Claude Design source; descriptions are written from each page's own copy. */
+/**
+ * Page metadata (SEO). Targets: Wix web design and development, Wix app/developer audience,
+ * WordPress and Wix SEO, digital marketing and conversion work for e-commerce and small businesses.
+ * Based in Manila, serving Southeast Asia and the US.
+ */
 export const PAGES = {
   home: {
-    title: 'KS LaunchPilot | Website design, development, marketing & Wix apps',
+    title: 'Wix & WordPress Web Design, SEO and Digital Marketing | KS LaunchPilot',
     description:
-      'KS LaunchPilot is a two-person digital studio combining website design, development and digital marketing. We also build apps for Wix sites: Code Canvas and CollectionGrid.',
+      'Manila-based studio building Wix and WordPress websites, SEO and conversion-focused digital marketing for small businesses and e-commerce brands in Southeast Asia and the US. Makers of Wix apps Code Canvas and CollectionGrid.',
   },
   services: {
-    title: 'Services | KS LaunchPilot',
+    title: 'Wix Web Development, WordPress SEO & Digital Marketing Services | KS LaunchPilot',
     description:
-      'Website strategy, UX and design, development, CMS and custom functionality, and digital marketing. From first structure to final launch, we handle the website from start to finish.',
+      'Website strategy, UX and design, Wix and WordPress development, CMS and custom functionality, SEO and digital marketing that lifts conversion rates for e-commerce stores and small businesses.',
   },
   work: {
-    title: 'Selected work | KS LaunchPilot',
+    title: 'Website Design & Development Work | KS LaunchPilot',
     description: IS_LAUNCH
-      ? 'The kinds of websites KS LaunchPilot has designed and built across hospitality, wellness, real estate and platform projects.'
+      ? 'Websites KS LaunchPilot has designed and built for small businesses, hospitality, wellness, real estate and platform projects across the US and Southeast Asia.'
       : 'Websites KS LaunchPilot has designed and built across hospitality, wellness, real estate and platform projects.',
   },
   apps: {
-    title: 'Apps for Wix sites | KS LaunchPilot',
+    title: 'Wix Apps for Developers & Site Owners: Code Canvas, CollectionGrid | KS LaunchPilot',
     description:
-      'Code Canvas turns HTML and CSS into editable sections. CollectionGrid edits CMS collections like a spreadsheet. Both are available on the Wix App Market.',
+      'Wix apps built for Wix developers and site owners. Code Canvas turns HTML and CSS into editable Wix sections. CollectionGrid edits Wix CMS collections like a spreadsheet. On the Wix App Market.',
   },
   about: {
-    title: 'About | KS LaunchPilot',
+    title: 'About Our Manila Web Design & Digital Marketing Studio | KS LaunchPilot',
     description:
-      'KS LaunchPilot is a two-person digital studio combining marketing strategy with website design and development. Meet Shrey and Kenny.',
+      'KS LaunchPilot is a two-person studio in Manila, Philippines, combining marketing strategy with Wix and WordPress design and development for clients in Southeast Asia and the US. Meet Shrey and Kenny.',
   },
   contact: {
-    title: 'Start your project | KS LaunchPilot',
+    title: 'Start Your Website or SEO Project | KS LaunchPilot',
     description:
-      "Tell KS LaunchPilot what you need and when you'd like to launch. We'll reply to arrange a short call.",
+      "Tell KS LaunchPilot what you need: a Wix or WordPress website, SEO or digital marketing. We'll get back to you in a jiffy.",
   },
   contactThanks: {
     title: 'Thank you | KS LaunchPilot',
-    description: "Thanks. We've got your project details.",
+    description: "Got it. We'll get back to you in a jiffy.",
   },
   privacy: {
     title: 'Privacy | KS LaunchPilot',
