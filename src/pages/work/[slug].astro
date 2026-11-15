@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ImageSlot from '../../components/ImageSlot.astro';
+import { CASE_STUDIES, type CaseStudy } from '../../data/caseStudies';
+
+export function getStaticPaths() {
+  return CASE_STUDIES.map((cs) => ({ params: { slug: cs.slug }, props: { cs } }));
+}
+
+interface Props {
+  cs: CaseStudy;
+}
+const { cs } = Astro.props;
+---
+
+<BaseLayout title={cs.title} description={cs.description} ogType="article">
+<section style="max-width:1360px;margin:0 auto;padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px);padding-top:clamp(32px,5vw,64px);padding-bottom:clamp(40px,5vw,64px)">
+  <a class="hv-728b35" href="/work/" style="font-size:14px;color:#2F2F2F">← All work</a>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:32px clamp(40px,6vw,96px);align-items:end;margin-top:clamp(32px,4vw,56px)">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#355C63;font-weight:500">Case study</div>
+      <h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(46px,6vw,88px);line-height:0.98;letter-spacing:-0.015em;text-wrap:balance">{cs.heading}</h1>
+    </div>
+    <dl style="margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:20px;font-size:14px;line-height:1.5">
+      {cs.facts.map((f) => (
+        <div style="display:flex;flex-direction:column;gap:6px;padding-top:14px;border-top:1px solid #2F2F2F"><dt style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#355C63">{f.label}</dt><dd style="margin:0">{f.value}</dd></div>
+      ))}
+    </dl>
+  </div>
+</section>
+<section style="max-width:1360px;margin:0 auto;padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px);padding-bottom:clamp(64px,8vw,112px);display:flex;flex-direction:column;gap:20px">
+  <div style="background:#D7D3CF;padding:10px;display:flex;flex-direction:column;gap:8px">
+    <div style="display:flex;gap:6px;padding:0 4px"><span style="width:7px;height:7px;border-radius:50%;background:#B7A89B"></span><span style="width:7px;height:7px;border-radius:50%;background:#B7A89B"></span><span style="width:7px;height:7px;border-radius:50%;background:#B7A89B"></span></div>
+    {/* Claude Design rendered this slot at 3:2 (its 16/8 wrapper grew to fit the slot), so 3:2 is used to match the approved look. */}
+    <div style="aspect-ratio:3/2"><ImageSlot id={cs.images.main} loading="eager" /></div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px">
+    <div class="cs-wide" style="min-width:0;background:#D7D3CF;padding:10px"><div class="cs-wide-frame" style="aspect-ratio:16/10"><ImageSlot id={cs.images.wide} /></div></div>
+    <div style="background:#D7D3CF;padding:10px"><div style="aspect-ratio:9/16"><ImageSlot id={cs.images.tall} /></div></div>
+  </div>
+  {cs.imageNote && <p style="margin:0;font-size:13px;line-height:1.6;color:#5A6851;max-width:720px">{cs.imageNote}</p>}
+</section>
+<section style="border-top:1px solid #D7D3CF">
+  <div style="max-width:1360px;margin:0 auto;padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px);padding-top:clamp(64px,8vw,112px);padding-bottom:clamp(64px,8vw,112px)">
+    {cs.sections.map((sec) => (
+      <div data-reveal style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px clamp(40px,6vw,96px);padding:32px 0;border-bottom:1px solid #D7D3CF"><h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(28px,2.8vw,38px);line-height:1.1">{sec.heading}</h2><p class="cs-span" style="min-width:0;margin:0;font-size:16px;line-height:1.7;max-width:680px">{sec.body}</p></div>
+    ))}
+  </div>
+</section>
+<section style="max-width:1360px;margin:0 auto;padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px);padding-bottom:clamp(80px,10vw,128px)">
+  <a class="hv-728b35" href={cs.next.href} style="display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding:32px 0;border-top:1px solid #2F2F2F;border-bottom:1px solid #2F2F2F;color:#2F2F2F">
+    <span style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase">{cs.next.href === '/work/' && cs.next.label === 'All work' ? 'More projects' : 'Next project'}</span>
+    <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(32px,3.6vw,48px);line-height:1">{cs.next.label} →</span>
+  </a>
+</section>
+<section data-surface="dark" style="background:#2F2F2F;color:#F7F4EF">
+  <div data-reveal style="max-width:1360px;margin:0 auto;padding:clamp(88px,11vw,150px) clamp(20px,4vw,48px);display:flex;flex-direction:column;gap:28px;align-items:flex-start">
+    <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(48px,7vw,104px);line-height:0.98;letter-spacing:-0.01em">Ready to build?</h2>
+    <p style="margin:0;font-size:17px;line-height:1.6;max-width:520px;color:#D7D3CF">Tell us what you're working on, what you need and when you'd like to launch.</p>
+    <a class="hv-d0dd51" href="/contact/" style="margin-top:8px;background:#F7F4EF;color:#2F2F2F;padding:17px 30px;font-size:15px;font-weight:500;white-space:nowrap">Start Your Project</a>
+  </div>
+</section>
+
+</BaseLayout>

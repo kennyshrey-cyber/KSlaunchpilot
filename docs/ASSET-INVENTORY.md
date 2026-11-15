@@ -7,8 +7,12 @@ correct size, so layouts stay intact.
 **How to add an image:** put the file in `src/assets/images/`, then set `file` and `alt` for that ID in
 `src/data/images.ts`. The build creates responsive WebP versions automatically and fails if `alt` is missing.
 
-**Do not use** random stock photography or generated or mock-up client screenshots. Use real photos and real
-screenshots of the delivered projects only.
+**Full edition only.** The slots below belong to the full edition (`PUBLIC_SITE_EDITION=full`). The launch
+edition does not use them: it shows anonymised project types with illustrative visuals rendered from
+`mockups/` (slot IDs starting `lp-l-`), and leaves the team photo areas out entirely.
+
+For the full edition, **do not use** stock photography or generated or mock-up client screenshots. Use real
+photos and real screenshots of the delivered projects only, and only with the client's permission.
 
 | # | Slot ID | Description (from the design) | Page and location | Aspect ratio | Recommended source size | Essential for launch |
 |---|---|---|---|---|---|---|

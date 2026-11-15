@@ -1,6 +1,6 @@
 {
-  "name": "KS Launchpilot",
-  "short_name": "Launchpilot",
+  "name": "KS LaunchPilot",
+  "short_name": "LaunchPilot",
   "icons": [
     { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
     { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }

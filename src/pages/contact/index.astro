@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ContactForm from '../../components/ContactForm.astro';
-import { PAGES } from '../../data/site';
+import { PAGES, SITE } from '../../data/site';
 ---
 
 <BaseLayout title={PAGES.contact.title} description={PAGES.contact.description} stickyCta={false}>
@@ -12,7 +12,7 @@ import { PAGES } from '../../data/site';
     <p style="margin:0;font-size:16px;line-height:1.65;max-width:420px">Tell us what you need and when you'd like to launch. We'll reply to arrange a short call.</p>
     <div style="display:flex;flex-direction:column;gap:6px;padding-top:22px;border-top:1px solid #D7D3CF;font-size:14px">
       <span style="color:#5A6851">Prefer email?</span>
-      <a class="hv-728b35" href="mailto:hello@kslaunchpilot.com" style="font-size:16px;color:#2F2F2F">hello@kslaunchpilot.com</a>
+      <a class="hv-728b35" href={`mailto:${SITE.email}`} style="font-size:16px;color:#2F2F2F">{SITE.email}</a>
     </div>
   </div>
   <div class="contact-form-col" style="min-width:0">

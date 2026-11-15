@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tanah Sunyi Retreat: illustrative retreat centre website</title>
+<link rel="stylesheet" href="fonts.css">
+<style>
+  body{font-family:Manrope,sans-serif;color:#2b2a24;background:#efe9dc}
+  .hero{position:relative;height:700px;color:#fff;text-align:center}
+  .hero img{position:absolute;inset:0}
+  .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 62% 52% at 50% 56%,rgba(22,18,10,.62) 0%,rgba(22,18,10,.3) 60%,rgba(22,18,10,0) 100%),linear-gradient(180deg,rgba(22,18,10,.62) 0%,rgba(22,18,10,.12) 26%,rgba(22,18,10,.2) 70%,rgba(22,18,10,.5) 100%)}
+  .hero>*{position:relative;z-index:1}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:28px 60px;font-size:14px;font-weight:500}
+  .logo{font-family:"Cormorant Garamond",serif;font-size:30px;font-weight:500;letter-spacing:.02em;display:flex;align-items:center;gap:12px}
+  .logo svg{width:30px;height:30px}
+  .links{display:flex;gap:34px}
+  .btn{background:#f1e7d0;color:#2b2a24;padding:13px 26px;border-radius:999px;font-weight:700;font-size:13px}
+  .eyebrow{margin-top:120px;text-shadow:0 1px 12px rgba(20,16,8,.7);font-size:13px;font-weight:600;letter-spacing:.32em;text-transform:uppercase}
+  h1{margin:20px auto 0;font-family:"Cormorant Garamond",serif;font-weight:400;font-size:96px;line-height:1;letter-spacing:-.01em;max-width:1100px;text-shadow:0 2px 30px rgba(20,16,8,.45)}
+  h1 em{font-style:italic}
+  .sub{margin:22px auto 0;font-size:19px;line-height:1.6;max-width:560px;font-weight:500;text-shadow:0 1px 14px rgba(20,16,8,.7)}
+  .actions{display:flex;gap:16px;justify-content:center;margin-top:30px}
+  .actions .btn{padding:17px 34px;font-size:14px}
+  .ghost{padding:16px 32px;border:1px solid rgba(255,255,255,.9);border-radius:999px;font-weight:700;font-size:14px}
+  .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;padding:48px 60px 0}
+  h2{margin:0 0 6px;font-family:"Cormorant Garamond",serif;font-weight:500;font-size:40px}
+  .lead{font-size:15px;color:#5d5a4e;margin:0 0 18px}
+  .r{display:grid;grid-template-columns:92px 1fr auto auto;gap:22px;align-items:center;padding:17px 0;border-top:1px solid #d6cdb9}
+  .date{font-family:"Cormorant Garamond",serif;font-size:27px;line-height:1}
+  .date small{display:block;font-family:Manrope,sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8a5a3c;margin-top:5px}
+  .r b{display:block;font-size:17px;font-weight:700}
+  .r span{font-size:13px;color:#5d5a4e}
+  .left{font-size:12px;font-weight:700;color:#4d6a4a;background:#dfe4cf;padding:6px 12px;border-radius:999px}
+  .left.low{color:#8a4a2c;background:#f0d9c6}
+  .go{font-size:13px;font-weight:700;border-bottom:1px solid #2b2a24;padding-bottom:2px}
+  .pics{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:150px 150px;gap:12px}
+  .pics div{border-radius:14px;overflow:hidden}
+  .pics .tall{grid-row:span 2}
+</style>
+</head>
+<body>
+<section class="hero">
+  <img src="../photos/retreat-hero.jpg" alt="">
+  <nav>
+    <div class="logo"><svg viewBox="0 0 30 30" fill="none" stroke="#fff" stroke-width="1.4"><circle cx="15" cy="15" r="13"/><path d="M4 19c4-5 7-5 11 0s7 5 11 0M15 2v9"/></svg>Tanah Sunyi</div>
+    <div class="links"><a>Retreats</a><a>The valley</a><a>Stay</a><a>Food</a><a>Teachers</a><a>Getting here</a></div>
+    <a class="btn">Reserve a place</a>
+  </nav>
+  <div class="eyebrow">Yoga &amp; meditation retreats · Est. 2014</div>
+  <h1>Seven days to <em>slow down.</em></h1>
+  <p class="sub">A small retreat centre above the rice terraces. Morning practice, simple food, long silences and room to think.</p>
+  <div class="actions"><a class="btn">See upcoming retreats</a><a class="ghost">Take the tour</a></div>
+</section>
+<section class="wrap">
+  <div>
+    <h2>Upcoming retreats</h2>
+    <p class="lead">Each retreat is limited to 16 guests. All meals and lodging included.</p>
+    <div class="r"><div class="date">12 to 18<small>April</small></div><div><b>Stillness: a silent week</b><span>7 days · Meditation · All levels</span></div><span class="left low">3 places left</span><a class="go">Details</a></div>
+    <div class="r"><div class="date">03 to 09<small>May</small></div><div><b>Breath &amp; Movement</b><span>7 days · Yoga and pranayama · All levels</span></div><span class="left">9 places left</span><a class="go">Details</a></div>
+    <div class="r"><div class="date">21 to 24<small>May</small></div><div><b>Weekend Reset</b><span>4 days · Yoga, rest and good food</span></div><span class="left">11 places left</span><a class="go">Details</a></div>
+  </div>
+  <div class="pics">
+    <div class="tall"><img src="../photos/retreat-bungalow.jpg" alt=""></div>
+    <div><img src="../photos/retreat-hall.jpg" alt=""></div>
+    <div><img src="../photos/retreat-food.jpg" alt=""></div>
+  </div>
+</section>
+</body>
+</html>

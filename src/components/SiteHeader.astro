@@ -1,5 +1,6 @@
 ---
 import { NAV } from '../data/site';
+import ImageSlot from './ImageSlot.astro';
 
 const path = Astro.url.pathname;
 const activeStyle = 'color:#2F2F2F;border-bottom:1px solid #2F2F2F;padding-bottom:2px';
@@ -12,13 +13,9 @@ const activeStyle = 'color:#2F2F2F;border-bottom:1px solid #2F2F2F;padding-botto
   <div
     style="max-width:1360px;margin:0 auto;padding:12px clamp(20px,4vw,48px);display:flex;align-items:center;justify-content:space-between;gap:20px"
   >
-    <a href="/" aria-label="KS Launchpilot, home" style="display:flex;align-items:center;gap:11px;color:#2F2F2F;white-space:nowrap">
-      <span
-        aria-hidden="true"
-        style="width:34px;height:34px;background:#2F2F2F;color:#F7F4EF;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;letter-spacing:0.04em"
-        >KS</span
-      >
-      <span aria-hidden="true" style="font-size:15px;font-weight:500;letter-spacing:0.01em">Launchpilot</span>
+    <a href="/" aria-label="KS LaunchPilot, home" style="display:flex;align-items:center;gap:11px;color:#2F2F2F;white-space:nowrap">
+      <span aria-hidden="true" style="width:34px;height:34px;display:block;flex:none"><ImageSlot id="brand-logo" loading="eager" decorative /></span>
+      <span aria-hidden="true" style="font-size:15px;font-weight:500;letter-spacing:0.01em">KS LaunchPilot</span>
     </a>
     <div class="header-actions" style="display:flex;align-items:center;gap:clamp(12px,2.4vw,34px)">
       <nav class="site-nav" aria-label="Main" style="display:flex;gap:clamp(18px,2.4vw,34px);font-size:14px;white-space:nowrap">

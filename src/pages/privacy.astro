@@ -1,22 +1,79 @@
 ---
 /*
- * PLACEHOLDER ROUTE: the approved privacy policy text has not been supplied yet.
- * This page is excluded from the sitemap and marked noindex until the legal content is added.
- * Replace the holding notice below with the approved policy, then remove `noindex`.
+ * Plain-language privacy notice describing what this website actually does.
+ * It is not a lawyer-reviewed policy. Update it whenever the site starts collecting anything new
+ * (for example analytics), and replace it if formal legal text is supplied.
  */
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { PAGES, SITE } from '../data/site';
+
+const SECTIONS = [
+  {
+    heading: 'What we collect',
+    body: [
+      'When you send the project form on our Contact page, we receive what you type into it: your name, email address, and any business name, website address, project details, timing and budget you choose to share.',
+      'If you email us, we receive your email address and whatever you write.',
+    ],
+  },
+  {
+    heading: 'How we use it',
+    body: [
+      'We use this information only to reply to you and to discuss and plan your project. We do not sell it, and we do not use it for advertising.',
+    ],
+  },
+  {
+    heading: 'Who handles it',
+    body: [
+      'This website is hosted by Netlify, which also processes and stores contact form submissions for us. Our email is provided by Google. Each handles the information under its own privacy terms.',
+    ],
+  },
+  {
+    heading: 'Cookies and tracking',
+    body: [
+      'This website does not use analytics, advertising trackers or its own cookies.',
+      'Our Apps page includes a demo video hosted on YouTube. Nothing is loaded from YouTube until you press play. Once you do, YouTube may set cookies and collect usage data under Google’s privacy policy.',
+    ],
+  },
+  {
+    heading: 'Links to other sites',
+    body: [
+      'We link to the Wix App Market, YouTube, Instagram, X and Reddit. Those sites have their own privacy policies. Our apps, Code Canvas and CollectionGrid, have their own privacy information on their Wix App Market listings.',
+    ],
+  },
+  {
+    heading: 'Keeping and deleting your information',
+    body: [
+      'We keep enquiries for as long as we need them to respond and to work with you. You can ask us at any time to send you a copy of the information we hold about you, to correct it or to delete it.',
+    ],
+  },
+];
 ---
 
-<BaseLayout title={PAGES.privacy.title} description={PAGES.privacy.description} noindex>
+<BaseLayout title={PAGES.privacy.title} description={PAGES.privacy.description}>
   <section style="max-width:1360px;margin:0 auto;padding:clamp(40px,6vw,88px) clamp(20px,4vw,48px) clamp(80px,10vw,128px)">
     <div style="display:flex;flex-direction:column;gap:20px;max-width:720px">
       <div style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#355C63;font-weight:500">Privacy</div>
-      <h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(46px,6vw,88px);line-height:0.98;letter-spacing:-0.015em">Privacy policy</h1>
-      <p style="margin:0;font-size:16px;line-height:1.65">
-        Our privacy policy is being finalised. If you have any questions about how we handle your information, email us at
-        <a href={`mailto:${SITE.email}`} class="hv-87875d" style="border-bottom:1px solid #2F2F2F;padding-bottom:2px">{SITE.email}</a>.
-      </p>
+      <h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(46px,6vw,88px);line-height:0.98;letter-spacing:-0.015em">Privacy</h1>
+      <p style="margin:0;font-size:17px;line-height:1.65">This page explains what information the {SITE.name} website collects and what we do with it. Last updated November 2026.</p>
+    </div>
+    <div style="margin-top:clamp(40px,5vw,64px);max-width:1100px">
+      {
+        SECTIONS.map((sec) => (
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px clamp(40px,6vw,96px);padding:32px 0;border-top:1px solid #D7D3CF">
+            <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,2.600vw,34px);line-height:1.1">{sec.heading}</h2>
+            <div class="cs-span" style="min-width:0;display:flex;flex-direction:column;gap:14px;max-width:680px">
+              {sec.body.map((p) => <p style="margin:0;font-size:16px;line-height:1.7">{p}</p>)}
+            </div>
+          </div>
+        ))
+      }
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px clamp(40px,6vw,96px);padding:32px 0;border-top:1px solid #D7D3CF;border-bottom:1px solid #D7D3CF">
+        <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,2.600vw,34px);line-height:1.1">Contact</h2>
+        <p class="cs-span" style="min-width:0;margin:0;font-size:16px;line-height:1.7;max-width:680px">
+          For any privacy question or request, email
+          <a href={`mailto:${SITE.email}`} class="hv-87875d" style="border-bottom:1px solid #2F2F2F;padding-bottom:2px">{SITE.email}</a>.
+        </p>
+      </div>
     </div>
   </section>
 </BaseLayout>

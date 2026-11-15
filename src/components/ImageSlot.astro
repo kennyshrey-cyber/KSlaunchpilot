@@ -11,9 +11,11 @@ import { IMAGES } from '../data/images';
 interface Props {
   id: string;
   loading?: 'lazy' | 'eager';
+  /** Decorative image (its meaning is already given in text next to it): rendered with empty alt text. */
+  decorative?: boolean;
 }
 
-const { id, loading = 'lazy' } = Astro.props;
+const { id, loading = 'lazy', decorative = false } = Astro.props;
 const entry = IMAGES[id];
 if (!entry) throw new Error(`ImageSlot: unknown image id "${id}". Add it to src/data/images.ts.`);
 
@@ -33,7 +35,7 @@ const widths = match
   match ? (
     <Image
       src={match.default}
-      alt={entry.alt}
+      alt={decorative ? '' : entry.alt}
       widths={widths}
       sizes={entry.sizes}
       loading={loading}

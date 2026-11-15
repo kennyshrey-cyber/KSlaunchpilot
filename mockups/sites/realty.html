@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Hartwell Reyes Realty: illustrative real estate website</title>
+<link rel="stylesheet" href="fonts.css">
+<style>
+  body{font-family:"Plus Jakarta Sans",sans-serif;color:#14202e;background:#fff}
+  .top{background:#14202e;color:#c9d2dd;font-size:13px;display:flex;justify-content:space-between;padding:10px 60px}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:22px 60px;font-size:15px;font-weight:500}
+  .logo{display:flex;align-items:center;gap:12px;font-family:"DM Serif Display",serif;font-size:26px;letter-spacing:.01em}
+  .logo i{width:38px;height:38px;background:#14202e;color:#d8b071;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:19px}
+  .links{display:flex;gap:34px}
+  .btn{background:#b98a45;color:#fff;padding:13px 24px;font-size:14px;font-weight:600;border-radius:4px}
+  .hero{position:relative;height:560px;margin:0 28px;border-radius:14px;overflow:hidden;color:#fff}
+  .hero img{position:absolute;inset:0}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,22,34,.82) 0%,rgba(13,22,34,.45) 45%,rgba(13,22,34,.05) 75%)}
+  .copy{position:absolute;z-index:1;left:52px;top:70px;max-width:620px}
+  .kick{font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#e3c48f}
+  h1{margin:16px 0 0;font-family:"DM Serif Display",serif;font-weight:400;font-size:70px;line-height:1.04}
+  .sub{margin:18px 0 0;font-size:17px;line-height:1.6;color:#dfe5ec;max-width:500px}
+  .search{position:absolute;z-index:1;left:52px;right:52px;bottom:40px;background:#fff;color:#14202e;border-radius:10px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+  .tabs{display:flex;gap:4px;padding:12px 16px 0;font-size:14px;font-weight:600}
+  .tabs span{padding:9px 18px;border-radius:6px 6px 0 0;color:#5a6676}
+  .tabs .on{background:#f3efe8;color:#14202e;box-shadow:inset 0 -2px 0 #b98a45}
+  .fields{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr auto;border-top:1px solid #e8e3d9}
+  .fields div{padding:16px 22px;border-right:1px solid #e8e3d9}
+  .fields label{display:block;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#7b8694;margin-bottom:6px}
+  .fields span{font-size:16px;font-weight:500}
+  .fields a{background:#14202e;color:#fff;display:flex;align-items:center;gap:10px;padding:0 34px;font-weight:600;font-size:15px;border-radius:0 0 10px 0}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;padding:40px 60px 22px}
+  .head h2{margin:0;font-family:"DM Serif Display",serif;font-weight:400;font-size:34px}
+  .head a{font-size:14px;font-weight:600;color:#b98a45}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:0 60px}
+  .card{border:1px solid #e8e3d9;border-radius:10px;overflow:hidden}
+  .card .ph{height:210px;position:relative}
+  .badge{position:absolute;left:14px;top:14px;background:#fff;font-size:12px;font-weight:700;padding:6px 10px;border-radius:4px;letter-spacing:.04em}
+  .badge.g{background:#1f6b4a;color:#fff}
+  .info{padding:18px 20px 22px}
+  .price{font-family:"DM Serif Display",serif;font-size:27px}
+  .addr{font-size:14px;color:#5a6676;margin:4px 0 14px}
+  .meta{display:flex;gap:18px;font-size:13px;font-weight:600;padding-top:14px;border-top:1px solid #eee9df}
+</style>
+</head>
+<body>
+<div class="top"><span>Independent agents serving the north shore since 2009</span><span>Call (555) 014-2290 · Open Mon to Sat, 9am to 6pm</span></div>
+<nav>
+  <div class="logo"><i>H</i>Hartwell Reyes</div>
+  <div class="links"><a>Buy</a><a>Rent</a><a>Sell</a><a>Neighbourhoods</a><a>Our agents</a><a>Market reports</a></div>
+  <a class="btn">Book a valuation</a>
+</nav>
+<section class="hero">
+  <img src="../photos/realty-hero.jpg" alt="">
+  <div class="copy">
+    <div class="kick">214 homes for sale right now</div>
+    <h1>Find the place you'll call home.</h1>
+    <p class="sub">Local agents, honest advice and every listing on the north shore in one search.</p>
+  </div>
+  <div class="search">
+    <div class="tabs"><span class="on">Buy</span><span>Rent</span><span>Sold prices</span></div>
+    <div class="fields">
+      <div><label>Location</label><span>Neighbourhood, street or postcode</span></div>
+      <div><label>Property type</label><span>House</span></div>
+      <div><label>Bedrooms</label><span>3+</span></div>
+      <div><label>Price range</label><span>$450k to $900k</span></div>
+      <a>Search homes →</a>
+    </div>
+  </div>
+</section>
+<div class="head"><h2>Featured listings</h2><a>View all 214 homes →</a></div>
+<section class="grid">
+  <div class="card"><div class="ph"><img src="../photos/realty-craftsman.jpg" alt=""><span class="badge g">New this week</span></div><div class="info"><div class="price">$685,000</div><div class="addr">18 Alder Lane, Brookfield</div><div class="meta"><span>3 beds</span><span>2 baths</span><span>1,840 sq ft</span></div></div></div>
+  <div class="card"><div class="ph"><img src="../photos/realty-apartment.jpg" alt=""><span class="badge">Open Sat 11am</span></div><div class="info"><div class="price">$512,500</div><div class="addr">Apt 904, The Mercer, Harbour Quarter</div><div class="meta"><span>2 beds</span><span>2 baths</span><span>1,120 sq ft</span></div></div></div>
+  <div class="card"><div class="ph"><img src="../photos/realty-townhouse.jpg" alt=""><span class="badge">Price reduced</span></div><div class="info"><div class="price">$749,000</div><div class="addr">7 Foundry Row, Old Mill District</div><div class="meta"><span>4 beds</span><span>3 baths</span><span>2,260 sq ft</span></div></div></div>
+</section>
+</body>
+</html>
