@@ -3,7 +3,7 @@ import { IS_LAUNCH } from './edition';
 export const SITE = {
   name: 'KS LaunchPilot',
   tagline: 'Website design, development, digital marketing and apps for Wix sites',
-  email: 'kslaunchpilot@gmail.com',
+  email: 'studio@kslaunchpilot.com',
   lang: 'en',
   /** Shown in the footer. */
   copyrightYear: 2026,
