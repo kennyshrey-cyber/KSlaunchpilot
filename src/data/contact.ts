@@ -6,6 +6,7 @@ export const NEEDS = [
   'CMS / Custom Functionality',
   'Website + Marketing',
   'Digital Marketing',
+  'Airbnb / Direct Booking Site',
   'Other',
 ] as const;
 
