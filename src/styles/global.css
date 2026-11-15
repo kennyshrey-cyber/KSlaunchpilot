@@ -316,3 +316,16 @@ body {
     aspect-ratio: auto !important;
   }
 }
+
+/* Home hero: on phones the small CMS card needs more room so its labels stay on one line. */
+@media (max-width: 559.98px) {
+  .hero-cms {
+    width: 56% !important;
+    padding: 11px 12px !important;
+    gap: 7px !important;
+    font-size: 9px !important;
+  }
+  .hero-cms > div {
+    white-space: nowrap;
+  }
+}
