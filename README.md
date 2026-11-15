@@ -106,8 +106,10 @@ wasn't sent and gives them the email address instead.
 
 ## Images
 
-Every image in the original design was an empty placeholder. The launch edition fills its project and
-case-study slots with illustrative website visuals rendered from `mockups/`, and uses the real Wix App Market
+Every image in the original design was an empty placeholder, and the homepage hero and "What we can build"
+cards were wireframes. The homepage now shows illustrative website visuals in both places, and the launch
+edition fills its project and case-study slots the same way, all rendered from `mockups/`. The launch edition
+leaves out the homepage "Selected experience" row, because it would repeat those visuals. It also uses the real Wix App Market
 listing images for the two apps. See [`docs/ASSET-INVENTORY.md`](docs/ASSET-INVENTORY.md) for the slots the full
 edition still needs. Images are optimised to responsive WebP at build time.
 

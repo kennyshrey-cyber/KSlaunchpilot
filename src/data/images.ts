@@ -124,6 +124,23 @@ export const IMAGES: Record<string, ImageEntry> = {
   'lp-l-directory': launch('launch-directory.jpg', 'Homepage design for a jobs and services directory: a search bar, category tiles and the latest listings'),
   'lp-l-realty': { ...launch('launch-realty.jpg', 'Homepage design for a real estate agency website: a property search panel over a house photo and featured listings'), pages: ['Work'] },
   'lp-l-retreat': { ...launch('launch-retreat.jpg', 'Homepage design for a retreat centre website: an open-air yoga shala above rice terraces and a list of upcoming retreats'), pages: ['Work'] },
+  'lp-l-business': { ...launch('launch-business.jpg', 'Homepage design for a home solar company: a savings headline, a postcode form and a house with solar panels'), pages: ['Home: What we can build'] },
+  'lp-l-professional': { ...launch('launch-professional.jpg', 'Homepage design for an accounting and advisory firm: a headline, a meeting room photo and four service columns'), pages: ['Home: What we can build'] },
+  'lp-l-hero-desktop': {
+    ...launch('launch-retreat.jpg', 'A retreat centre website shown in a browser window'),
+    pages: ['Home: hero, browser frame'],
+    sizes: '(min-width: 1000px) 520px, 90vw',
+  },
+  'lp-l-hero-phone': {
+    description: 'Illustrative website design on a phone (launch edition)',
+    pages: ['Home: hero, phone frame'],
+    aspect: '9:18.5',
+    recommendedSize: '750 × 1540 px',
+    essential: true,
+    sizes: '140px',
+    file: 'launch-retreat-mobile.jpg',
+    alt: 'The same retreat centre website shown on a phone',
+  },
   'lp-l-cs-main': {
     description: 'Directory homepage, desktop (illustrative)',
     pages: ['Case study: Jobs & services directory'],
