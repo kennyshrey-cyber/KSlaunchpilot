@@ -2,7 +2,7 @@ import { IS_LAUNCH } from './edition';
 
 export const SITE = {
   name: 'KS LaunchPilot',
-  tagline: 'Website design, development, digital marketing and apps for Wix sites',
+  tagline: 'Custom and platform websites, SEO and digital marketing. Makers of Wix apps.',
   email: 'studio@kslaunchpilot.com',
   lang: 'en',
   /** Shown in the footer. */
@@ -47,9 +47,9 @@ export const NAV: NavItem[] = [
  */
 export const PAGES = {
   home: {
-    title: 'Wix & WordPress Web Design, SEO and Digital Marketing | KS LaunchPilot',
+    title: 'Web Design & Development, SEO and Digital Marketing | KS LaunchPilot',
     description:
-      'Manila-based studio building Wix and WordPress websites, SEO and conversion-focused digital marketing for small businesses and e-commerce brands in Southeast Asia and the US. Makers of Wix apps Code Canvas and CollectionGrid.',
+      'Websites that convert: custom React and Next.js builds, or Wix, Wix Studio Two, WordPress, Squarespace and GoHighLevel. Plus SEO and digital marketing for small businesses in Southeast Asia and the US.',
   },
   services: {
     title: 'Wix Web Development, WordPress SEO & Digital Marketing Services | KS LaunchPilot',
