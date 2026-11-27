@@ -24,6 +24,8 @@ export interface AppInfo {
   gallery: { imageId: string; caption: string }[];
   marketUrl: string | null;
   helpUrl: string | null;
+  /** A guide on this site, linked from the app's section on the Apps page. */
+  guide: { href: string; label: string } | null;
   video: { youtubeId: string; title: string; posterId: string } | null;
   /** Brand colours, used for the app's section on the Apps page. */
   theme: { background: string; accent: string; text: string; muted: string; line: string };
@@ -60,6 +62,7 @@ export const APPS: AppInfo[] = [
     ],
     marketUrl: 'https://www.wix.com/app-market/e9d03aaf-9878-455e-9388-4347c192f5cc',
     helpUrl: 'https://sites.google.com/view/ks-launchpilot-code-canvas',
+    guide: { href: '/guides/add-html-css-to-wix/', label: 'Guide: add your own HTML and CSS to Wix' },
     video: {
       youtubeId: 'tYd537GUe40',
       title: 'Code Canvas demo: paste AI HTML and CSS into Wix, with no iframe',
@@ -94,6 +97,7 @@ export const APPS: AppInfo[] = [
     gallery: [],
     marketUrl: null,
     helpUrl: null,
+    guide: null,
     video: null,
     theme: { background: '#102D30', accent: '#A8DD63', text: '#F5F7F1', muted: '#C3D2CC', line: 'rgba(195,210,204,0.24)' },
   },
