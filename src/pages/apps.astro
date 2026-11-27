@@ -81,6 +81,9 @@ const youtube = SOCIALS.find((s) => s.id === 'youtube')!;
               {app.helpUrl && (
                 <a class="hv-accent" href={app.helpUrl} target="_blank" rel="noopener" style={`font-size:15px;color:${app.theme.text};border-bottom:1px solid ${app.theme.text};padding-bottom:3px`}>Help and setup guide ↗<span class="visually-hidden"> (opens in a new tab)</span></a>
               )}
+              {app.guide && (
+                <a class="hv-accent" href={app.guide.href} style={`font-size:15px;color:${app.theme.text};border-bottom:1px solid ${app.theme.text};padding-bottom:3px`}>{app.guide.label} →</a>
+              )}
             </div>
           </div>
           <div data-reveal style={`border:1px solid ${app.theme.line};box-shadow:0 30px 60px -30px rgba(0,0,0,0.6)`}>

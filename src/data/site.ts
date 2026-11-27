@@ -72,6 +72,11 @@ export const PAGES = {
     description:
       'KS LaunchPilot is a two-person studio in Manila, Philippines, combining marketing strategy with Wix and WordPress design and development for clients in Southeast Asia and the US. Meet Shrey and Kenny.',
   },
+  guideHtmlCss: {
+    title: 'How to add your own HTML and CSS to Wix (and keep it editable) | KS LaunchPilot',
+    description:
+      'How to add your own HTML and CSS to Wix: Embed HTML (iframe), custom elements, Wix Studio CSS or Code Canvas. What each does and where it falls short.',
+  },
   contact: {
     title: 'Start Your Website or SEO Project | KS LaunchPilot',
     description:

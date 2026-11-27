@@ -23,6 +23,9 @@ export interface ImageEntry {
 }
 
 const PROJECT_SIZES = '(min-width: 1360px) 420px, (min-width: 760px) 45vw, 100vw';
+/** Guide figures: wide UI screenshots run up to 1000 px, 4:3 images up to 760 px. */
+const GUIDE_WIDE = '(min-width: 1100px) 1000px, 100vw';
+const GUIDE_NARROW = '(min-width: 860px) 760px, 100vw';
 
 const project = (name: string, kind = 'homepage screenshot'): ImageEntry => ({
   description: `${name}, ${kind}`,
@@ -195,7 +198,52 @@ export const IMAGES: Record<string, ImageEntry> = {
     recommendedSize: '1280 × 720 px',
   },
   'app-cg-listing': app('app-collectiongrid-listing.jpg', 'CollectionGrid: a CMS collection opened as a spreadsheet, with one edited cell highlighted before saving'),
+
+  /* ---------- Guide: add your own HTML and CSS to Wix (real Code Canvas captures from Wix Studio test sites) ---------- */
+  'guide-import-report': guide(
+    'guide-import-report.png',
+    'Code Canvas import report for a new design. Ready: 6 editable elements, 1 image. Removed: one script. Warnings: forms do not submit in Code Canvas, add a Wix Form under this section; Heading 1 changed to heading 2 because a Wix page has its own H1. Buttons: Back to code and Load into canvas.',
+    '1712:724',
+    GUIDE_WIDE,
+  ),
+  'guide-tablet-styles': guide(
+    'guide-tablet-styles.png',
+    'Code Canvas editor with the Tablet 768 preview selected and a heading chosen on the canvas. The Style panel says: Changes apply to: Tablet and smaller (up to 1024 px wide).',
+    '1984:680',
+    GUIDE_WIDE,
+  ),
+  'guide-widget-settings': guide(
+    'guide-widget-settings.png',
+    'The Code Canvas widget Settings panel in the Wix editor, with a design chosen in the Design list, a Refresh list link and an Edit this design button, next to the section on the page.',
+    '2060:862',
+    GUIDE_WIDE,
+  ),
+  'guide-live': guide(
+    'app-code-canvas-live.jpg',
+    'A Code Canvas test section on a published Wix site, shown on a desktop browser and on a phone, where the layout stacks into one column.',
+    '4:3',
+    GUIDE_NARROW,
+  ),
+  'guide-client': guide(
+    'app-code-canvas-client.jpg',
+    'Code Canvas Client mode. Left: the developer ticks Lock for client on a heading. Right: the client edit panel for a link, with Label text, Link URL and an Open in new tab option.',
+    '4:3',
+    GUIDE_NARROW,
+  ),
 };
+
+function guide(file: string, alt: string, aspect: string, sizes: string): ImageEntry {
+  return {
+    description: 'Guide figure',
+    pages: ['Guide: add your own HTML and CSS to Wix'],
+    aspect,
+    recommendedSize: 'Shown at its natural size',
+    essential: true,
+    sizes,
+    file,
+    alt,
+  };
+}
 
 function launch(file: string, alt: string): ImageEntry {
   return {

@@ -25,6 +25,7 @@ Team photos appear automatically in either edition once their files are register
 | `/work/` | `Launchpilot Work.dc.html` |
 | `/work/jobs-services-directory/` | `Launchpilot Case Study.dc.html` (launch edition: anonymised). The full edition builds `/work/felon-friendly-jobs-now/` instead. |
 | `/apps/` | New page: Code Canvas and CollectionGrid on the Wix App Market |
+| `/guides/add-html-css-to-wix/` | New page: guide comparing the ways to add your own HTML and CSS to Wix, with Code Canvas steps. Wix sources are listed on the page. |
 | `/about/` | `Launchpilot About.dc.html` |
 | `/contact/` | `Launchpilot Contact.dc.html` |
 | `/contact/thanks/` | Form confirmation (used when JavaScript is off; not indexed) |
